@@ -5,7 +5,7 @@ using UnityEngine;
 public class TESTPlayerController : MonoBehaviour
 {
     [SerializeField] private float normalSpeed = 5f; // Normal movement speed of the player
-    [SerializeField] private float sprintSpeed = 8f; // Sprinting speed of the player
+    [SerializeField] private float sprintSpeed = 10f; // Sprinting speed of the player
     [SerializeField] private Animator animator; // Animator component for controlling player animations
 
     // PlayerControls object for handling player input
