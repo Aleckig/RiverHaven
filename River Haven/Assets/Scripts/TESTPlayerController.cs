@@ -8,14 +8,13 @@ public class TESTPlayerController : MonoBehaviour
     [SerializeField] private float sprintSpeed = 8f; // Sprinting speed of the player
     [SerializeField] private Animator animator; // Animator component for controlling player animations
 
-    // PlayerControls object for handling player input
-    private PlayerControls playerControls;
+    private PlayerControls playerControls; // PlayerControls object for handling player input
     private Rigidbody rb; // Rigidbody component for controlling player movement
     private Vector3 movement; // Direction of player movement
     private float currentSpeed; // Current speed of the player
     private float rotationSpeed = 720f; // Speed at which the player rotates (degrees per second)
 
-    private const string IS_WALK_PARAM = "IsWalk"; // Animator parameter for controlling walk/yogging animation
+    private const string SPEED_PARAM = "Speed"; // Animator parameter for controlling speed-based animations
 
     private void Awake()
     {
@@ -38,7 +37,7 @@ public class TESTPlayerController : MonoBehaviour
     private void Start()
     {
         // Get Rigidbody component
-        rb = gameObject.GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         // Set initial speed to normal speed
         currentSpeed = normalSpeed;
     }
@@ -48,21 +47,17 @@ public class TESTPlayerController : MonoBehaviour
         // Read player input for movement
         Vector2 input = playerControls.Player.Move.ReadValue<Vector2>();
 
-        // Normalize movement vector
+        // Calculate movement vector
         movement = new Vector3(input.x, 0, input.y).normalized;
 
-        // Set walk animation parameter
-        animator.SetBool(IS_WALK_PARAM, movement != Vector3.zero);
+        // Determine current speed based on movement vector
+        float speed = movement.magnitude * currentSpeed;
 
-        // Check if Shift key is held down to adjust speed
-        if (playerControls.Player.Sprint.IsPressed())
-        {
-            currentSpeed = sprintSpeed;
-        }
-        else
-        {
-            currentSpeed = normalSpeed;
-        }
+        // Set animator speed parameter
+        animator.SetFloat(SPEED_PARAM, speed);
+
+        // Adjust speed based on sprinting
+        currentSpeed = playerControls.Player.Sprint.IsPressed() ? sprintSpeed : normalSpeed;
     }
 
     private void FixedUpdate()
@@ -90,9 +85,9 @@ public class TESTPlayerController : MonoBehaviour
             rb.rotation = Quaternion.RotateTowards(rb.rotation, targetRotation, step);
 
             // Debugging logs
-            //Debug.Log("Movement Vector: " + movement);
-            //Debug.Log("Current Rotation: " + rb.rotation.eulerAngles);
-            //Debug.Log("Target Rotation: " + targetRotation.eulerAngles);
+            // Debug.Log("Movement Vector: " + movement);
+            // Debug.Log("Current Rotation: " + rb.rotation.eulerAngles);
+            // Debug.Log("Target Rotation: " + targetRotation.eulerAngles);
         }
     }
 }
