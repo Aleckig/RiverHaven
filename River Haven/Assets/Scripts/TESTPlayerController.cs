@@ -13,7 +13,7 @@ public class TESTPlayerController : MonoBehaviour
     private Rigidbody rb; // Rigidbody component for controlling player movement
     private Vector3 movement; // Direction of player movement
     private float currentSpeed; // Current speed of the player
-    private float rotationSpeed = 10f; // Speed at which the player rotates
+    private float rotationSpeed = 720f; // Speed at which the player rotates (degrees per second)
 
     private const string IS_WALK_PARAM = "IsWalk"; // Animator parameter for controlling walk animation
 
@@ -83,11 +83,16 @@ public class TESTPlayerController : MonoBehaviour
 
     private void RotateCharacter()
     {
-        // Rotate the character to face the movement direction
         if (movement != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(movement);
-            rb.rotation = Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
+            float step = rotationSpeed * Time.fixedDeltaTime; // Calculate rotation step size
+            rb.rotation = Quaternion.RotateTowards(rb.rotation, targetRotation, step);
+
+            // Debugging logs
+            Debug.Log("Movement Vector: " + movement);
+            Debug.Log("Current Rotation: " + rb.rotation.eulerAngles);
+            Debug.Log("Target Rotation: " + targetRotation.eulerAngles);
         }
     }
 }
