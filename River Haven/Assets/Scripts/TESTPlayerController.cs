@@ -5,7 +5,7 @@ using UnityEngine;
 public class TESTPlayerController : MonoBehaviour
 {
     [SerializeField] private float normalSpeed = 5f; // Normal movement speed of the player
-    [SerializeField] private float sprintSpeed = 10f; // Sprinting speed of the player
+    [SerializeField] private float sprintSpeed = 8f; // Sprinting speed of the player
     [SerializeField] private Animator animator; // Animator component for controlling player animations
 
     // PlayerControls object for handling player input
@@ -15,7 +15,7 @@ public class TESTPlayerController : MonoBehaviour
     private float currentSpeed; // Current speed of the player
     private float rotationSpeed = 720f; // Speed at which the player rotates (degrees per second)
 
-    private const string IS_WALK_PARAM = "IsWalk"; // Animator parameter for controlling walk animation
+    private const string IS_WALK_PARAM = "IsWalk"; // Animator parameter for controlling walk/yogging animation
 
     private void Awake()
     {
@@ -90,9 +90,9 @@ public class TESTPlayerController : MonoBehaviour
             rb.rotation = Quaternion.RotateTowards(rb.rotation, targetRotation, step);
 
             // Debugging logs
-            Debug.Log("Movement Vector: " + movement);
-            Debug.Log("Current Rotation: " + rb.rotation.eulerAngles);
-            Debug.Log("Target Rotation: " + targetRotation.eulerAngles);
+            //Debug.Log("Movement Vector: " + movement);
+            //Debug.Log("Current Rotation: " + rb.rotation.eulerAngles);
+            //Debug.Log("Target Rotation: " + targetRotation.eulerAngles);
         }
     }
 }
