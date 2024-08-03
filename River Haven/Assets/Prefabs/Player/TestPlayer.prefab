@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8196941339068717934}
-  - component: {fileID: 690239903302711342}
   - component: {fileID: 866494906371407555}
+  - component: {fileID: 7786344240937611214}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Untagged
@@ -34,21 +34,6 @@ Transform:
   - {fileID: 7417726537877380203}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &690239903302711342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7728926740031712007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c0082b5cf5615468c11e07451f2144, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalSpeed: 5
-  sprintSpeed: 8
-  animator: {fileID: 7417726537886917157}
 --- !u!54 &866494906371407555
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -76,6 +61,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &7786344240937611214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7728926740031712007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c0082b5cf5615468c11e07451f2144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSpeed: 5
+  sprintSpeed: 10
+  animator: {fileID: 7417726537886917157}
 --- !u!1001 &7417726537877551863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 9509074, guid: 5e488cfd825ce044395037d93a9d8eb6, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: b966bb4eb4d808d428bcde223fec0e0c, type: 2}
+      objectReference: {fileID: 9100000, guid: 1f447b8ca37a7514daa1c5e4ab7196a1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
