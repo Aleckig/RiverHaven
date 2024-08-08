@@ -3292,6 +3292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2893209108902879623}
+  - component: {fileID: 5971020775888797037}
   m_Layer: 0
   m_Name: Shop03
   m_TagString: Untagged
@@ -3317,6 +3318,27 @@ Transform:
   - {fileID: 6462151948526401755}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5971020775888797037
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5886329480895053299}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16, y: 4, z: 10.5}
+  m_Center: {x: -2.4695606, y: 1, z: 2.70042}
 --- !u!1 &5910775859013216441
 GameObject:
   m_ObjectHideFlags: 0
