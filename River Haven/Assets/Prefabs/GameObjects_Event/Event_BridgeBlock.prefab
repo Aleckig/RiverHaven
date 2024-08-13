@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 2599698272910282102}
   - component: {fileID: 4547606648616225522}
   - component: {fileID: 3427184514857406098}
+  - component: {fileID: 7501462023153829065}
   m_Layer: 0
   m_Name: SM_Veh_Bus_01
   m_TagString: Untagged
@@ -332,11 +333,32 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43895113535026548, guid: aa35f88e912d1564d9145d86948e20eb, type: 2}
+--- !u!65 &7501462023153829065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2216143423159014988}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.2372897, y: 3.1269305, z: 11.426154}
+  m_Center: {x: 0, y: 1.7839774, z: 0.68750566}
 --- !u!1 &2367041605143808154
 GameObject:
   m_ObjectHideFlags: 0
