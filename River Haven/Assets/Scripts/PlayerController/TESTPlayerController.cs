@@ -22,13 +22,13 @@ public class TESTPlayerController : MonoBehaviour
         playerControls = new PlayerControls();
     }
 
-    private void OnEnable()
+    public void OnEnable()
     {
         // Enable PlayerControls input actions
         playerControls.Enable();
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         // Disable PlayerControls input actions
         playerControls.Disable();
