@@ -11,11 +11,12 @@ public class PickUpItem : MonoBehaviour
     public bool readyToThrow;
     public bool itemPickedUp;
     private Rigidbody rb;
+    [SerializeField] private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        player = GameObject.Find("TestPlayer").transform;
+        player = GameObject.Find("Player").transform;
         pickUpPoint = GameObject.Find("PickUpPoint").transform;
     }
 
@@ -31,6 +32,7 @@ public class PickUpItem : MonoBehaviour
                 rb.constraints = RigidbodyConstraints.FreezeAll;
                 this.transform.parent = GameObject.Find("PickUpPoint").transform;
                 itemPickedUp = true;
+                animator.SetBool("itemPicked", true);
             }
         }
         if (itemPickedUp == true)
@@ -44,6 +46,7 @@ public class PickUpItem : MonoBehaviour
             this.transform.parent = null;
             GetComponent<Rigidbody>().useGravity = true;
             rb.constraints = RigidbodyConstraints.None;
+            animator.SetBool("itemPicked", false);
             itemPickedUp = false;
             readyToThrow = false;
         }
