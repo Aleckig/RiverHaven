@@ -251,18 +251,20 @@ MonoBehaviour:
   canvasGroup: {fileID: 22506366}
   barkText:
     m_uiText: {fileID: 11445092}
+    m_textMeshProUGUI: {fileID: 0}
   nameText:
     m_uiText: {fileID: 0}
+    m_textMeshProUGUI: {fileID: 0}
   includeName: 0
   portraitImage: {fileID: 0}
   showPortraitImage: 0
-  doneTime: 0
+  doneTime: 8.767601
   animationTransitions:
     showTrigger: Show
     hideTrigger: Hide
-  duration: 1
+  duration: 4
   keepInView: 0
-  waitUntilSequenceEnds: 0
+  waitUntilSequenceEnds: 1
   cancelWaitUntilSequenceEndsIfReplacingBark: 0
   waitForContinueButton: 0
   textDisplaySetting: 0
@@ -482,4 +484,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Subtitle text.
+  m_Text: This took so much time but I'm glad it's over
