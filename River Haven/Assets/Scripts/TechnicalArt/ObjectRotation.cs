@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class ObjectRotation : MonoBehaviour
 {
-    [SerializeField] private float rotationSpeed = 100f;
+    [SerializeField] private float rotationSpeed = 100f;   // Speed of rotation
+    [SerializeField] private Vector3 rotationAxis = Vector3.up;  // Axis of rotation
 
     void Update()
     {
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        // Rotate the object around the specified axis
+        transform.Rotate(rotationAxis, rotationSpeed * Time.deltaTime);
     }
 }
