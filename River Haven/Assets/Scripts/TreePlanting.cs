@@ -7,6 +7,7 @@ public class TreePlanting : MonoBehaviour
     public GameObject smallTree;
     public GameObject finalTree;
     public ParticleSystem dirtParticleEffect;
+    public ParticleSystem plantingParticleEffect;
     public ParticleSystem waterParticleEffect;
     
     private bool playerInArea = false;
@@ -105,10 +106,10 @@ public class TreePlanting : MonoBehaviour
     {
         actionCount++;
         Debug.Log("TreePlanting: Planting. Action count: " + actionCount);
-        if (dirtParticleEffect != null)
+        if (plantingParticleEffect != null)
         {
-            dirtParticleEffect.transform.position = dirt.transform.position;
-            dirtParticleEffect.Play();
+            plantingParticleEffect.transform.position = dirt.transform.position; // Position at the dirt
+            plantingParticleEffect.Play();
         }
         
         if (actionCount >= requiredActions)
