@@ -9,6 +9,7 @@ public class TreePlanting : MonoBehaviour
     public ParticleSystem dirtParticleEffect;
     public ParticleSystem plantingParticleEffect;
     public ParticleSystem waterParticleEffect;
+    public ParticleSystem completedParticleEffect;
     
     private bool playerInArea = false;
     private bool shovelInArea = false;
@@ -139,6 +140,13 @@ public class TreePlanting : MonoBehaviour
             actionCount = 0;
             currentStage = PlantingStage.Completed;
             Debug.Log("TreePlanting: Watering completed. Tree fully grown.");
+            
+            // Play the completed particle effect
+            if (completedParticleEffect != null)
+            {
+                completedParticleEffect.transform.position = finalTree.transform.position;
+                completedParticleEffect.Play();
+            }
         }
     }
 
