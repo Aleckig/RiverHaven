@@ -22,7 +22,7 @@ public class PickUpItem : MonoBehaviour
 
     void Update()
     {
-        pickUpDistance = Vector3.Distance(player.position, transform.position);
+         pickUpDistance = Vector3.Distance(player.position, transform.position);
 
         if (pickUpDistance <= 2f)
         {
@@ -30,15 +30,31 @@ public class PickUpItem : MonoBehaviour
             {
                 rb.useGravity = false;
                 rb.constraints = RigidbodyConstraints.FreezeAll;
-                this.transform.parent = GameObject.Find("PickUpPoint").transform;
+                this.transform.parent = pickUpPoint;
                 itemPickedUp = true;
                 animator.SetBool("itemPicked", true);
+
+                // Check the type of item and call the appropriate function
+                if (gameObject.CompareTag("Shovel"))
+                {
+                    player.GetComponent<TreePlanting>().PickUpShovel();
+                }
+                else if (gameObject.CompareTag("Plant"))
+                {
+                    player.GetComponent<TreePlanting>().PickUpPlant();
+                }
+                else if (gameObject.CompareTag("Bucket"))
+                {
+                    player.GetComponent<TreePlanting>().PickUpBucket();
+                }
             }
         }
+
         if (itemPickedUp == true)
         {
             this.transform.position = pickUpPoint.position;
         }
+
         if (Input.GetKeyUp(KeyCode.Space) && itemPickedUp == true)
         {
             readyToThrow = true;
