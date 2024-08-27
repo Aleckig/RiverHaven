@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TreePlanting : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class TreePlanting : MonoBehaviour
     public ParticleSystem plantingParticleEffect;
     public ParticleSystem waterParticleEffect;
     public ParticleSystem completedParticleEffect;
-    
+    public Image ProgressBar;
+    public GameObject progressBarContainer;
+
     private bool playerInArea = false;
     private bool shovelInArea = false;
     private bool plantInArea = false;
     private bool bucketInArea = false;
-    
+
     private int actionCount = 0;
     private const int requiredActions = 5;
 
@@ -35,6 +38,7 @@ public class TreePlanting : MonoBehaviour
         dirt.SetActive(false);
         smallTree.SetActive(false);
         finalTree.SetActive(false);
+        SetProgressBarVisibility(false);
         Debug.Log("TreePlanting: Start method called. Initial stage: " + currentStage);
     }
 
@@ -44,6 +48,16 @@ public class TreePlanting : MonoBehaviour
         {
             PerformAction();
         }
+    }
+
+    public void UpdateProgressBar(float progress)
+    {
+        ProgressBar.fillAmount = progress;
+    }
+
+    private void SetProgressBarVisibility(bool isVisible)
+    {
+        progressBarContainer.gameObject.SetActive(isVisible);
     }
 
     private void PerformAction()
@@ -71,6 +85,7 @@ public class TreePlanting : MonoBehaviour
                 break;
             case PlantingStage.Completed:
                 Debug.Log("TreePlanting: Tree is already fully grown.");
+                SetProgressBarVisibility(false);
                 break;
         }
     }
@@ -80,6 +95,8 @@ public class TreePlanting : MonoBehaviour
         Debug.Log("TreePlanting: Starting to dig.");
         currentStage = PlantingStage.Digging;
         actionCount = 0;
+        SetProgressBarVisibility(true);
+        UpdateProgressBar(0f);
         ContinueDigging();
     }
 
@@ -92,39 +109,57 @@ public class TreePlanting : MonoBehaviour
             dirtParticleEffect.transform.position = questMarker.transform.position;
             dirtParticleEffect.Play();
         }
-        
+
+        UpdateProgressBar((float)actionCount / requiredActions);
+
         if (actionCount >= requiredActions)
         {
             questMarker.SetActive(false);
             dirt.SetActive(true);
             actionCount = 0;
             currentStage = PlantingStage.Planting;
+            SetProgressBarVisibility(false);
             Debug.Log("TreePlanting: Digging completed. Moving to Planting stage.");
         }
     }
 
     private void ContinuePlanting()
     {
+        if (actionCount == 0)
+        {
+            SetProgressBarVisibility(true);
+            UpdateProgressBar(0f);
+        }
+
         actionCount++;
         Debug.Log("TreePlanting: Planting. Action count: " + actionCount);
         if (plantingParticleEffect != null)
         {
-            plantingParticleEffect.transform.position = dirt.transform.position; // Position at the dirt
+            plantingParticleEffect.transform.position = dirt.transform.position;
             plantingParticleEffect.Play();
         }
-        
+
+        UpdateProgressBar((float)actionCount / requiredActions);
+
         if (actionCount >= requiredActions)
         {
             dirt.SetActive(false);
             smallTree.SetActive(true);
             actionCount = 0;
             currentStage = PlantingStage.Watering;
+            SetProgressBarVisibility(false);
             Debug.Log("TreePlanting: Planting completed. Moving to Watering stage.");
         }
     }
 
     private void ContinueWatering()
     {
+        if (actionCount == 0)
+        {
+            SetProgressBarVisibility(true);
+            UpdateProgressBar(0f);
+        }
+
         actionCount++;
         Debug.Log("TreePlanting: Watering. Action count: " + actionCount);
         if (waterParticleEffect != null)
@@ -132,16 +167,18 @@ public class TreePlanting : MonoBehaviour
             waterParticleEffect.transform.position = smallTree.transform.position;
             waterParticleEffect.Play();
         }
-        
+
+        UpdateProgressBar((float)actionCount / requiredActions);
+
         if (actionCount >= requiredActions)
         {
             smallTree.SetActive(false);
             finalTree.SetActive(true);
             actionCount = 0;
             currentStage = PlantingStage.Completed;
+            SetProgressBarVisibility(false);
             Debug.Log("TreePlanting: Watering completed. Tree fully grown.");
-            
-            // Play the completed particle effect
+
             if (completedParticleEffect != null)
             {
                 completedParticleEffect.transform.position = finalTree.transform.position;
