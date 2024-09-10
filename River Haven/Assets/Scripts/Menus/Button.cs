@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+
 public class Button : MonoBehaviour
 {
     // Reference to your animator component (if you're using animations)
@@ -32,7 +33,7 @@ public class Button : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("StartGame called");
-        //SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(1);
     }
 
     public void ShowOptions()
