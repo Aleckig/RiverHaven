@@ -12,8 +12,8 @@ namespace MenuManagement
         [SerializeField] private CreditsScreen creditsScreenPrefab;
         [SerializeField] private GameMenu gameMenuPrefab;
         [SerializeField] private PauseMenu pauseMenuPrefab;
-        [SerializeField] private WinScreen winScreenPrefab;
-        [SerializeField] private FailScreen failScreenPrefab;
+        //[SerializeField] private WinScreen winScreenPrefab;
+        //[SerializeField] private FailScreen failScreenPrefab;
         //[SerializeField] private LevelSelectMenu levelSelectMenuPrefab;
         
 
