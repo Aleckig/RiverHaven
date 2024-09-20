@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using TowerGame;
 using UnityEngine.UI;
 using MenuManagement.Data; 
 using TMPro;
@@ -12,8 +11,7 @@ namespace MenuManagement
 
     public class MainMenu : Menu<MainMenu>
     {
-        //[SerializeField] private float playDelay = 0.5f;
-        //[SerializeField] private TransitionFader startTransitionPrefab;
+        
 
         private DataManager dataManager;
 
@@ -60,23 +58,9 @@ namespace MenuManagement
 
         public void OnPlayPressed()
         {
-            //LevelSelectMenu.Open();
-            LevelLoader.LoadNextLevel();
-            
+            LevelLoader.LoadNextLevel();     
         }
-        /*
-        private IEnumerator OnPlayPressedRoutine()
-        {
-            TransitionFader.PlayTransition(startTransitionPrefab);
-            
-            yield return new WaitForSeconds(playDelay);
-
-
-            LevelLoader.LoadNextLevel();
-            GameMenu.Open();
-
-            
-        }*/
+        
 
         
 
@@ -86,16 +70,17 @@ namespace MenuManagement
             SettingsMenu.Open();
         }
 
-            public void OnCreditsPressed()
-            {
+        public void OnCreditsPressed()
+        {
 
-               CreditsScreen.Open();
-            }
-
-            public override void OnBackPressed()
-            {
-                Application.Quit();
-            }
+            CreditsScreen.Open();
         }
+
+        public override void OnBackPressed()
+        {
+                Application.Quit();
+        }
+        
+    }
     
 }

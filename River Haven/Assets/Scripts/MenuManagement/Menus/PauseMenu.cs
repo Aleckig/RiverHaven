@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//using TowerGame;
+
 
 namespace MenuManagement
 {
-    
-    public class PauseMenu : Menu<PauseMenu>
+     public class PauseMenu : Menu<PauseMenu>
     {
         
 
@@ -58,7 +57,7 @@ namespace MenuManagement
          
         
     }
-
+    
 }
 
 
