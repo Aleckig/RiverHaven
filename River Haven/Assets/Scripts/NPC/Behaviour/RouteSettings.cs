@@ -2,25 +2,25 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 public class RouteSettings : MonoBehaviour
 {
-    [SerializeField] private float speed = 2;
     [SerializeField] private float rotationSpeed = 5;
     [SerializeField] private List<RouteAction> Actions;
+    private NavMeshAgent navMeshAgent;
     private static RouteManager routeManager;
-    private int routeId = -1;
-
     public RouteManager RouteManager { set { routeManager = value; } }
-    public int RouteId { set { routeId = value; } }
 
-    // private void Awake()
-    // {
-    //     routeManager = FindObjectOfType<RouteManager>();
-    // }
+    private void Awake()
+    {
+        navMeshAgent = GetComponent<NavMeshAgent>();
+    }
 
     public void ExecuteAction(int minutes)
     {
@@ -30,20 +30,22 @@ public class RouteSettings : MonoBehaviour
             {
                 item.events?.Invoke();
 
-                item.callBack?.Invoke();
+                item.callBacks?.Invoke();
             }
         }
     }
 
-    public void FollowPath(Transform objectToMove)
+    public void FollowPath(int routeId)
     {
         List<string> waypoints = routeManager.GetRoute(routeId).Route;
 
-        StartCoroutine(MoveTo(objectToMove, waypoints));
+        StartCoroutine(MoveTo(waypoints));
     }
 
-    private IEnumerator MoveTo(Transform objectToMove, List<string> waypoints)
+    private IEnumerator MoveTo(List<string> waypoints)
     {
+        Transform objectToMove = this.gameObject.transform;
+
         List<Transform> waypointObjList = new();
 
         foreach (string name in waypoints)
@@ -63,23 +65,20 @@ public class RouteSettings : MonoBehaviour
             {
                 // Move towards the current waypoint
                 Vector3 direction = (waypointObj.position - transform.position).normalized;
-                objectToMove.transform.position += direction * speed * Time.deltaTime;
 
+                navMeshAgent.SetDestination(waypointObj.position);
                 // Smoothly rotate towards the current waypoint
                 SmoothRotateTowards(direction);
 
                 // Check if the NPC has reached the waypoint
-                if (Vector3.Distance(transform.position, waypointObj.position) < 0.1f)
+                if (Vector3.Distance(waypointObj.position, transform.position) <= 1.1f)
                 {
-
                     break;
                 }
 
                 yield return new WaitForFixedUpdate();
                 // Leave the routine and return here in the next frame
             }
-
-            objectToMove.position = waypointObj.position;
         }
 
         yield break;
@@ -101,12 +100,14 @@ public class RouteAction
     [Tooltip("Set time if you don't want to convert it to minutes. Example - 11:30")]
     public string time = "6:00";
     public UnityEvent events;
-    public UnityEvent callBack;
+    [OnValueChanged("AddCallbacks")]
+    public UnityEvent callBacks;
     private int minutes;
 
     public bool CheckTime(int _minutes)
     {
         minutes = ConvTimeStrToInt();
+
         if (minutes == _minutes) return true;
 
         return false;
@@ -131,5 +132,10 @@ public class RouteAction
         }
 
         return _hours * 60 + _minutes;
+    }
+
+    private void AddCallbacks()
+    {
+        // events.AddListener(callBacks.);
     }
 }

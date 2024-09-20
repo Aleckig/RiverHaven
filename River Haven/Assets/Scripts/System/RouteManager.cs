@@ -19,17 +19,23 @@ public class RouteManager : MonoBehaviour
 
   private void Start()
   {
-    cMinutes = int.Parse(cTime);
+    cMinutes = ConvTimeStrToInt(cTime);
     NpcList = FindObjectsOfType<RouteSettings>().ToList<RouteSettings>();
 
     NpcList[0].RouteManager = GetComponent<RouteManager>();
 
+    CheckExecution();
+  }
+
+  private void CheckExecution()
+  {
     foreach (var npc in NpcList)
     {
       npc.ExecuteAction(cMinutes);
     }
   }
-  public void ChangeMinutes(int value)
+
+  private void ChangeMinutes(int value)
   {
     if (cMinutes + value >= 60 || cMinutes + value < 0)
     {
@@ -38,6 +44,25 @@ public class RouteManager : MonoBehaviour
     }
 
     cMinutes += value;
+
+    cTime = ConvTimeIntToStr(cMinutes);
+
+    CheckExecution();
+  }
+
+  public void AddHalfHour()
+  {
+    ChangeMinutes(30);
+  }
+
+  public void AddHour()
+  {
+    ChangeMinutes(60);
+  }
+
+  public void AddFewHours(int numberOfHours)
+  {
+    ChangeMinutes(60 * numberOfHours);
   }
 
   public RouteWaypoints GetRoute(int routeId)
@@ -48,6 +73,35 @@ public class RouteManager : MonoBehaviour
   public void UpdateStaticList()
   {
     SWaypointsList = WaypointsList;
+  }
+
+  private string ConvTimeIntToStr(int minutes)
+  {
+    int _hours = minutes / 60;
+    int _minutes = minutes - (_hours * 60);
+
+    return _hours + ":" + _minutes;
+  }
+
+  private int ConvTimeStrToInt(string time)
+  {
+    int _hours = 6;
+    int _minutes = 0;
+
+    string[] splited = time.Split(":");
+
+    if (int.TryParse(splited[0], out _hours) && int.TryParse(splited[1], out _minutes))
+    {
+      Debug.Log("Successfully parsed time");
+      _minutes = _minutes >= 60 || _minutes <= 0 ? 0 : _minutes;
+    }
+    else
+    {
+      Debug.Log("Failed to parse time");
+      return 360;
+    }
+
+    return _hours * 60 + _minutes;
   }
 }
 
