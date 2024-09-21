@@ -59,7 +59,8 @@ namespace MenuManagement
 
         public void OnPlayPressed()
         {
-            LevelLoader.LoadNextLevel();     
+            LevelSelectMenu.Open();
+            //LevelLoader.LoadNextLevel();     
         }
         
 

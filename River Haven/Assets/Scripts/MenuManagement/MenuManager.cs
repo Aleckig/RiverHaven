@@ -15,7 +15,7 @@ namespace MenuManagement
         [SerializeField] private PauseMenu pauseMenuPrefab;
         //[SerializeField] private WinScreen winScreenPrefab;
         //[SerializeField] private FailScreen failScreenPrefab;
-        //[SerializeField] private LevelSelectMenu levelSelectMenuPrefab;
+        [SerializeField] private LevelSelectMenu levelSelectMenuPrefab;
         
 
         [SerializeField]

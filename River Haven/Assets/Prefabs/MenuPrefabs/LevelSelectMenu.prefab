@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7270081417370857594}
   - component: {fileID: 6471739497771376734}
   - component: {fileID: 1371141668483332399}
+  - component: {fileID: 749165061013843131}
+  - component: {fileID: 671132095915881283}
   m_Layer: 5
   m_Name: LevelSelectMenu
   m_TagString: Untagged
@@ -103,6 +105,37 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &749165061013843131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540655837892742341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12985e98b9d4dee43b41ab57888e4dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionList: {fileID: 11400000, guid: afd299261d9605b47af1a4542abdca72, type: 2}
+--- !u!114 &671132095915881283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540655837892742341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d6f7169f2a5d14aa7504e17f75f854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 0}
+  descriptionText: {fileID: 0}
+  image: {fileID: 0}
+  playDelay: 0.5
+  playTransitionPrefab: {fileID: 7452234560909581158, guid: 416160dd40799a541b462076e0e59879,
+    type: 3}
 --- !u!1 &1574065612372630453
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,8 +359,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuManagement.MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 671132095915881283}
+        m_TargetAssemblyTypeName: MenuManagement.Menu, Assembly-CSharp
         m_MethodName: OnBackPressed
         m_Mode: 1
         m_Arguments:
@@ -610,8 +643,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuManagement.MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 671132095915881283}
+        m_TargetAssemblyTypeName: MenuManagement.LevelSelectMenu, Assembly-CSharp
         m_MethodName: OnPlayPressed
         m_Mode: 1
         m_Arguments:
