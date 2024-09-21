@@ -3,37 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 namespace MenuManagement
 {
-     public class PauseMenu : Menu<PauseMenu>
+    public class PauseMenu : Menu<PauseMenu>
     {
-        
+        private PlayerController playerController;
+
+        private void Start()
+        {
+            playerController = FindObjectOfType<PlayerController>();
+        }
 
         public void OnResumePressed()
         {
-            Time.timeScale = 1;
-            base.OnBackPressed();
+            if (playerController != null)
+            {
+                playerController.ResumeGame();
+            }
+            else
+            {
+                Time.timeScale = 1; // Ensure the game is unpaused
+                MenuManager.Instance.CloseMenu(); // Close the pause menu using MenuManager
+            }
         }
 
         public void OnRestartPressed()
         {
-            
             Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            base.OnBackPressed();
+            MenuManager.Instance.CloseMenu(); // Close all menus before restarting
         }
 
         public void OnMainMenuPressed()
         {
-            //AudioManager.instance.StopMusic();
             Time.timeScale = 1;
             LevelLoader.LoadMainMenuLevel();
-            //AudioManager.instance.PlayMenuMusic();
-
+            MenuManager.Instance.CloseMenu(); // Close the pause menu
             MainMenu.Open();    
         }
-        public void OnSettingsPressend()
+
+        public void OnSettingsPressed()
         {
             SettingsMenu.Open();
         }
@@ -43,7 +52,6 @@ namespace MenuManagement
             Application.Quit();
         }
 
-        
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -51,13 +59,5 @@ namespace MenuManagement
                 OnResumePressed();
             }
         }
-
-       
-
-         
-        
     }
-    
 }
-
-
