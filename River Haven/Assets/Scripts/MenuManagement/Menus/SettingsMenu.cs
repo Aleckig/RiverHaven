@@ -11,8 +11,8 @@ namespace MenuManagement
         [SerializeField] private Slider masterVolumeSlider;
         [SerializeField] private Slider sfxVolumeSlider;
         [SerializeField] private Slider musicVolumeSlider;
-        [SerializeField] private AudioMixer volumeMixer;
 
+        private AudioMixer volumeMixer;
         private DataManager dataManager;
 
         protected override void Awake()
@@ -22,6 +22,16 @@ namespace MenuManagement
             if (dataManager == null)
             {
                 Debug.LogError("DataManager not found in the scene!");
+            }
+
+            // Get the AudioMixer from MenuManager
+            if (MenuManager.Instance != null)
+            {
+                volumeMixer = MenuManager.Instance.GetAudioMixer();
+            }
+            else
+            {
+                Debug.LogError("MenuManager instance not found!");
             }
         }
 
@@ -53,7 +63,7 @@ namespace MenuManagement
             SetVolume("Music", volume);
         }
 
-        private void SetVolume(string parameterName, float volume)
+         private void SetVolume(string parameterName, float volume)
         {
             if (dataManager != null)
             {
@@ -71,11 +81,23 @@ namespace MenuManagement
                 }
             }
 
-            float dbVolume = volume > 0 ? Mathf.Log10(volume) * 20 : -80f;
-            bool success = volumeMixer.SetFloat(parameterName, dbVolume);
-            if (!success)
+            if (volumeMixer != null)
             {
-                Debug.LogError($"Failed to set {parameterName} volume. Check if the AudioMixer parameter name is correct.");
+                float dbVolume = volume > 0 ? Mathf.Log10(volume) * 20 : -80f;
+                bool success = volumeMixer.SetFloat(parameterName, dbVolume);
+                
+                if (success)
+                {
+                    Debug.Log($"SettingsMenu: Set {parameterName} volume to {dbVolume} dB (linear value: {volume})");
+                }
+                else
+                {
+                    Debug.LogError($"SettingsMenu: Failed to set {parameterName} volume. Check if the AudioMixer parameter name is correct and exposed.");
+                }
+            }
+            else
+            {
+                Debug.LogError("SettingsMenu: volumeMixer is null. Make sure MenuManager is initialized properly.");
             }
             
             SaveSettings();

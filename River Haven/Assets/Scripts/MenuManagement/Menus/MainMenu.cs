@@ -26,8 +26,7 @@ namespace MenuManagement
         
         void Start()
         {
-            LoadData();
-            //AudioManager.instance.PlayMenuMusic();
+            LoadData();    
         }
 
         private void LoadData()
@@ -60,7 +59,7 @@ namespace MenuManagement
         public void OnPlayPressed()
         {
             LevelSelectMenu.Open();
-            //LevelLoader.LoadNextLevel();     
+              
         }
         
 
