@@ -9,7 +9,7 @@ namespace MenuManagement.Data
     public class SaveData
     {
         public string playerName;
-        private readonly string defaultName = "Mongo";
+        private readonly string defaultName = "Minecraft Steve";
         public string hashValue;
         
         public float masterVolume;

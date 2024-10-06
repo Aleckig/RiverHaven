@@ -368,10 +368,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 2772210813939741167}
   m_HandleRect: {fileID: 6676334869912840633}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.01
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -914,10 +914,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 4909305088234463555}
   m_HandleRect: {fileID: 3030674107325386384}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.01
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1491,10 +1491,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 7043067378072723445}
   m_HandleRect: {fileID: 7466652558481893185}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.01
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1782,9 +1782,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971e1a0187050b94db782734292735be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masterVolumeSlider: {fileID: 0}
-  musicVolumeSlider: {fileID: 0}
-  sfxVolumeSlider: {fileID: 0}
+  masterVolumeSlider: {fileID: 6830346044008316769}
+  sfxVolumeSlider: {fileID: 3957274590642015133}
+  musicVolumeSlider: {fileID: 7902270620852156151}
+  volumeMixer: {fileID: 24100000, guid: 3af02d56250ef2e4499b5fc86c0babbd, type: 2}
 --- !u!1 &8482054342093698079
 GameObject:
   m_ObjectHideFlags: 0

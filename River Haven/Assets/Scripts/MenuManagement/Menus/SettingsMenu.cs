@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using MenuManagement.Data;
@@ -7,7 +5,6 @@ using UnityEngine.Audio;
 
 namespace MenuManagement
 {
-    
     public class SettingsMenu : Menu<SettingsMenu>
     {
         [Header("Volume")]
@@ -21,71 +18,108 @@ namespace MenuManagement
         protected override void Awake()
         {
             base.Awake();
-            dataManager = Object.FindObjectOfType<DataManager>();
+            dataManager = FindObjectOfType<DataManager>();
+            if (dataManager == null)
+            {
+                Debug.LogError("DataManager not found in the scene!");
+            }
         }
 
         private void Start()
         {
             LoadData();
+            SetupSliders();
+        }
+
+        private void SetupSliders()
+        {
+            if (masterVolumeSlider != null) masterVolumeSlider.onValueChanged.AddListener(OnMasterVolumeChanged);
+            if (sfxVolumeSlider != null) sfxVolumeSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
+            if (musicVolumeSlider != null) musicVolumeSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
         }
 
         public void OnMasterVolumeChanged(float volume)
         {
-            if (dataManager != null)
-            {
-                dataManager.MasterVolume = volume;
-            }
-
-            volumeMixer.SetFloat("MASTER", Mathf.Log10(volume) * 20);
+            SetVolume("Master", volume);
         }
 
         public void OnSFXVolumeChanged(float volume)
         {
-            if (dataManager != null)
-            {
-                dataManager.SfxVolume = volume;
-            }
-
-            volumeMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
+            SetVolume("SFX", volume);
         }
 
         public void OnMusicVolumeChanged(float volume)
         {
+            SetVolume("Music", volume);
+        }
+
+        private void SetVolume(string parameterName, float volume)
+        {
             if (dataManager != null)
             {
-                dataManager.MusicVolume = volume;
+                switch (parameterName)
+                {
+                    case "Master":
+                        dataManager.MasterVolume = volume;
+                        break;
+                    case "SFX":
+                        dataManager.SfxVolume = volume;
+                        break;
+                    case "Music":
+                        dataManager.MusicVolume = volume;
+                        break;
+                }
             }
 
-            volumeMixer.SetFloat("MUSIC", Mathf.Log10(volume) * 20);
+            float dbVolume = volume > 0 ? Mathf.Log10(volume) * 20 : -80f;
+            bool success = volumeMixer.SetFloat(parameterName, dbVolume);
+            if (!success)
+            {
+                Debug.LogError($"Failed to set {parameterName} volume. Check if the AudioMixer parameter name is correct.");
+            }
+            
+            SaveSettings();
         }
 
         public override void OnBackPressed()
         {
             base.OnBackPressed();
+            SaveSettings();
+        }
+
+        private void SaveSettings()
+        {
             if (dataManager != null)
             {
                 dataManager.Save();
+                Debug.Log("Settings saved.");
+            }
+            else
+            {
+                Debug.LogError("Failed to save settings: DataManager is null.");
             }
         }
 
         public void LoadData()
         {
-            if (dataManager == null || masterVolumeSlider == null ||
-                sfxVolumeSlider == null || musicVolumeSlider == null)
+            if (dataManager == null)
             {
+                Debug.LogError("Cannot load data: DataManager is null.");
                 return;
             }
 
             dataManager.Load();
 
-            masterVolumeSlider.value = dataManager.MasterVolume;
-            sfxVolumeSlider.value = dataManager.SfxVolume;
-            musicVolumeSlider.value = dataManager.MusicVolume;
+            if (masterVolumeSlider != null) masterVolumeSlider.value = dataManager.MasterVolume;
+            if (sfxVolumeSlider != null) sfxVolumeSlider.value = dataManager.SfxVolume;
+            if (musicVolumeSlider != null) musicVolumeSlider.value = dataManager.MusicVolume;
+
+            // Apply loaded values
+            SetVolume("Master", dataManager.MasterVolume);
+            SetVolume("SFX", dataManager.SfxVolume);
+            SetVolume("Music", dataManager.MusicVolume);
+
+            Debug.Log("Settings loaded and applied.");
         }
     }
-            
-    
-        
-
 }
-
