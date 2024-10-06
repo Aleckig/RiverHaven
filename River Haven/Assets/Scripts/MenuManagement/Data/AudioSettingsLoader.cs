@@ -1,10 +1,10 @@
 using UnityEngine;
-using MenuManagement.Data; // Assuming this is where your DataManager is located
+using MenuManagement.Data; 
 using UnityEngine.Audio;
 
 public class AudioSettingsLoader : MonoBehaviour
 {
-    [SerializeField] private AudioMixer audioMixer; // Assign your AudioMixer in the Inspector
+    [SerializeField] private AudioMixer audioMixer; 
 
     private DataManager dataManager;
 
@@ -18,10 +18,8 @@ public class AudioSettingsLoader : MonoBehaviour
             return;
         }
 
-        // Load the data from the DataManager
         dataManager.Load();
 
-        // Apply the volume settings from the saved data
         ApplyVolumeSettings();
     }
 
@@ -35,7 +33,7 @@ public class AudioSettingsLoader : MonoBehaviour
         Debug.Log("Audio settings loaded and applied at scene start.");
     }
 
-    // Helper function to set the volume on the AudioMixer
+    
     private void SetVolume(string parameterName, float volume)
     {
         if (audioMixer != null)
