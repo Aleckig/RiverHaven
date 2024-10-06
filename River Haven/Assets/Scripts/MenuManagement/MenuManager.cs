@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Reflection;
 using RiverHaven;
 using MenuManagement.Data;
-using UnityEngine.Audio;
+
 
 namespace MenuManagement
 {
@@ -18,7 +18,7 @@ namespace MenuManagement
         [SerializeField] private LevelSelectMenu levelSelectMenuPrefab;
        
         [SerializeField] private Transform menuParent;
-        [SerializeField] private AudioMixer audioMixer;
+        
 
         private Stack<Menu> menuStack = new Stack<Menu>();
         private static MenuManager instance;
@@ -41,7 +41,7 @@ namespace MenuManagement
                     Debug.LogError("DataManager not found in the scene!");
                 }
                 InitializeMenus();
-                InitializeAudioSettings();
+               
                 DontDestroyOnLoad(gameObject);
             }
         }
@@ -116,48 +116,7 @@ namespace MenuManagement
             }
         }
 
-        private void InitializeAudioSettings()
-        {
-            if (dataManager != null && audioMixer != null)
-            {
-                dataManager.Load();
-                SetVolume("Master", dataManager.MasterVolume);
-                SetVolume("SFX", dataManager.SfxVolume);
-                SetVolume("Music", dataManager.MusicVolume);
-                Debug.Log("Audio settings loaded and applied at startup.");
-            }
-            else
-            {
-                Debug.LogError("Failed to initialize audio settings. DataManager or AudioMixer is missing.");
-            }
-        }
-
-        private void SetVolume(string parameterName, float volume)
-        {
-            if (audioMixer != null)
-            {
-                float dbVolume = volume > 0 ? Mathf.Log10(volume) * 20 : -80f;
-                bool success = audioMixer.SetFloat(parameterName, dbVolume);
-                if (success)
-                {
-                    Debug.Log($"MenuManager: Set {parameterName} volume to {dbVolume} dB (linear value: {volume})");
-                }
-                else
-                {
-                    Debug.LogError($"MenuManager: Failed to set {parameterName} volume. Check if the AudioMixer parameter name is correct and exposed.");
-                }
-            }
-            else
-            {
-                Debug.LogError("MenuManager: AudioMixer not assigned.");
-            }
-        }
-
-        // Add this method to allow other scripts to access the AudioMixer
-        public AudioMixer GetAudioMixer()
-        {
-            return audioMixer;
-        }
+        
     }
 
     
