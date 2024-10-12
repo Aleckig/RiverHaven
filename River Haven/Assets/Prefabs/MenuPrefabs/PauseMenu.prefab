@@ -359,7 +359,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 255
 --- !u!114 &8153033014744497605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8153033014744497605}
         m_TargetAssemblyTypeName: MenuManagement.PauseMenu, Assembly-CSharp
-        m_MethodName: OnSettingsPressend
+        m_MethodName: OnSettingsPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -10,9 +10,9 @@ namespace MenuManagement
     [RequireComponent(typeof(MissionSelector))]
     public class LevelSelectMenu : Menu<LevelSelectMenu>
     {
-        [SerializeField] protected TMP_Text nameText;
-        [SerializeField] protected TMP_Text descriptionText;
-        [SerializeField] protected Image image;
+        //[SerializeField] protected TMP_Text nameText;
+        //[SerializeField] protected TMP_Text descriptionText;
+        //[SerializeField] protected Image image;
         [SerializeField] protected float playDelay = 0.5f;
         [SerializeField] protected TransitionFader playTransitionPrefab;
         
@@ -54,7 +54,7 @@ namespace MenuManagement
                 Debug.LogWarning("Current mission is null in LevelSelectMenu.");
             }
 
-            if (nameText != null)
+            /*if (nameText != null)
             {
                 nameText.text = currentMission?.Name ?? "No Mission Selected";
             }
@@ -80,7 +80,7 @@ namespace MenuManagement
             else
             {
                 Debug.LogWarning("image is null in LevelSelectMenu.");
-            }
+            }*/
         }
 
         public void OnNextPressed()
