@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class RouteManager : MonoBehaviour
 {
+  public static RouteManager Manager { get; private set; }
+
   [SerializeField] private string cTime;
   [OnValueChanged("UpdateStaticList")]
   [SerializeField] private List<Waypoint> WaypointsList = new();
@@ -17,12 +19,15 @@ public class RouteManager : MonoBehaviour
 
   public List<Waypoint> GetWaypointsList => WaypointsList;
 
+  private void Awake()
+  {
+    Manager = GetComponent<RouteManager>();
+  }
+
   private void Start()
   {
     cMinutes = ConvTimeStrToInt(cTime);
     NpcList = FindObjectsOfType<RouteSettings>().ToList<RouteSettings>();
-
-    NpcList[0].RouteManager = GetComponent<RouteManager>();
 
     CheckExecution();
   }
@@ -37,11 +42,11 @@ public class RouteManager : MonoBehaviour
 
   private void ChangeMinutes(int value)
   {
-    if (cMinutes + value >= 60 || cMinutes + value < 0)
-    {
-      cMinutes = 0;
-      return;
-    }
+    // if (cMinutes + value >= 60 || cMinutes + value < 0)
+    // {
+    //   cMinutes = 0;
+    //   return;
+    // }
 
     cMinutes += value;
 
