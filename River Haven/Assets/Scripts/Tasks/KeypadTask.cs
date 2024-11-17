@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -17,9 +16,13 @@ public class KeypadTask : MonoBehaviour
     [SerializeField] private string taskNameText = "Keypad Task";
     [SerializeField] private int codeLenght = 5;
     [SerializeField] private float codeResetTimeInSeconds = 0.5f;
+    [SerializeField] private float endTaskTime = 1.5f;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip correctSound;
+    [SerializeField] private AudioClip wrongSound;
+    [SerializeField] private AudioClip buttonSound;
 
     private bool isResetting = false;
-    
 
     private void OnEnable()
     {
@@ -28,10 +31,12 @@ public class KeypadTask : MonoBehaviour
         {
             taskName.text = taskNameText;
         }
+        
+        // Generate a random code
         string code = string.Empty;
         for (int i = 0; i < codeLenght; i++)
         {
-            code += Random.Range(0, 10).ToString();
+            code += Random.Range(1, 10).ToString();
         }
 
         cardCode.text = code;
@@ -50,18 +55,24 @@ public class KeypadTask : MonoBehaviour
             return;
         }
 
+        // Play button click sound
+        PlaySound(buttonSound);
+
+        // Append the number to the input code
         inputCode.text += number;
 
         if (inputCode.text == cardCode.text)
         {
-            inputCode.text = "Correct!";
             SetLightColor(correctColor);
+            PlaySound(correctSound); // Play correct sound
             StartCoroutine(ResetCode());
+            StartCoroutine(EndTask()); // Handle delayed deactivation here
         }
         else if (inputCode.text.Length == codeLenght)
         {
-            inputCode.text = "Incorrect!";
+            inputCode.text = "Wrong!";
             SetLightColor(wrongColor);
+            PlaySound(wrongSound); // Play wrong sound
             StartCoroutine(ResetCode());
         }
     }
@@ -83,12 +94,25 @@ public class KeypadTask : MonoBehaviour
         }
     }
 
-    
+    private IEnumerator EndTask()
+    {
+        yield return new WaitForSeconds(endTaskTime); // Delay before deactivating the UI
+        CloseUI();
+    }
+
     public void CloseUI()
     {
         if (uiPanel != null)
         {
             uiPanel.SetActive(false); 
+        }
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip); // Play the sound once
         }
     }
 }
