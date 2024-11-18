@@ -8,6 +8,7 @@ public class KeypadTask : MonoBehaviour
     [SerializeField] private TMP_Text cardCode; 
     [SerializeField] private TMP_Text inputCode;
     [SerializeField] private GameObject uiPanel; // Reference to the UI panel
+    [SerializeField] private GameObject closeTaskMarker; // Reference to the close task marker
     [SerializeField] private Image lightImage; // Reference to the light image
     [SerializeField] private Color neutralColor = Color.white; // Default light color
     [SerializeField] private Color correctColor = Color.green; // Light color for correct input
@@ -65,6 +66,7 @@ public class KeypadTask : MonoBehaviour
         {
             SetLightColor(correctColor);
             PlaySound(correctSound); // Play correct sound
+            
             StartCoroutine(ResetCode());
             StartCoroutine(EndTask()); // Handle delayed deactivation here
         }
@@ -104,7 +106,8 @@ public class KeypadTask : MonoBehaviour
     {
         if (uiPanel != null)
         {
-            uiPanel.SetActive(false); 
+            uiPanel.SetActive(false);
+            closeTaskMarker.SetActive(false); //close task marker
         }
     }
 
