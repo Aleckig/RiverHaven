@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class SimonTask : MonoBehaviour
 {
-    [SerializeField] GameObject[] buttons;          // The button objects
-    [SerializeField] GameObject[] lightArray;       // The lights for showing the sequence to the player
-    [SerializeField] GameObject[] rowlights;        // The rowlights to indicate the progress (left = progress, right = status)
-    [SerializeField] GameObject[] completedRowlights; // New array for completed lights (right side)
-    [SerializeField] GameObject simonSaysGamePanel;
+    [SerializeField] private GameObject[] buttons;          // The button objects
+    [SerializeField] private GameObject[] lightArray;       // The lights for showing the sequence to the player
+    [SerializeField] private GameObject[] rowlights;        // The rowlights to indicate the progress (left = progress, right = status)
+    [SerializeField] private GameObject[] completedRowlights; // New array for completed lights (right side)
+    [SerializeField] private GameObject simonSaysGamePanel;
+    [SerializeField] private GameObject closeTaskMarker; // Reference to the close task marker
     [SerializeField] int[] lightSequence;           // The sequence of lights that the player needs to follow
     int level = 0;
     int buttonsPressed = 0;
@@ -68,6 +69,7 @@ public class SimonTask : MonoBehaviour
                 {
                     // Set won to true after completing level 5
                     won = true;
+                    closeTaskMarker.SetActive(false); // Enable the close task marker
                     audioSource.PlayOneShot(correctSound); // Play the correct sequence sound
                     StartCoroutine(ColorBlink(correctColor)); // Blink green to indicate the win
                     return; // Stop the game after winning the 5th level
@@ -90,6 +92,7 @@ public class SimonTask : MonoBehaviour
             Debug.Log($"Incorrect button! Expected {lightSequence[buttonsPressed - 1]}, but got {button}.");
         }
     }
+
 
     public void ClosePanel()
     {
