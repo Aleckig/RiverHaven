@@ -15,6 +15,14 @@ public class PlayerController : MonoBehaviour
     private float rotationSpeed = 720f;
     private bool isPaused = false;
     private const string SPEED_PARAM = "Speed";
+    private bool animationToggle;
+    private bool movementToggle;
+    public bool holdingObject;
+
+    private float targetNormalizedTime = 0f;
+    private float transitionSpeed = 1f;
+
+    private float currentNormalizedTime = 0f;
 
     private void Awake()
     {
@@ -42,6 +50,31 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
+        }
+        if (holdingObject == true && movement == Vector3.zero)
+        {
+            Invoke("SetAnimationSpeedToZero", 0.05f);
+            animationToggle = true;
+        }
+        else if (holdingObject == true && movement != Vector3.zero && animationToggle == true)
+        {
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            if (stateInfo.normalizedTime > 0)
+            {
+                targetNormalizedTime = 0f;
+                currentNormalizedTime = Mathf.MoveTowards(currentNormalizedTime, targetNormalizedTime, transitionSpeed * Time.deltaTime);
+                animator.Play("WalkingWithBox", 0, currentNormalizedTime);
+            }
+            else
+            {
+                animator.speed = 1;
+            }
+            animationToggle = false;
+
+        }
+        else
+        {
+            animator.speed = 1;
         }
     }
 
@@ -99,5 +132,10 @@ public class PlayerController : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1; // Resume the game
         MenuManager.Instance.CloseMenu(); // Close the pause menu using MenuManager
+    }
+
+    void SetAnimationSpeedToZero()
+    {
+        animator.speed = 0f;
     }
 }

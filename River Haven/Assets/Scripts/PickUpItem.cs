@@ -6,6 +6,7 @@ public class PickUpItem : MonoBehaviour
 {
     private Transform pickUpPoint;
     private Transform player;
+    public PlayerController playerController;
     public float pickUpDistance;
     public float force = 30f;
     public bool readyToThrow;
@@ -17,6 +18,7 @@ public class PickUpItem : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>(); // Initialize Rigidbody
         player = GameObject.Find("Player")?.transform; // Find the player object
+        playerController = FindObjectOfType<PlayerController>();
         pickUpPoint = GameObject.Find("PickUpPoint")?.transform; // Find the pick up point object
 
         if (player == null)
@@ -53,6 +55,7 @@ public class PickUpItem : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && !itemPickedUp && pickUpPoint.childCount < 1)
             {
+                playerController.holdingObject = true;
                 rb.useGravity = false;
                 rb.constraints = RigidbodyConstraints.FreezeAll;
                 this.transform.parent = pickUpPoint; // Set the parent to pickUpPoint
@@ -69,6 +72,7 @@ public class PickUpItem : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) && itemPickedUp)
         {
             readyToThrow = true;
+            playerController.holdingObject = false;
             rb.AddForce(player.transform.forward * force); // Add force to the Rigidbody
             this.transform.parent = null; // Unparent the item
             rb.useGravity = true;

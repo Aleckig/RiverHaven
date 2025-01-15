@@ -86,7 +86,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &11488232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 255
 --- !u!114 &11482146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +155,7 @@ MonoBehaviour:
   pcImage: {fileID: 0}
   pcName:
     m_uiText: {fileID: 0}
+    m_textMeshProUGUI: {fileID: 0}
   usePortraitNativeSize: 0
   timerSlider: {fileID: 0}
   buttonAlignment: 0
@@ -355,6 +356,7 @@ MonoBehaviour:
   button: {fileID: 11454554}
   label:
     m_uiText: {fileID: 11447440}
+    m_textMeshProUGUI: {fileID: 0}
   setLabelColor: 0
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &121446
@@ -521,6 +523,7 @@ MonoBehaviour:
   button: {fileID: 11423782}
   label:
     m_uiText: {fileID: 11467338}
+    m_textMeshProUGUI: {fileID: 0}
   setLabelColor: 0
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &126130
@@ -716,9 +719,9 @@ RectTransform:
   - {fileID: 22470800}
   m_Father: {fileID: 22476094}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 622, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 622, y: -116}
   m_SizeDelta: {x: 220, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &22230288
@@ -963,6 +966,7 @@ MonoBehaviour:
   button: {fileID: 11461226}
   label:
     m_uiText: {fileID: 11440652}
+    m_textMeshProUGUI: {fileID: 0}
   setLabelColor: 0
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &161710
@@ -1118,9 +1122,9 @@ RectTransform:
   - {fileID: 22455090}
   m_Father: {fileID: 22476094}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 402, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 402, y: -116}
   m_SizeDelta: {x: 220, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &22290310
