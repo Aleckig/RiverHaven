@@ -7077,6 +7077,118 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+  - guid: 0c9b3b88-a7b1-4d29-8770-1e73a57b23f4
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1259868195}
+          m_TargetAssemblyTypeName: TimeTracker, Assembly-CSharp
+          m_MethodName: AddHalfHour
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 190796b4-19f4-4b29-9e1a-d42fa6c822b9
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1259868195}
+          m_TargetAssemblyTypeName: TimeTracker, Assembly-CSharp
+          m_MethodName: AddHalfHour
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 03cbff1e-0fea-4cbe-bdc3-ab6473a663e7
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1259868195}
+          m_TargetAssemblyTypeName: TimeTracker, Assembly-CSharp
+          m_MethodName: AddHalfHour
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 6d770084-f3ea-4c4c-8a9c-eedf3f878f06
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1259868195}
+          m_TargetAssemblyTypeName: TimeTracker, Assembly-CSharp
+          m_MethodName: AddHalfHour
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: a4e2ba79-8e8d-48df-ba4d-8d8b1fbbd708
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1259868195}
+          m_TargetAssemblyTypeName: TimeTracker, Assembly-CSharp
+          m_MethodName: AddHalfHour
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 0a734c01-9a55-4a12-9405-6e2fb206886c
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1259868195}
+          m_TargetAssemblyTypeName: TimeTracker, Assembly-CSharp
+          m_MethodName: AddHalfHour
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 5dba1fb3-cc92-4bc0-b12c-82e03671d631
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1945287486}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!4 &617453851
 Transform:
   m_ObjectHideFlags: 0
@@ -14404,7 +14516,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f32e5938036064e478648bf275c6338d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18382,9 +18494,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8842451580925559709, guid: b3c44dedddc466241a37344c179e256e,
         type: 3}
+      propertyPath: exclusive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8842451580925559709, guid: b3c44dedddc466241a37344c179e256e,
+        type: 3}
       propertyPath: conversationActor
       value: 
       objectReference: {fileID: 280196184}
+    - target: {fileID: 8842451580925559709, guid: b3c44dedddc466241a37344c179e256e,
+        type: 3}
+      propertyPath: showCursorDuringConversation
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24069,9 +24191,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7500450309688022898, guid: ab0d7ca0424fd114c859d96dd17f2427,
         type: 3}
+      propertyPath: exclusive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500450309688022898, guid: ab0d7ca0424fd114c859d96dd17f2427,
+        type: 3}
       propertyPath: conversationActor
       value: 
       objectReference: {fileID: 280196184}
+    - target: {fileID: 7500450309688022898, guid: ab0d7ca0424fd114c859d96dd17f2427,
+        type: 3}
+      propertyPath: showCursorDuringConversation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8035322926803832075, guid: ab0d7ca0424fd114c859d96dd17f2427,
         type: 3}
       propertyPath: m_Name
@@ -24102,9 +24234,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5713062061967288165, guid: 97f832f837f26b44fb4249594535876e,
         type: 3}
+      propertyPath: exclusive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713062061967288165, guid: 97f832f837f26b44fb4249594535876e,
+        type: 3}
       propertyPath: conversationActor
       value: 
       objectReference: {fileID: 280196184}
+    - target: {fileID: 5713062061967288165, guid: 97f832f837f26b44fb4249594535876e,
+        type: 3}
+      propertyPath: showCursorDuringConversation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6038867660343357313, guid: 97f832f837f26b44fb4249594535876e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24484,9 +24626,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5632075867822188310, guid: ddf741112e5f08342ba69f6cb8e12c54,
         type: 3}
+      propertyPath: exclusive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632075867822188310, guid: ddf741112e5f08342ba69f6cb8e12c54,
+        type: 3}
       propertyPath: conversationActor
       value: 
       objectReference: {fileID: 280196184}
+    - target: {fileID: 5632075867822188310, guid: ddf741112e5f08342ba69f6cb8e12c54,
+        type: 3}
+      propertyPath: showCursorDuringConversation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5698271306646949614, guid: ddf741112e5f08342ba69f6cb8e12c54,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24589,6 +24741,16 @@ PrefabInstance:
         type: 3}
       propertyPath: showCursorDuringConversation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646302702447935296, guid: c4f1713712c654748bf2f5df237c5d91,
+        type: 3}
+      propertyPath: onExecute.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646302702447935296, guid: c4f1713712c654748bf2f5df237c5d91,
+        type: 3}
+      propertyPath: onExecute.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8753551858236651218, guid: c4f1713712c654748bf2f5df237c5d91,
         type: 3}
@@ -30460,9 +30622,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3563450940240703440, guid: ad1b171daae00ca4788633017dd41354,
         type: 3}
+      propertyPath: exclusive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3563450940240703440, guid: ad1b171daae00ca4788633017dd41354,
+        type: 3}
       propertyPath: conversationActor
       value: 
       objectReference: {fileID: 280196184}
+    - target: {fileID: 3563450940240703440, guid: ad1b171daae00ca4788633017dd41354,
+        type: 3}
+      propertyPath: showCursorDuringConversation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5523547728549556957, guid: ad1b171daae00ca4788633017dd41354,
         type: 3}
       propertyPath: actor

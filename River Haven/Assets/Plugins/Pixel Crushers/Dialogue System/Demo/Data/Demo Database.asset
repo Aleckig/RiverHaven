@@ -1235,6 +1235,57 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+  - id: 12
+    fields:
+    - title: Name
+      value: Invite People To The Party
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: Go around the town and try to invite as many people to the party as
+        possible. Helping the nieghbors may persuade them to join the party.
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: CustomFieldType_QuestState
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Trackable
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Track
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: 'People invited: [var=peopleInvitedAmount]'
+      type: 0
+      typeString: 
   locations: []
   variables:
   - id: 0
@@ -1695,6 +1746,20 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 34
+    fields:
+    - title: Name
+      value: peopleInvitedAmount
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
     - title: Description
       value: 
       type: 0
@@ -10309,6 +10374,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 5dba1fb3-cc92-4bc0-b12c-82e03671d631
+        type: 0
+        typeString: 
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -10318,7 +10387,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: 'SetQuestState("Invite People To The Party", "active");
+
+        ShowAlert("New
+        Quest: Invite People To The Party")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10329,7 +10401,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0.75720215}
+    canvasScrollPosition: {x: 26.502548, y: 91.622986}
     canvasZoom: 1.056503
   - id: 16
     fields:
@@ -11948,7 +12020,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("Find Dog's Toy", "active")
+      userScript: 'SetQuestState("Find Dog''s Toy", "active")
+
+        ShowAlert("New
+        Quest: Find Dog Toy");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12383,8 +12458,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0.8000488, y: 3.2000122}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 150.05951}
+    canvasZoom: 0.837001
   - id: 17
     fields:
     - title: Title
@@ -14661,7 +14736,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["peopleInvitedAmount"] = Variable["peopleInvitedAmount"]
+        + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14940,7 +15016,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["peopleInvitedAmount"] = Variable["peopleInvitedAmount"]
+        + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14951,7 +15028,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 323.8826, y: 6.177582}
     canvasZoom: 0.9065014
   - id: 18
     fields:
@@ -15929,7 +16006,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 10.400024, y: 163.19995}
+    canvasScrollPosition: {x: 1.6000366, y: 292.8}
     canvasZoom: 1
   - id: 19
     fields:
@@ -17343,7 +17420,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 214.40002, y: 0}
+    canvasScrollPosition: {x: 140.80002, y: 6.4000244}
     canvasZoom: 1
   - id: 20
     fields:
@@ -18064,7 +18141,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: See you, Pam!
+        value: See you, Nina!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -18108,7 +18185,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 22.40007}
+    canvasScrollPosition: {x: 0.7999878, y: 200.80002}
     canvasZoom: 1
   - id: 21
     fields:
@@ -19439,7 +19516,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("Bring Scarf To Agatha", "success")
+      userScript: 'SetQuestState("Bring Scarf To Agatha", "success")
+
+        Variable["peopleInvitedAmount"]
+        = Variable["peopleInvitedAmount"] + 1'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19450,7 +19530,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 35.200012, y: 3.2000122}
+    canvasScrollPosition: {x: 148, y: 0.7999878}
     canvasZoom: 1
   - id: 22
     fields:
@@ -21000,7 +21080,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["FootBallReceived"] = true
+      userScript: 'Variable["FootBallReceived"] = true
+
+        Variable["peopleInvitedAmount"]
+        = Variable["peopleInvitedAmount"] + 1'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21226,7 +21309,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 105.60004, y: 0}
+    canvasScrollPosition: {x: 164.00003, y: 48.80005}
     canvasZoom: 1
   - id: 23
     fields:
@@ -21903,6 +21986,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 0c9b3b88-a7b1-4d29-8770-1e73a57b23f4
+        type: 0
+        typeString: 
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -21912,10 +21999,23 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 95.2
@@ -22132,7 +22232,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 95.057434, y: 2.3963928}
+    canvasScrollPosition: {x: 19.970062, y: 19.970123}
     canvasZoom: 1.0014997
   - id: 24
     fields:
@@ -22870,6 +22970,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 190796b4-19f4-4b29-9e1a-d42fa6c822b9
+        type: 0
+        typeString: 
       conversationID: 24
       isRoot: 0
       isGroup: 0
@@ -22879,7 +22983,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22890,7 +22995,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0.7999878, y: 0}
+    canvasScrollPosition: {x: 15.200012, y: 148.79999}
     canvasZoom: 1
   - id: 25
     fields:
@@ -23717,6 +23822,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 03cbff1e-0fea-4cbe-bdc3-ab6473a663e7
+        type: 0
+        typeString: 
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -23726,7 +23835,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -24657,7 +24767,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 196.80002, y: 24.800018}
+    canvasScrollPosition: {x: 207.99998, y: 15.20018}
     canvasZoom: 1
   - id: 26
     fields:
@@ -24899,6 +25009,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 6d770084-f3ea-4c4c-8a9c-eedf3f878f06
+        type: 0
+        typeString: 
       conversationID: 26
       isRoot: 0
       isGroup: 0
@@ -25468,6 +25582,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: a4e2ba79-8e8d-48df-ba4d-8d8b1fbbd708
+        type: 0
+        typeString: 
       conversationID: 27
       isRoot: 0
       isGroup: 0
@@ -25477,7 +25595,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -26483,7 +26602,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 238.40002, y: 0.8000183}
+    canvasScrollPosition: {x: 52.80002, y: 28.800018}
     canvasZoom: 1
   - id: 28
     fields:
@@ -26748,6 +26867,271 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1
+  - id: 29
+    fields:
+    - title: Title
+      value: AfifaConversation
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Actor
+      value: 7
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Conversant
+      value: 28
+      type: 5
+      typeString: CustomFieldType_Actor
+    overrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    nodeColor: 
+    dialogueEntries:
+    - id: 0
+      fields:
+      - title: Title
+        value: START
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 22
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: 
+      conversationID: 29
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 29
+        originDialogueID: 0
+        destinationConversationID: 29
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 160
+        y: 30
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 22
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Hello!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Camera(CameraPoint,listener,1)
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 29
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 29
+        originDialogueID: 1
+        destinationConversationID: 29
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active"
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 22
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Hello
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 0a734c01-9a55-4a12-9405-6e2fb206886c
+        type: 0
+        typeString: 
+      conversationID: 29
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 160
+        y: 130
+        width: 160
+        height: 30
+    entryGroups: []
+    canvasScrollPosition: {x: 0.7999878, y: 2.399994}
     canvasZoom: 1
   syncInfo:
     syncActors: 0

@@ -8,6 +8,8 @@ public class TimeTracker : MonoBehaviour
     public int hours;
     public int minutes;
     public int day;
+    private bool questLogAlertShown = false;
+    private bool mapAlertShown = false;
 
     void Start()
     {
@@ -19,10 +21,22 @@ public class TimeTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (day == 1 && hours > 10)
+        if (day == 1 && hours > 13)
         {
             day++;
             FirstDayEnds();
+        }
+
+        if (day == 1 && hours == 10 && questLogAlertShown == false)
+        {
+            Invoke("ShowQuestLogAlert", 2f);
+            questLogAlertShown = true;
+        }
+
+        if (day == 1 && hours == 10 && mapAlertShown == false)
+        {
+            Invoke("ShowMapAlert", 4f);
+            mapAlertShown = true;
         }
     }
 
@@ -76,5 +90,15 @@ public class TimeTracker : MonoBehaviour
     public void FirstDayEnds()
     {
         DialogueLua.SetVariable("firstDayEnds", true);
+    }
+
+    void ShowQuestLogAlert()
+    {
+        DialogueManager.ShowAlert("Press 'J' to open quest log");
+    }
+
+    void ShowMapAlert()
+    {
+        DialogueManager.ShowAlert("Press 'M' to open map");
     }
 }
