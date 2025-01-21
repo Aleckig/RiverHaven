@@ -1,3 +1,20 @@
+/*
+ * MenuManager Script
+ * 
+ * Description:
+ * This script manages a stack-based menu system in Unity. It initializes and handles
+ * the menus in the game, allowing menus to be opened and closed dynamically. The 
+ * script ensures only one menu is visible at a time by deactivating other menus 
+ * when a new one is opened. It also keeps track of the order in which menus are opened 
+ * using a stack, enabling the correct behavior when closing menus.
+ *
+ * Key Features:
+ * - Initializes menus from prefabs at runtime.
+ * - Uses a stack data structure to manage the active menu hierarchy.
+ * - Prevents duplicate MenuManager instances using a Singleton pattern.
+ * - Provides methods for opening and closing menus.
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
