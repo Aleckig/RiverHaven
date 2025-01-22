@@ -5,10 +5,9 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class RouteManager : MonoBehaviour
 {
-  public static RouteManager Manager { get; private set; }
-
   [SerializeField] private string cTime;
   [OnValueChanged("UpdateStaticList")]
   [SerializeField] private List<Waypoint> WaypointsList = new();
@@ -18,16 +17,29 @@ public class RouteManager : MonoBehaviour
   private List<RouteSettings> NpcList = new();
 
   public List<Waypoint> GetWaypointsList => WaypointsList;
+  private static RouteManager Manager;
 
+  private void Update()
+  {
+    // For correct displayment of values for dropdown option
+    if (Application.isPlaying) return;
+    Debug.Log("Updated list");
+    UpdateStaticList();
+    //
+  }
   private void Awake()
   {
     Manager = GetComponent<RouteManager>();
   }
-
   private void Start()
   {
     cMinutes = ConvTimeStrToInt(cTime);
     NpcList = FindObjectsOfType<RouteSettings>().ToList<RouteSettings>();
+
+    foreach (var item in NpcList)
+    {
+      item.routeManager = Manager;
+    }
 
     CheckExecution();
   }
@@ -42,12 +54,6 @@ public class RouteManager : MonoBehaviour
 
   private void ChangeMinutes(int value)
   {
-    // if (cMinutes + value >= 60 || cMinutes + value < 0)
-    // {
-    //   cMinutes = 0;
-    //   return;
-    // }
-
     cMinutes += value;
 
     cTime = ConvTimeIntToStr(cMinutes);
@@ -97,7 +103,7 @@ public class RouteManager : MonoBehaviour
 
     if (int.TryParse(splited[0], out _hours) && int.TryParse(splited[1], out _minutes))
     {
-      Debug.Log("Successfully parsed time");
+      // Debug.Log("Successfully parsed time");
       _minutes = _minutes >= 60 || _minutes <= 0 ? 0 : _minutes;
     }
     else
@@ -107,6 +113,13 @@ public class RouteManager : MonoBehaviour
     }
 
     return _hours * 60 + _minutes;
+  }
+
+  [HorizontalGroup("Split", 0.5f)]
+  [Button(ButtonSizes.Large), GUIColor(0.4f, 0.8f, 1)]
+  private void AddOneHourBtn()
+  {
+    AddHour();
   }
 }
 
@@ -123,6 +136,7 @@ public class RouteWaypoints
 
     foreach (var item in RouteManager.SWaypointsList)
     {
+      if (item.waypointName == null) continue;
       names.Add(item.waypointName);
     }
 
