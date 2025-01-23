@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -10,9 +9,9 @@ public class RouteSettings : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 5;
     [SerializeField] private List<RouteAction> Actions;
-    [SerializeField] private Animator animator;
+    private NPCAnimator animator;
     private NavMeshAgent navMeshAgent;
-    private RouteManager routeManager;
+    public RouteManager routeManager;
     private Dictionary<int, int> actionsInProg = new();
     private int idCount = 0;
     private int cMinutes = 0;
@@ -25,12 +24,8 @@ public class RouteSettings : MonoBehaviour
 
     private void Awake()
     {
+        animator = GetComponent<NPCAnimator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
-    }
-
-    private void Start()
-    {
-        routeManager = RouteManager.Manager;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,7 +33,7 @@ public class RouteSettings : MonoBehaviour
         if (pauseOnTrigger && other.gameObject == pauseOnTriggerObject)
         {
             pauseMovement = true;
-            animator.SetBool("Walking", false);
+            animator.StopWalking();
             navMeshAgent.ResetPath();
         }
     }
@@ -56,15 +51,22 @@ public class RouteSettings : MonoBehaviour
         }
     }
 
-    public void FollowPath(int routeId)
+    public void FollowPathWithTp(int routeId)
     {
         List<string> waypoints = routeManager.GetRoute(routeId).Route;
-
         StartCoroutine(MoveTo(waypoints));
     }
 
-    private IEnumerator MoveTo(List<string> waypoints)
+    public void FollowPathWithoutTp(int routeId)
     {
+        List<string> waypoints = routeManager.GetRoute(routeId).Route;
+
+        StartCoroutine(MoveTo(waypoints, false));
+    }
+
+    private IEnumerator MoveTo(List<string> waypoints, bool tpStatus = true)
+    {
+
         int actionId = SaveActionStatus(cMinutes);
 
         Transform objectToMove = this.gameObject.transform;
@@ -77,7 +79,14 @@ public class RouteSettings : MonoBehaviour
             waypointObjList.Add(routeManager.GetWaypointsList.Find(e => e.waypointName == name).waypointObj);
         }
 
-        objectToMove.position = waypointObjList[0].position;
+        if (tpStatus)
+        {
+            navMeshAgent.enabled = false;
+            objectToMove.position = waypointObjList[0].position;
+            navMeshAgent.enabled = true;
+        }
+        else yield return new WaitForSeconds(.5f);
+
 
         foreach (Transform waypointObj in waypointObjList)
         {
@@ -100,16 +109,15 @@ public class RouteSettings : MonoBehaviour
                 if (finishMovement)
                 {
                     navMeshAgent.ResetPath();
-                    animator.SetBool("Walking", false);
+                    animator.StopWalking();
                     ClearActionStatus(actionId, cMinutes);
                     yield break;
                 }
 
                 // Start animation for walking
-                animator.SetBool("Walking", true);
+                animator.StartWalking();
                 // Smoothly rotate towards the current waypoint
-                Vector3 direction = (waypointObj.position - transform.position).normalized;
-                SmoothRotateTowards(direction);
+                // SmoothRotateTowards(waypointObj);
                 // Move towards the current waypoint
                 navMeshAgent.SetDestination(waypointObj.position);
 
@@ -129,18 +137,52 @@ public class RouteSettings : MonoBehaviour
         }
 
         navMeshAgent.ResetPath();
-        animator.SetBool("Walking", false);
+        animator.StopWalking();
         ClearActionStatus(actionId, cMinutes);
         yield break;
     }
 
-    void SmoothRotateTowards(Vector3 direction)
+    public void SmoothRotateTowardsSomeone(Transform aimObj)
     {
-        // Calculate the target rotation based on the direction
-        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        StartCoroutine(SmoothRotateTowardsCourutine(aimObj));
+    }
 
-        // Smoothly interpolate towards the target rotation using Slerp with Time.deltaTime
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    private bool IsAimedAtTarget(Transform target)
+    {
+        // Calculate the direction vector from the object to the target
+        Vector3 directionToTarget = target.position - transform.position;
+
+        // Normalize the direction vector (optional but recommended)
+        directionToTarget.Normalize();
+
+        // Calculate the angle between the object's forward direction and the direction to the target
+        float angle = Vector3.Angle(transform.forward, directionToTarget);
+
+        // Check if the angle is within the aim threshold
+        return angle <= 4f;
+    }
+
+    private IEnumerator SmoothRotateTowardsCourutine(Transform aimObj)
+    {
+        while (true)
+        {
+            Vector3 direction = (aimObj.position - transform.position).normalized;
+            // Calculate the target rotation based on the direction
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+            // Smoothly interpolate towards the target rotation using Slerp with Time.deltaTime
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            // Debug.Log(gameObject.name + " rotation " + transform.rotation.eulerAngles);
+
+            if (IsAimedAtTarget(aimObj)) break;
+
+            // Otherwise, continue next frame
+            yield return new WaitForFixedUpdate();
+        }
+
+        Debug.Log("Courutine stopped");
+        yield break;
     }
 
     private void ResetState()
@@ -158,6 +200,20 @@ public class RouteSettings : MonoBehaviour
     {
         pauseOnTrigger = true;
         pauseOnTriggerObject = _gameObject;
+    }
+
+    public void PauseMovementForSeconds(float seconds)
+    {
+        pauseMovement = true;
+        animator.StopWalking();
+        navMeshAgent.ResetPath();
+        StartCoroutine(ContinueMovementAfterSeconds(seconds));
+    }
+
+    private IEnumerator ContinueMovementAfterSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        ResetState();
     }
 
     //Functions block for invoking callbacks
@@ -193,7 +249,6 @@ public class RouteSettings : MonoBehaviour
         //then execute callbacks
         foreach (var item in Actions)
         {
-            Debug.Log(item);
             if (item.CheckTime(minutes))
             {
                 item.callBacks?.Invoke();
@@ -201,10 +256,13 @@ public class RouteSettings : MonoBehaviour
         }
     }
     // End of Functions block for invoking callbacks
-}
 
-internal class navMeshAgent
-{
+    public void HideNPC(Transform resetPoint)
+    {
+        navMeshAgent.enabled = false;
+        transform.position = resetPoint.position;
+        navMeshAgent.enabled = true;
+    }
 }
 
 [Serializable]
@@ -234,7 +292,6 @@ public class RouteAction
 
         if (int.TryParse(splited[0], out _hours) && int.TryParse(splited[1], out _minutes))
         {
-            Debug.Log("Successfully parsed time");
             _minutes = _minutes >= 60 || _minutes <= 0 ? 0 : _minutes;
         }
         else
