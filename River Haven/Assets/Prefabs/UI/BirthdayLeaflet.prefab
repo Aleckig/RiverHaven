@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 6052827728006179941}
   - component: {fileID: 1148363670807060834}
   - component: {fileID: 3714755278168794734}
+  - component: {fileID: 2094214828922806457}
   m_Layer: 5
   m_Name: leaflet
   m_TagString: Untagged
@@ -161,6 +162,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2094214828922806457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4340554663624876633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 10, y: -10}
+  m_UseGraphicAlpha: 1
 --- !u!1 &6781832356334167980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1263,11 @@ PrefabInstance:
     - target: {fileID: 4353807117117190229, guid: 0319ce74cf3a846c0bd7fe90e0f7275f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297529480661914635, guid: 0319ce74cf3a846c0bd7fe90e0f7275f,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6969433414283198081, guid: 0319ce74cf3a846c0bd7fe90e0f7275f,
