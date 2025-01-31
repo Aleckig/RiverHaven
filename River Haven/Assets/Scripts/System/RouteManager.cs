@@ -52,6 +52,14 @@ public class RouteManager : MonoBehaviour
     }
   }
 
+  public void SetTime(int value)
+  {
+    cMinutes = value;
+
+    cTime = ConvTimeIntToStr(cMinutes);
+
+    CheckExecution();
+  }
   private void ChangeMinutes(int value)
   {
     cMinutes += value;
@@ -60,22 +68,6 @@ public class RouteManager : MonoBehaviour
 
     CheckExecution();
   }
-
-  public void AddHalfHour()
-  {
-    ChangeMinutes(30);
-  }
-
-  public void AddHour()
-  {
-    ChangeMinutes(60);
-  }
-
-  public void AddFewHours(int numberOfHours)
-  {
-    ChangeMinutes(60 * numberOfHours);
-  }
-
   public RouteWaypoints GetRoute(int routeId)
   {
     return RoutesList.Find((e) => e.routeId == routeId);
@@ -91,7 +83,7 @@ public class RouteManager : MonoBehaviour
     int _hours = minutes / 60;
     int _minutes = minutes - (_hours * 60);
 
-    return _hours + ":" + _minutes;
+    return _hours + ":" + (_minutes > 10 ? _minutes.ToString() : "0" + _minutes);
   }
 
   private int ConvTimeStrToInt(string time)
@@ -115,12 +107,12 @@ public class RouteManager : MonoBehaviour
     return _hours * 60 + _minutes;
   }
 
-  [HorizontalGroup("Split", 0.5f)]
-  [Button(ButtonSizes.Large), GUIColor(0.4f, 0.8f, 1)]
-  private void AddOneHourBtn()
-  {
-    AddHour();
-  }
+  // [HorizontalGroup("Split", 0.5f)]
+  // [Button(ButtonSizes.Large), GUIColor(0.4f, 0.8f, 1)]
+  // private void AddOneHourBtn()
+  // {
+  //   AddHour();
+  // }
 }
 
 [Serializable]

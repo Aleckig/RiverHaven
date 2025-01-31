@@ -5,15 +5,18 @@ using PixelCrushers.DialogueSystem;
 
 public class TimeTracker : MonoBehaviour
 {
+    [SerializeField] private RouteManager routeManager;
     public int hours;
     public int minutes;
     public int day;
 
     void Start()
     {
-        hours = 7;
+        hours = 6;
         minutes = 0;
         day = 1;
+
+        routeManager.SetTime(hours * 60 + minutes);
     }
 
     // Update is called once per frame
@@ -23,6 +26,8 @@ public class TimeTracker : MonoBehaviour
         {
             day++;
             FirstDayEnds();
+
+            routeManager.SetTime(hours * 60 + minutes);
         }
     }
 
@@ -36,16 +41,20 @@ public class TimeTracker : MonoBehaviour
             minutes -= 60;
             hours++;
         }
-        
+
         if (hours > 24)
         {
             hours -= 24;
         }
+
+        routeManager.SetTime(hours * 60 + minutes);
     }
 
     public void AddOneHour()
     {
         hours++;
+
+        routeManager.SetTime(hours * 60 + minutes);
     }
 
     public void AddHalfHour()
@@ -56,11 +65,15 @@ public class TimeTracker : MonoBehaviour
             minutes -= 60;
             hours++;
         }
+
+        routeManager.SetTime(hours * 60 + minutes);
     }
 
     public void AddTwoHours()
     {
         hours = hours + 2;
+
+        routeManager.SetTime(hours * 60 + minutes);
     }
 
     public void CheckIfDayEnds()
