@@ -263,6 +263,19 @@ public class RouteSettings : MonoBehaviour
         transform.position = resetPoint.position;
         navMeshAgent.enabled = true;
     }
+
+    public void DisableNavMesh()
+    {
+        pauseMovement = true;
+        navMeshAgent.ResetPath();
+        animator.StopWalking();
+        navMeshAgent.enabled = false;
+    }
+
+    public void EnableNavMesh()
+    {
+        navMeshAgent.enabled = true;
+    }
 }
 
 [Serializable]
