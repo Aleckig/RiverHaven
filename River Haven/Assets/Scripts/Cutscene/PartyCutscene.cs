@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PixelCrushers.DialogueSystem;
 
 public class PartyCutscene : MonoBehaviour
 {
@@ -103,6 +104,7 @@ public class PartyCutscene : MonoBehaviour
         //permanentlyDisabledObject1.SetActive(false);
         //permanentlyDisabledObject2.SetActive(false);
         EnablePlayerControls();
+        DialogueManager.ShowAlert("Go talk to the Landlord");
     }
 
     private void DisablePlayerControls()

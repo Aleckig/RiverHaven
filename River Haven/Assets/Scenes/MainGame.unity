@@ -378,6 +378,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -256
       objectReference: {fileID: 0}
+    - target: {fileID: 1480461151843731155, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+        type: 3}
+      propertyPath: m_Name
+      value: NamePrefab - Steve
+      objectReference: {fileID: 0}
     - target: {fileID: 2331347713183872421, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -418,6 +423,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -256
       objectReference: {fileID: 0}
+    - target: {fileID: 4298879838834329320, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+        type: 3}
+      propertyPath: m_Name
+      value: NamePrefab - Baraka
+      objectReference: {fileID: 0}
     - target: {fileID: 4438795012192252592, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -438,6 +448,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -256
       objectReference: {fileID: 0}
+    - target: {fileID: 4548760613806018053, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+        type: 3}
+      propertyPath: m_Name
+      value: NamePrefab - Violet
+      objectReference: {fileID: 0}
     - target: {fileID: 4758433918422692613, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -457,6 +472,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826497463226981532, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+        type: 3}
+      propertyPath: m_text
+      value: Baraka & Co.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076656414668805233, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+        type: 3}
+      propertyPath: m_text
+      value: Violet
       objectReference: {fileID: 0}
     - target: {fileID: 5137558395888222177, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
@@ -591,17 +616,17 @@ PrefabInstance:
     - target: {fileID: 7010292195638415545, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7010292195638415545, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7010292195638415545, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7010292195638415545, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
@@ -667,6 +692,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915144668542770343, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+        type: 3}
+      propertyPath: m_text
+      value: Steve
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1757,6 +1787,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'KeyPadTaskManager '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730484140834375932, guid: 94e123795bf21fe45b75fd90ccdbbc31,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3025,6 +3060,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1874295795}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &500105523 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5427991315043275259, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+    type: 3}
+  m_PrefabInstance: {fileID: 46015825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &504708917
 GameObject:
   m_ObjectHideFlags: 0
@@ -8850,6 +8897,110 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - guid: 218d7d13-828e-4dd0-991e-3004f9a81a24
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1540866749}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - guid: 5f4f6548-d7a2-4445-bad2-fc9ef78d2960
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 500105523}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - guid: aed54704-fbfc-493b-b5f1-c11e9400de4d
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 500105523}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - guid: d745c6c6-903d-407a-8d48-9c8f7f2fd233
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1557997659}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - guid: b1575d20-b3ca-488a-8747-2fee9d1b25b0
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 861371898}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 561379637}
+          m_TargetAssemblyTypeName: ShowBoard, Assembly-CSharp
+          m_MethodName: DeactivateBool
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 561379635}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &617453851
 Transform:
   m_ObjectHideFlags: 0
@@ -10388,6 +10539,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 16794429084398687, guid: 532849e866af2984daafd8b71ecc195c,
     type: 3}
   m_PrefabInstance: {fileID: 1175390710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &861371898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5388662374556448052, guid: bd36b20666e548b4bb50e281e9aedc67,
+    type: 3}
+  m_PrefabInstance: {fileID: 8041204271014081509}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &863460376 stripped
 Transform:
@@ -16510,12 +16667,12 @@ PrefabInstance:
     - target: {fileID: 1239948052302299478, guid: 585b9412ea52aec4c81cd3c2d656a14d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1298072169021362633, guid: 585b9412ea52aec4c81cd3c2d656a14d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1896893481816563589, guid: 585b9412ea52aec4c81cd3c2d656a14d,
         type: 3}
@@ -16572,15 +16729,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeTaskManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2548994985241986584, guid: 585b9412ea52aec4c81cd3c2d656a14d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2791719594662720457, guid: 585b9412ea52aec4c81cd3c2d656a14d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5287582275345877666, guid: 585b9412ea52aec4c81cd3c2d656a14d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20772,6 +20934,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1540866749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7239271052007248320, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+    type: 3}
+  m_PrefabInstance: {fileID: 46015825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1541108219
 GameObject:
   m_ObjectHideFlags: 0
@@ -20884,6 +21058,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 5905599478078133491}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1557997659 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6989533195646802221, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+    type: 3}
+  m_PrefabInstance: {fileID: 46015825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1562024839
 GameObject:
   m_ObjectHideFlags: 0
@@ -23123,6 +23309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimonTaskManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3251251249714805712, guid: 29ce87b07fb970e4284e18feb0e23f89,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24371,7 +24562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 4
   Actions:
-  - time: 6:00
+  - time: 14:00
     events:
       m_PersistentCalls:
         m_Calls:
@@ -37679,7 +37870,7 @@ PrefabInstance:
     - target: {fileID: 2857889265808688850, guid: a5eda3c5c0e19de4f99aedb4cd00c791,
         type: 3}
       propertyPath: barkText
-      value: Get off my lawn!!!!
+      value: Go away, I'm reading!
       objectReference: {fileID: 0}
     - target: {fileID: 3245911262673066450, guid: a5eda3c5c0e19de4f99aedb4cd00c791,
         type: 3}
@@ -37936,7 +38127,7 @@ PrefabInstance:
     - target: {fileID: 5388662374556448052, guid: bd36b20666e548b4bb50e281e9aedc67,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

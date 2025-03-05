@@ -1699,6 +1699,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+  - id: 34
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: false
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -14652,6 +14666,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: aed54704-fbfc-493b-b5f1-c11e9400de4d
+        type: 0
+        typeString: 
       conversationID: 17
       isRoot: 0
       isGroup: 0
@@ -14661,7 +14679,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["BirthdayQuest.Invitees"] = Variable["BirthdayQuest.Invitees"]
+        + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14931,6 +14950,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 5f4f6548-d7a2-4445-bad2-fc9ef78d2960
+        type: 0
+        typeString: 
       conversationID: 17
       isRoot: 0
       isGroup: 0
@@ -14940,7 +14963,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["BirthdayQuest.Invitees"] = Variable["BirthdayQuest.Invitees"]
+        + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14951,7 +14975,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 293.877, y: 7.06015}
     canvasZoom: 0.9065014
   - id: 18
     fields:
@@ -15929,7 +15953,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 10.400024, y: 163.19995}
+    canvasScrollPosition: {x: 71.19998, y: 202.39996}
     canvasZoom: 1
   - id: 19
     fields:
@@ -18108,7 +18132,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 22.40007}
+    canvasScrollPosition: {x: 23.199997, y: 146.4}
     canvasZoom: 1
   - id: 21
     fields:
@@ -19430,6 +19454,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: d745c6c6-903d-407a-8d48-9c8f7f2fd233
+        type: 0
+        typeString: 
       conversationID: 21
       isRoot: 0
       isGroup: 0
@@ -19439,7 +19467,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("Bring Scarf To Agatha", "success")
+      userScript: 'SetQuestState("Bring Scarf To Agatha", "success");
+
+        Variable["BirthdayQuest.Invitees"]
+        = Variable["BirthdayQuest.Invitees"] + 1'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20991,6 +21022,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 218d7d13-828e-4dd0-991e-3004f9a81a24
+        type: 0
+        typeString: 
       conversationID: 22
       isRoot: 0
       isGroup: 0
@@ -21000,7 +21035,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["FootBallReceived"] = true
+      userScript: 'Variable["FootBallReceived"] = true;
+
+        Variable["BirthdayQuest.Invitees"]
+        = Variable["BirthdayQuest.Invitees"] + 1'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21226,7 +21264,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 30.399994, y: 274.39993}
+    canvasScrollPosition: {x: 208, y: 33.599915}
     canvasZoom: 1
   - id: 23
     fields:
@@ -26671,6 +26709,12 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
+      - originConversationID: 28
+        originDialogueID: 1
+        destinationConversationID: 28
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -26749,6 +26793,75 @@ MonoBehaviour:
         serializedVersion: 2
         x: 160
         y: 130
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 31
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I think enough people have been invited. Let the party begin!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: b1575d20-b3ca-488a-8747-2fee9d1b25b0
+        type: 0
+        typeString: 
+      conversationID: 28
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["BirthdayQuest.Invitees"] >= 3
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 344.80002
+        y: 128.4
         width: 160
         height: 30
     entryGroups: []
