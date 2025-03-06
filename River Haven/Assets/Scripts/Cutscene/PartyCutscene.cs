@@ -15,6 +15,8 @@ public class PartyCutscene : MonoBehaviour
     [SerializeField] private GameObject objectToActivate;
     [SerializeField] private GameObject permanentlyDisabledObject1;
     [SerializeField] private GameObject permanentlyDisabledObject2;
+    [SerializeField] private GameObject objectToEnable1;
+    [SerializeField] private GameObject objectToEnable2;
 
     public Sprite[] pictures;
     public Image pictureDisplay;
@@ -24,6 +26,8 @@ public class PartyCutscene : MonoBehaviour
 
     private int currentIndex = 0;
     private bool isCutsceneActive = false;
+
+    public string variableName = "PartyFinished";
 
     private void Start()
     {
@@ -104,7 +108,10 @@ public class PartyCutscene : MonoBehaviour
         //permanentlyDisabledObject1.SetActive(false);
         //permanentlyDisabledObject2.SetActive(false);
         EnablePlayerControls();
-        DialogueManager.ShowAlert("Go talk to the Landlord");
+        objectToEnable1.SetActive(true);
+        objectToEnable2.SetActive(true);
+        DialogueManager.ShowAlert("Go talk to Layla at the party scene");
+        ChangeBoolean(variableName, true);
     }
 
     private void DisablePlayerControls()
@@ -117,5 +124,10 @@ public class PartyCutscene : MonoBehaviour
     {
         // Re-enable the player's movement and input
         // (You'll need to implement this based on your player controller setup)
+    }
+
+    void ChangeBoolean(string varName, bool value)
+    {
+        DialogueLua.SetVariable(varName, true);
     }
 }
