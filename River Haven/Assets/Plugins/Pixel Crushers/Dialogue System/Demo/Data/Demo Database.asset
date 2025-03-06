@@ -740,6 +740,28 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
+  - id: 32
+    fields:
+    - title: Name
+      value: Marcus
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
   items:
   - id: 1
     fields:
@@ -27496,6 +27518,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 73194507-6fc7-4919-b118-1a9ffdf9539c
+        type: 0
+        typeString: 
       conversationID: 29
       isRoot: 0
       isGroup: 0
@@ -27516,7 +27542,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 43.19998, y: 1.5999756}
+    canvasScrollPosition: {x: 3.2000122, y: 157.59998}
     canvasZoom: 1
   syncInfo:
     syncActors: 0
