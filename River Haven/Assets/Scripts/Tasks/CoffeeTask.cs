@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Random = UnityEngine.Random;
 
 public class CoffeeTask : MonoBehaviour
 {
@@ -56,7 +58,7 @@ public class CoffeeTask : MonoBehaviour
             sliderControl.slider.wholeNumbers = true;
             sliderControl.slider.value = 0;
 
-            sliderControl.targetValue = Random.Range(0, 11);
+            sliderControl.targetValue = Random.Range(1, 11);
             sliderControl.targetValueText.text = sliderControl.targetValue.ToString();
 
             UpdateTargetImagePosition(sliderControl);
@@ -79,7 +81,6 @@ public class CoffeeTask : MonoBehaviour
         closeButton.onClick.AddListener(ClosePanel);
 
         completionPanel.SetActive(false);
-        //LayoutRebuilder.ForceRebuildLayoutImmediate(completionPanel.GetComponent<RectTransform>());
     }
 
     void PlayButtonClickSound()
