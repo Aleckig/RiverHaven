@@ -79,6 +79,7 @@ public class CoffeeTask : MonoBehaviour
         closeButton.onClick.AddListener(ClosePanel);
 
         completionPanel.SetActive(false);
+        //LayoutRebuilder.ForceRebuildLayoutImmediate(completionPanel.GetComponent<RectTransform>());
     }
 
     void PlayButtonClickSound()
