@@ -2026,7 +2026,63 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 49
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 50
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 51
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 52
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -15355,7 +15411,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["FootBallReceived"] == true and (CurrentQuestState("Find
-        Dog's Toy") == "success")
+        Dog's Toy") == "success") and (Variable["PartyFinished"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -17471,7 +17527,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("Meeting The Neighbors") == "success" and
-        (Variable["JupitersPaintFound"] == false)
+        (Variable["JupitersPaintFound"] == false) and (Variable["PartyFinished"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -18261,7 +18318,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 584.80005, y: 4.799988}
+    canvasScrollPosition: {x: 209.60016, y: 0}
     canvasZoom: 1
   - id: 20
     fields:
@@ -21989,7 +22046,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Camera(CameraPoint,listener,1)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 22
@@ -22348,7 +22405,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Camera(CameraPoint,listener,1)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 22
@@ -27210,7 +27267,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("Meeting The Neighbors") == "success" and
-        CurrentQuestState("Lost Piano Sheet") ~= "success"
+        CurrentQuestState("Lost Piano Sheet") ~= "success" and (Variable["PartyFinished"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
