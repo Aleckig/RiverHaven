@@ -15,6 +15,8 @@ public class ScreenFade : MonoBehaviour
     private bool teleportPlayer = false;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private Transform destination;
+    [SerializeField] private Transform homeTransform;
+    [SerializeField] private Transform NGOTransform;
 
     // Call this function to trigger the fade effect, stay black, and fade back in
     public void TriggerFadeAndAlert()
@@ -29,6 +31,18 @@ public class ScreenFade : MonoBehaviour
     {
         showTheAlert = false;
         teleportPlayer = true;
+        destination = homeTransform;
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+    }
+
+    public void TriggerFadeAndTeleportToNGO()
+    {
+        showTheAlert = false;
+        teleportPlayer = true;
+        destination = NGOTransform;
         if (!isFading)
         {
             StartCoroutine(FadeSequence());

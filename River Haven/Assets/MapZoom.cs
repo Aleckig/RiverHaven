@@ -15,6 +15,7 @@ public class MapZoom : MonoBehaviour
     private float initialXRotation;
     private bool isZoomedOut = false;
     private float elapsedTime = 0f;
+    [SerializeField] private Camera secondCamera;
 
     void Start()
     {
@@ -30,10 +31,12 @@ public class MapZoom : MonoBehaviour
             if (isZoomedOut)
             {
                 StartCoroutine(ZoomIn());
+                secondCamera.gameObject.SetActive(false);
             }
             else
             {
                 StartCoroutine(ZoomOut());
+                secondCamera.gameObject.SetActive(true);
             }
         }
     }
