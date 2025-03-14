@@ -1404,7 +1404,7 @@ MonoBehaviour:
   npcTransform: {fileID: 344591633}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 1534052952}
 --- !u!114 &124581312
@@ -1523,7 +1523,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &124581315
 Rigidbody:
@@ -2816,7 +2816,7 @@ MonoBehaviour:
   npcTransform: {fileID: 6629511791312983183}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 2006819131}
 --- !u!114 &256502610
@@ -2935,7 +2935,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &256502613
 Rigidbody:
@@ -3411,7 +3411,7 @@ MonoBehaviour:
   npcTransform: {fileID: 1806847625}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 708889018}
 --- !u!114 &280551473
@@ -3530,7 +3530,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &280551476
 Rigidbody:
@@ -4954,7 +4954,7 @@ MonoBehaviour:
   npcTransform: {fileID: 1146637933351598594}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 717515386}
 --- !u!114 &480387889
@@ -5073,7 +5073,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &480387892
 Rigidbody:
@@ -10627,7 +10627,7 @@ MonoBehaviour:
   npcTransform: {fileID: 8221209600890022193}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 28770684}
 --- !u!114 &590463929
@@ -10746,7 +10746,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &590463932
 Rigidbody:
@@ -11423,6 +11423,22 @@ MonoBehaviour:
         - m_Target: {fileID: 418185476}
           m_TargetAssemblyTypeName: ScreenFade, Assembly-CSharp
           m_MethodName: TriggerFadeAndTeleportToNGO
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 75091640-120a-4dd3-90f8-56e05043364b
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1259868195}
+          m_TargetAssemblyTypeName: TimeTracker, Assembly-CSharp
+          m_MethodName: AddHalfHour
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -18895,7 +18911,7 @@ MonoBehaviour:
   npcTransform: {fileID: 8672943680688297717}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 1951359246}
 --- !u!114 &980912928
@@ -19014,7 +19030,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &980912931
 Rigidbody:
@@ -20334,7 +20350,7 @@ MonoBehaviour:
   npcTransform: {fileID: 2014140224}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 251616929}
 --- !u!114 &1087490085
@@ -20453,7 +20469,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1087490088
 Rigidbody:
@@ -22088,7 +22104,7 @@ MonoBehaviour:
   npcTransform: {fileID: 3719841136415035668}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 0}
 --- !u!114 &1182309526
@@ -22207,7 +22223,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1182309529
 Rigidbody:
@@ -23906,7 +23922,7 @@ MonoBehaviour:
   npcTransform: {fileID: 3502327389388522191}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 2064955438}
 --- !u!114 &1350751766
@@ -24025,7 +24041,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1350751769
 Rigidbody:
@@ -24528,7 +24544,7 @@ MonoBehaviour:
   npcTransform: {fileID: 6437781443562632656}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 136914071}
 --- !u!114 &1435029121
@@ -24647,7 +24663,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1435029124
 Rigidbody:
@@ -25162,7 +25178,7 @@ MonoBehaviour:
   npcTransform: {fileID: 4264443699971657495}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 654606535}
 --- !u!114 &1473600532
@@ -25281,7 +25297,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1473600535
 Rigidbody:
@@ -26503,7 +26519,7 @@ MonoBehaviour:
   npcTransform: {fileID: 4072725750435510835}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 1458489007}
 --- !u!114 &1569738896
@@ -26622,7 +26638,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1569738899
 Rigidbody:
@@ -31092,7 +31108,7 @@ MonoBehaviour:
   npcTransform: {fileID: 4978896793147469927}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 2010041731}
 --- !u!114 &2057573528
@@ -31211,7 +31227,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2057573531
 Rigidbody:
@@ -31636,7 +31652,7 @@ MonoBehaviour:
   npcTransform: {fileID: 698087564}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 394197935}
 --- !u!114 &2080632849
@@ -31755,7 +31771,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2080632852
 Rigidbody:
@@ -36788,7 +36804,7 @@ MonoBehaviour:
   npcTransform: {fileID: 722699048}
   offset: {x: 0, y: 3, z: 0}
   nameOffset: {x: 0, y: 0, z: 0}
-  zOffsetChange: 0.5
+  zOffsetChange: 0.7
   moveSpeed: 3
   textMeshProTransform: {fileID: 1713105304}
 --- !u!65 &2092977277
@@ -36810,7 +36826,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1.2, z: 1}
+  m_Size: {x: 5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2092977278
 Rigidbody:
