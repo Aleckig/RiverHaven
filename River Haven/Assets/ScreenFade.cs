@@ -11,10 +11,38 @@ public class ScreenFade : MonoBehaviour
     //public string alertMessage = "This is an alert!"; // The message for the alert
 
     private bool isFading = false;
+    private bool showTheAlert = true;
+    private bool teleportPlayer = false;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private Transform destination;
+    [SerializeField] private Transform homeTransform;
+    [SerializeField] private Transform NGOTransform;
 
     // Call this function to trigger the fade effect, stay black, and fade back in
     public void TriggerFadeAndAlert()
     {
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+    }
+
+    public void TriggerFadeAndTeleportHome()
+    {
+        showTheAlert = false;
+        teleportPlayer = true;
+        destination = homeTransform;
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+    }
+
+    public void TriggerFadeAndTeleportToNGO()
+    {
+        showTheAlert = false;
+        teleportPlayer = true;
+        destination = NGOTransform;
         if (!isFading)
         {
             StartCoroutine(FadeSequence());
@@ -34,6 +62,7 @@ public class ScreenFade : MonoBehaviour
 
         // Trigger the alert using Lua scripting from the Dialogue System
         TriggerAlertLua();
+        TeleportPlayer();
 
         // Fade back to transparent (normal)
         yield return StartCoroutine(FadeToColor(new Color(0, 0, 0, 0))); // Fade back to transparent (alpha = 0)
@@ -69,6 +98,17 @@ public class ScreenFade : MonoBehaviour
     {
         // Assuming you have set up the Lua function in the Dialogue System
         // This will trigger a Lua statement that can be hooked into your alert system
-        DialogueManager.ShowAlert("You feel rested. Go talk to Mai, she has some information for you.");
+        if (showTheAlert == true)
+        {
+            DialogueManager.ShowAlert("You feel rested. Go talk to Mai, she has some information for you.");
+        }
+    }
+
+    private void TeleportPlayer()
+    {
+        if (teleportPlayer == true)
+        {
+            playerTransform.position = destination.position;
+        }
     }
 }
