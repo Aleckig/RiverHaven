@@ -19,6 +19,7 @@ public class ScreenFade : MonoBehaviour
     [SerializeField] private Transform homeTransform;
     [SerializeField] private Transform NGOTransform;
     [SerializeField] private Transform CommunityBoardTransform;
+    [SerializeField] private Transform StoreTransform;
 
     // Call this function to trigger the fade effect, stay black, and fade back in
     public void TriggerFadeAndAlert()
@@ -58,6 +59,18 @@ public class ScreenFade : MonoBehaviour
         teleportPlayer = true;
         destination = CommunityBoardTransform;
         alertMessage = "Put the last poster on the community board.";
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+    }
+
+    public void TriggerFadeAndTeleportToStore()
+    {
+        showTheAlert = true;
+        teleportPlayer = true;
+        destination = StoreTransform;
+        alertMessage = "Go to the store and find the ingredients";
         if (!isFading)
         {
             StartCoroutine(FadeSequence());

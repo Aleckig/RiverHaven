@@ -178,6 +178,8 @@ public class CoffeeTask : MonoBehaviour
         {
             QuestLog.SetQuestState("Have A Coffee Break", QuestState.Success);
             DialogueManager.ShowAlert("You feel refreshed and energized.");
+            DialogueManager.ShowAlert("Go check the activity board in the living room.");
+            StartCoroutine(HideAlertAfterDuration(5));
             audioSource.PlayOneShot(brewingSound);
             StartCoroutine(ClosePanelAfterBrewSound());
         }
@@ -185,6 +187,15 @@ public class CoffeeTask : MonoBehaviour
         {
             ClosePanel();
         }
+    }
+
+    private IEnumerator HideAlertAfterDuration(float duration)
+    {
+        // Wait for the specified duration
+        yield return new WaitForSeconds(duration);
+
+        // Hide the alert after the specified time
+        DialogueManager.HideAlert();
     }
 
     IEnumerator ClosePanelAfterBrewSound()
