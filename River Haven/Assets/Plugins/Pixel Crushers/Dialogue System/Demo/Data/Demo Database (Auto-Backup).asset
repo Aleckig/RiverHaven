@@ -784,6 +784,28 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
+  - id: 34
+    fields:
+    - title: Name
+      value: NGOComputer
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
   items:
   - id: 1
     fields:
@@ -991,7 +1013,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: I should look around and meet some of my neighbors
+      value: I should look around and meet some of my neighbors.
       type: 0
       typeString: CustomFieldType_Text
     - title: Success Description
@@ -1076,11 +1098,11 @@ MonoBehaviour:
     - title: Entry 1 State
       value: active
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Entry 1
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
   - id: 7
     fields:
     - title: Name
@@ -1463,7 +1485,7 @@ MonoBehaviour:
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
-      value: unassigned
+      value: active
       type: 0
       typeString: 
     - title: Entry 1
@@ -1541,6 +1563,50 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Trackable
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Track
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 4
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: 'Sugar Found: 0/[var=SugarFound]'
+      type: 0
+      typeString: 
+    - title: Entry 2 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: 'Butter Found: 0/[var=ButterFound]'
+      type: 0
+      typeString: 
+    - title: Entry 3 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 3
+      value: 'Eggs Found: 0/[var=EggsFound]'
+      type: 0
+      typeString: 
+    - title: Entry 4 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 4
+      value: 'Flour Found: 0/[var=FlourFound]'
+      type: 0
+      typeString: 
   - id: 18
     fields:
     - title: Name
@@ -1570,6 +1636,14 @@ MonoBehaviour:
       typeString: CustomFieldType_QuestState
     - title: Is Item
       value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Trackable
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Track
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
   - id: 19
@@ -1602,6 +1676,14 @@ MonoBehaviour:
       typeString: CustomFieldType_QuestState
     - title: Is Item
       value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Trackable
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Track
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
   locations: []
@@ -2422,6 +2504,118 @@ MonoBehaviour:
     fields:
     - title: Name
       value: BusLightsFixed
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 60
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 61
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 62
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 63
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 64
+    fields:
+    - title: Name
+      value: SugarFound
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 65
+    fields:
+    - title: Name
+      value: FlourFound
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 66
+    fields:
+    - title: Name
+      value: EggsFound
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 67
+    fields:
+    - title: Name
+      value: ButterFound
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
@@ -9551,6 +9745,12 @@ MonoBehaviour:
         destinationDialogueID: 15
         isConnector: 0
         priority: 2
+      - originConversationID: 15
+        originDialogueID: 0
+        destinationConversationID: 15
+        destinationDialogueID: 22
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -9624,7 +9824,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("Crates") == "success" and (CurrentQuestState("Meeting
-        The Neighbors") == "unassigned")
+        The Neighbors") == "unassigned") and (Variable["QuestsSkipped"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10623,7 +10823,8 @@ MonoBehaviour:
         destinationDialogueID: 16
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Meeting The Neighbors") == "success"
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "success" and
+        (Variable["Act1Finished"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -11051,7 +11252,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: ShowAlert("Go around the town to ask people if they need any help.")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11061,8 +11262,444 @@ MonoBehaviour:
         y: 407.25977
         width: 160
         height: 30
+    - id: 22
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 28
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Hello Mai! I heard you are going to bake tree-shaped cookies to promote
+          the tree planting event.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Camera(CameraPoint,speaker,1)
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 22
+        destinationConversationID: 15
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
+      conditionsString: CurrentQuestState("Mai's Tree-shaped Cookies") == "active"
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 506.8045
+        y: 76.21393
+        width: 160
+        height: 30
+    - id: 23
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 28
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Indeed! I'm only missing a few ingredients.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 23
+        destinationConversationID: 15
+        destinationDialogueID: 24
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 506.8045
+        y: 126.21393
+        width: 160
+        height: 30
+    - id: 24
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 28
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I can go buy them from the store for you so you can start heating
+          up the oven.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 24
+        destinationConversationID: 15
+        destinationDialogueID: 25
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 506.8045
+        y: 176.21393
+        width: 160
+        height: 30
+    - id: 25
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 28
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: That's very sweet of you! I'll get right into business then. Here's
+          a list of what I need.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 25
+        destinationConversationID: 15
+        destinationDialogueID: 26
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 506.8045
+        y: 226.21393
+        width: 160
+        height: 30
+    - id: 26
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 28
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Thanks! I'll be right back with the ingredients.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 26
+        destinationConversationID: 15
+        destinationDialogueID: 27
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 506.8045
+        y: 276.21393
+        width: 160
+        height: 30
+    - id: 27
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 28
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: See you soon!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 5cd252e3-72bd-44f8-adce-5dbf09cfcbe3
+        type: 0
+        typeString: 
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 'SetQuestEntryState("Mai''s Tree-shaped Cookies", 1, "active")
+
+        SetQuestEntryState("Mai''s
+        Tree-shaped Cookies", 2, "active")
+
+        SetQuestEntryState("Mai''s Tree-shaped
+        Cookies", 3, "active")
+
+        SetQuestEntryState("Mai''s Tree-shaped Cookies",
+        4, "active")'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 506.8045
+        y: 326.21393
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0.75720215}
+    canvasScrollPosition: {x: 0, y: 133.26985}
     canvasZoom: 1.056503
   - id: 16
     fields:
@@ -14861,7 +15498,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: 'Wow, thanks! Well, they would play if they had a football; I heard
-          Mr. Paul has a football that his son is not playing with anymore. Would
+          Mr. Baraka has a football that his son is not playing with anymore. Would
           you ask if we can have it from him? '
         type: 0
         typeString: CustomFieldType_Text
@@ -15978,7 +16615,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 293.877, y: 7.06015}
+    canvasScrollPosition: {x: 77.6611, y: 52.06833}
     canvasZoom: 0.9065014
   - id: 18
     fields:
@@ -18661,7 +19298,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 209.60016, y: 0}
+    canvasScrollPosition: {x: 211.19998, y: 0}
     canvasZoom: 1
   - id: 20
     fields:
@@ -20662,7 +21299,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'I gave the scarf to Agatha. She seemed to like it. '
+        value: I gave the scarf to Agatha. She seemed to like it and asked to me
+          thank you for her.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20765,12 +21403,15 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 17
+        destinationConversationID: 21
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 'SetQuestState("Bring Scarf To Agatha", "success");
-
-        Variable["BirthdayQuest.Invitees"]
-        = Variable["BirthdayQuest.Invitees"] + 1'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21136,8 +21777,76 @@ MonoBehaviour:
         y: 268.8
         width: 160
         height: 30
+    - id: 23
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 24
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I will see you there!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 21
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 'SetQuestState("Bring Scarf To Agatha", "success");
+
+        Variable["BirthdayQuest.Invitees"]
+        = Variable["BirthdayQuest.Invitees"] + 1'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 526.4
+        y: 180
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 104, y: 1.6000061}
+    canvasScrollPosition: {x: 170.4, y: 1.6000061}
     canvasZoom: 1
   - id: 22
     fields:
@@ -22694,7 +23403,10 @@ MonoBehaviour:
       userScript: 'Variable["FootBallReceived"] = true;
 
         Variable["BirthdayQuest.Invitees"]
-        = Variable["BirthdayQuest.Invitees"] + 1'
+        = Variable["BirthdayQuest.Invitees"] + 1;
+
+        ShowAlert("Go and give
+        the football to Steve.")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22920,7 +23632,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 20.799957, y: 350.39996}
+    canvasScrollPosition: {x: 224.79996, y: 9.600006}
     canvasZoom: 1
   - id: 23
     fields:
@@ -23820,7 +24532,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["ScarfGiven"] = true
+      userScript: 'Variable["ScarfGiven"] = true;
+
+        ShowAlert("Go back to
+        Violet to thank for the scarf.")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -23831,7 +24546,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 14.378387, y: 281.97714}
+    canvasScrollPosition: {x: 91.063385, y: 1.5976257}
     canvasZoom: 1.0014997
   - id: 24
     fields:
@@ -28878,7 +29593,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["BirthdayQuest.Invitees"] >= 3
-      userScript: 
+      userScript: ShowAlert("The party is starting soon! Follow the arrow.")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28889,8 +29604,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 124, y: 0.7999878}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 114.212906, y: 0}
+    canvasZoom: 0.94725025
   - id: 29
     fields:
     - title: Title
@@ -30946,9 +31661,8 @@ MonoBehaviour:
         destinationDialogueID: 13
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Act1Finished"] == true and (CurrentQuestState("Give
-        Out Promotional Leaflets") ~= "active") and (Variable["QuestsSkipped"] ==
-        false)
+      conditionsString: Variable["Act1Finished"] == true and (Variable["QuestsSkipped"]
+        == false) and (CurrentQuestState("Give Out Promotional Leaflets") == "unassigned")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -31807,7 +32521,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("Place Posters On Walls", "active")
+      userScript: 'SetQuestState("Place Posters On Walls", "active");
+
+        ShowAlert("Go
+        outside to place the posters.")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -32059,9 +32776,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Sure, if you wish! There is an activity board over there where we
-          have listed everything that needs to be done to promote the event. Go ahead
-          and see if there is something you would like to do.
+        value: Sure, if you wish! There is an activity board over there in the living
+          room where we have listed everything that needs to be done to promote the
+          event. Go ahead and see if there is something you would like to do.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -32389,7 +33106,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 752.7997, y: 1.6000061}
+    canvasScrollPosition: {x: 400.79974, y: 0}
     canvasZoom: 1
   - id: 31
     fields:
@@ -32602,7 +33319,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Have A Coffee Break") == "success"
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -32659,6 +33376,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 05edd4b4-1868-456a-bcc6-07ff676fadf3
+        type: 0
+        typeString: 
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -32668,7 +33389,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: CurrentQuestState("Fix Lights On Bus Stops") == "unassigned"
-      userScript: SetQuestState("Fix Lights On Bus Stops", "active")
+      userScript: 'SetQuestState("Fix Lights On Bus Stops", "active");
+
+        ShowAlert("Find
+        the bus stops along the road outside near the stores.")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -32724,6 +33448,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: b3c580dc-c38d-4200-8a1c-57c3e618298b
+        type: 0
+        typeString: 
       conversationID: 31
       isRoot: 0
       isGroup: 0
@@ -32867,7 +33595,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: CurrentQuestState("Fix The Radio Tower") == "unassigned"
-      userScript: SetQuestState("Fix The Radio Tower", "active")
+      userScript: 'SetQuestState("Fix The Radio Tower", "active");
+
+        ShowAlert("Go
+        to the radio tower near the bridge.")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -33154,6 +33885,81 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
+        value: 33
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You accessed the NGO computer.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Camera(CameraPoint,listener,1)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 8f5a4da6-d4ce-4287-87bc-71606bbb787c
+        type: 0
+        typeString: 
+      conversationID: 32
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 32
+        originDialogueID: 1
+        destinationConversationID: 32
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 163.21286
+        y: 94.457855
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
         value: 7
         type: 5
         typeString: CustomFieldType_Actor
@@ -33185,10 +33991,6 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      - title: EventGuid
-        value: 8f5a4da6-d4ce-4287-87bc-71606bbb787c
-        type: 0
-        typeString: 
       conversationID: 32
       isRoot: 0
       isGroup: 0
@@ -33201,14 +34003,17 @@ MonoBehaviour:
       userScript: 'SetQuestState("Social Media Advertisement", "success");
 
         Variable["ActivitiesCompleted"]
-        = Variable["ActivitiesCompleted"] + 1'
+        = Variable["ActivitiesCompleted"] + 1;
+
+        ShowAlert("You uploaded the
+        material to social media.")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 80
+        x: 163.21288
+        y: 157.30928
         width: 160
         height: 30
     entryGroups: []
