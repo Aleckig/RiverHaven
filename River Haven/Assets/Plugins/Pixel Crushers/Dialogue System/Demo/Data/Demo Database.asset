@@ -26727,6 +26727,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 7af1e79f-154c-45bb-a2dc-c437984a73d2
+        type: 0
+        typeString: 
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -26736,7 +26740,8 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27667,7 +27672,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 25.599976, y: 303.19995}
+    canvasScrollPosition: {x: 53.599945, y: 91.99988}
     canvasZoom: 1
   - id: 26
     fields:
@@ -34343,7 +34348,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 25.599976, y: 1.6000061}
+    canvasScrollPosition: {x: 0.7999878, y: 2.399994}
     canvasZoom: 1
   - id: 32
     fields:
