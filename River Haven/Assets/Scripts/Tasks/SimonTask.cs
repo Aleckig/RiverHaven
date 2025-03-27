@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PixelCrushers.DialogueSystem;
 
 public class SimonTask : MonoBehaviour
 {
@@ -69,6 +70,8 @@ public class SimonTask : MonoBehaviour
                 {
                     // Set won to true after completing level 5
                     won = true;
+                    QuestLog.SetQuestState("Fix The Radio Tower", QuestState.Success);
+                    DialogueLua.SetVariable("ActivitiesCompleted", DialogueLua.GetVariable("ActivitiesCompleted").AsInt + 1);
                     closeTaskMarker.SetActive(false); // Enable the close task marker
                     audioSource.PlayOneShot(correctSound); // Play the correct sequence sound
                     StartCoroutine(ColorBlink(correctColor)); // Blink green to indicate the win
@@ -138,6 +141,7 @@ public class SimonTask : MonoBehaviour
         if (won)
         {
             ClosePanel(); // Close the panel if the game is won
+            DialogueManager.ShowAlert("You fixed the radio tower!");
         }
         EnableInteractableButtons();
         ResetGame(); // Restart the game after the blink

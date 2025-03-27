@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using PixelCrushers.DialogueSystem;
 
 public class KeypadTask : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class KeypadTask : MonoBehaviour
     [SerializeField] private AudioClip correctSound;
     [SerializeField] private AudioClip wrongSound;
     [SerializeField] private AudioClip buttonSound;
+    [SerializeField] private GameObject NGOComputer;
 
     private bool isResetting = false;
 
@@ -99,6 +101,15 @@ public class KeypadTask : MonoBehaviour
     private IEnumerator EndTask()
     {
         yield return new WaitForSeconds(endTaskTime); // Delay before deactivating the UI
+        if (NGOComputer != null)
+        {
+            NGOComputer.gameObject.SetActive(true);
+            DialogueManager.ShowAlert("You retrieved the promotional material. Go to the computer.");
+        }
+        else
+        {
+            Debug.Log("NGOComputer not assigned!");
+        }
         CloseUI();
     }
 

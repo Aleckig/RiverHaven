@@ -13,14 +13,18 @@ public class ScreenFade : MonoBehaviour
     private bool isFading = false;
     private bool showTheAlert = true;
     private bool teleportPlayer = false;
+    private string alertMessage;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private Transform destination;
     [SerializeField] private Transform homeTransform;
     [SerializeField] private Transform NGOTransform;
+    [SerializeField] private Transform CommunityBoardTransform;
+    [SerializeField] private Transform StoreTransform;
 
     // Call this function to trigger the fade effect, stay black, and fade back in
     public void TriggerFadeAndAlert()
     {
+        alertMessage = "You feel rested. Go talk to Mai, she has some information for you.";
         if (!isFading)
         {
             StartCoroutine(FadeSequence());
@@ -43,6 +47,30 @@ public class ScreenFade : MonoBehaviour
         showTheAlert = false;
         teleportPlayer = true;
         destination = NGOTransform;
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+    }
+
+    public void TriggerFadeAndTeleportToCommunityBoard()
+    {
+        showTheAlert = true;
+        teleportPlayer = true;
+        destination = CommunityBoardTransform;
+        alertMessage = "Put the last poster on the community board.";
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+    }
+
+    public void TriggerFadeAndTeleportToStore()
+    {
+        showTheAlert = true;
+        teleportPlayer = true;
+        destination = StoreTransform;
+        alertMessage = "Go to the store and find the ingredients";
         if (!isFading)
         {
             StartCoroutine(FadeSequence());
@@ -100,7 +128,7 @@ public class ScreenFade : MonoBehaviour
         // This will trigger a Lua statement that can be hooked into your alert system
         if (showTheAlert == true)
         {
-            DialogueManager.ShowAlert("You feel rested. Go talk to Mai, she has some information for you.");
+            DialogueManager.ShowAlert(alertMessage);
         }
     }
 

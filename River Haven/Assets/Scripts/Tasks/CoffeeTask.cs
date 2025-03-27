@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Random = UnityEngine.Random;
+using PixelCrushers.DialogueSystem;
 
 public class CoffeeTask : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class CoffeeTask : MonoBehaviour
     [SerializeField] private GameObject closeTask;
 
     private int completedSliders = 0;
+    public ScreenFade screenFadeScript;
 
     void Start()
     {
@@ -174,6 +176,9 @@ public class CoffeeTask : MonoBehaviour
     {
         if (brewingSound != null && audioSource != null)
         {
+            QuestLog.SetQuestState("Have A Coffee Break", QuestState.Success);
+            DialogueManager.ShowAlert("You feel refreshed and energized.");
+            DialogueManager.ShowAlert("Go check the activity board in the living room for more tasks.");
             audioSource.PlayOneShot(brewingSound);
             StartCoroutine(ClosePanelAfterBrewSound());
         }
@@ -188,6 +193,14 @@ public class CoffeeTask : MonoBehaviour
         // Wait for the brewing sound to finish
         yield return new WaitForSeconds(brewingSound.length);
         ClosePanel();
+        if (screenFadeScript != null)
+        {
+            screenFadeScript.TriggerFadeAndTeleportToNGO();
+        }
+        else
+        {
+            Debug.LogWarning("ScreenFade reference is missing in the Inspector!");
+        }
     }
 
     void ClosePanel()
