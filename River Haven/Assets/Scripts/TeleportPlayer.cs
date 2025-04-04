@@ -23,6 +23,14 @@ public class TeleportPlayer : MonoBehaviour
             //Debug.Log("Player position set to destination: " + destination.position);
 
             playerObject.SetActive(true);
+            if (playerObject != null)
+            {
+                playerObject.GetComponent<IndoorTracker>().isIndoors = !playerObject.GetComponent<IndoorTracker>().isIndoors;
+                if (gameObject.CompareTag("NGO"))
+                {
+                    playerObject.GetComponent<IndoorTracker>().isInNGO = !playerObject.GetComponent<IndoorTracker>().isInNGO;
+                }
+            }
             //Debug.Log("Player object reactivated.");
         }
         else

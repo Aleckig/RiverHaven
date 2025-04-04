@@ -20,11 +20,26 @@ public class ScreenFade : MonoBehaviour
     [SerializeField] private Transform NGOTransform;
     [SerializeField] private Transform CommunityBoardTransform;
     [SerializeField] private Transform StoreTransform;
+    [SerializeField] private Transform RyanTransform;
+    [SerializeField] private GameObject truckPainting;
+    private bool isRyanQuest = false;
+    [SerializeField] private GameObject player;
 
     // Call this function to trigger the fade effect, stay black, and fade back in
     public void TriggerFadeAndAlert()
     {
         alertMessage = "You feel rested. Go talk to Mai, she has some information for you.";
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+    }
+
+    public void TriggerFadeRyanVersion()
+    {
+        showTheAlert = true;
+        isRyanQuest = true;
+        alertMessage = "Ryan finished painting the truck. Go talk to him.";
         if (!isFading)
         {
             StartCoroutine(FadeSequence());
@@ -40,6 +55,11 @@ public class ScreenFade : MonoBehaviour
         {
             StartCoroutine(FadeSequence());
         }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
+        }
     }
 
     public void TriggerFadeAndTeleportToNGO()
@@ -50,6 +70,27 @@ public class ScreenFade : MonoBehaviour
         if (!isFading)
         {
             StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = true;
+            player.GetComponent<IndoorTracker>().isInNGO = true;
+        }
+    }
+
+    public void TriggerFadeAndTeleportToRyan()
+    {
+        showTheAlert = false;
+        teleportPlayer = true;
+        destination = RyanTransform;
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
         }
     }
 
@@ -63,6 +104,11 @@ public class ScreenFade : MonoBehaviour
         {
             StartCoroutine(FadeSequence());
         }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
+        }
     }
 
     public void TriggerFadeAndTeleportToStore()
@@ -74,6 +120,11 @@ public class ScreenFade : MonoBehaviour
         if (!isFading)
         {
             StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = true;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
         }
     }
 
@@ -91,6 +142,11 @@ public class ScreenFade : MonoBehaviour
         // Trigger the alert using Lua scripting from the Dialogue System
         TriggerAlertLua();
         TeleportPlayer();
+        if (isRyanQuest == true)
+        {
+            truckPainting.gameObject.SetActive(true);
+            isRyanQuest = false;
+        }
 
         // Fade back to transparent (normal)
         yield return StartCoroutine(FadeToColor(new Color(0, 0, 0, 0))); // Fade back to transparent (alpha = 0)
