@@ -48665,6 +48665,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab0d7ca0424fd114c859d96dd17f2427, type: 3}
+--- !u!1001 &2080943135037150430
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -39.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -53.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847846904197173281, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Event_RoadBlock(part3) '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad38a48103d7219408418014079fa17c, type: 3}
 --- !u!114 &2258712641531853326 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8324592695657424103, guid: 7bfa3964ec10879479acb9363de056fb,
@@ -50459,6 +50527,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Act2QuestCutsceneController
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678986377442585327, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5046107841400257621, guid: 13824c621f28cb147a8a508fc0aab5f8,
         type: 3}
@@ -56964,6 +57037,7 @@ SceneRoots:
   - {fileID: 1603499473}
   - {fileID: 1757198379}
   - {fileID: 8688358573616782057}
+  - {fileID: 2080943135037150430}
   - {fileID: 1896588702}
   - {fileID: 479650472}
   - {fileID: 5960072529641438439}
