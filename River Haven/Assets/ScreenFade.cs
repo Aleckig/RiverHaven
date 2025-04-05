@@ -21,6 +21,7 @@ public class ScreenFade : MonoBehaviour
     [SerializeField] private Transform CommunityBoardTransform;
     [SerializeField] private Transform StoreTransform;
     [SerializeField] private Transform RyanTransform;
+    [SerializeField] private Transform speechTransform;
     [SerializeField] private GameObject truckPainting;
     private bool isRyanQuest = false;
     [SerializeField] private GameObject player;
@@ -124,6 +125,22 @@ public class ScreenFade : MonoBehaviour
         if (player != null)
         {
             player.GetComponent<IndoorTracker>().isIndoors = true;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
+        }
+    }
+
+    public void TriggerFadeAndTeleportSpeech()
+    {
+        showTheAlert = false;
+        teleportPlayer = true;
+        destination = speechTransform;
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
             player.GetComponent<IndoorTracker>().isInNGO = false;
         }
     }
