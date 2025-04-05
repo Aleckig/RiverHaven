@@ -30786,6 +30786,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2333908749960946952, guid: 920f742f8b138de43b8370666210cbb9,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3890224108823172483, guid: 920f742f8b138de43b8370666210cbb9,
         type: 3}
       propertyPath: m_Enabled
@@ -31942,6 +31947,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: NGO
       objectReference: {fileID: 0}
+    - target: {fileID: 1344869374108216114, guid: 532849e866af2984daafd8b71ecc195c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -55.16
+      objectReference: {fileID: 0}
     - target: {fileID: 1365238397735969950, guid: 532849e866af2984daafd8b71ecc195c,
         type: 3}
       propertyPath: playerObject
@@ -32097,6 +32107,16 @@ PrefabInstance:
       propertyPath: playerTransformation
       value: 
       objectReference: {fileID: 280196184}
+    - target: {fileID: 4971106713332077853, guid: 532849e866af2984daafd8b71ecc195c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -54.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971106713332077853, guid: 532849e866af2984daafd8b71ecc195c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 30.19
+      objectReference: {fileID: 0}
     - target: {fileID: 5124712537398960337, guid: 532849e866af2984daafd8b71ecc195c,
         type: 3}
       propertyPath: playerObject
@@ -42447,8 +42467,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0951911, y: 1, z: 1}
-  m_Center: {x: 0.04759319, y: 0, z: 0.0000000585977}
+  m_Size: {x: 1.0951914, y: 1.0800328, z: 8.91105}
+  m_Center: {x: 0.04759321, y: 0.040016662, z: -3.9555492}
 --- !u!23 &1734640432
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62697,6 +62717,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562467316079278303, guid: f39ef8591b2c4fb478451645f7ca8f4d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.16
       objectReference: {fileID: 0}
     - target: {fileID: 5821682192436903806, guid: f39ef8591b2c4fb478451645f7ca8f4d,
         type: 3}
