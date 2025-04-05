@@ -5496,6 +5496,135 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1175390710}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &272239816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 272239817}
+  - component: {fileID: 272239818}
+  m_Layer: 0
+  m_Name: PartyCutsceneSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &272239817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272239816}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2123597196}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &272239818
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272239816}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -7062140592833139475, guid: 3af02d56250ef2e4499b5fc86c0babbd,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: c6f9c22012e7b8745837de2f8bd36419, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &273974753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36906,6 +37035,84 @@ Transform:
   - {fileID: 291047808}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1453679193
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -38.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -52.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028571964251769885, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460531233963772133, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.814
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847846904197173281, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Event_RoadBlock(part3) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847846904197173281, guid: ad38a48103d7219408418014079fa17c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad38a48103d7219408418014079fa17c, type: 3}
 --- !u!1 &1457413191
 GameObject:
   m_ObjectHideFlags: 0
@@ -37326,6 +37533,12 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 0.3, z: 0.3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1466103941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5847846904197173281, guid: ad38a48103d7219408418014079fa17c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1453679193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1473600529
 GameObject:
   m_ObjectHideFlags: 0
@@ -40397,6 +40610,7 @@ Transform:
   m_Children:
   - {fileID: 14908167}
   - {fileID: 2007199639}
+  - {fileID: 2123597196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1616907941
@@ -45945,6 +46159,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16284e1d5f39757408e526b413e473ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1962692130 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3872989177776942312, guid: 68355d95ded0e4a42ae4b3ef615e6b99,
+    type: 3}
+  m_PrefabInstance: {fileID: 7861565935101444605}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1966487559
 GameObject:
   m_ObjectHideFlags: 0
@@ -46078,6 +46304,18 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: c1cc03cd82f6cdb40afbc0575be25564, type: 2}
+--- !u!114 &1973585288 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1700585751365081938, guid: 7bfa3964ec10879479acb9363de056fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1059126869491395241}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1977430803
 GameObject:
   m_ObjectHideFlags: 0
@@ -53379,6 +53617,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1388675997}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2123597195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2123597196}
+  m_Layer: 0
+  m_Name: CutSceneSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2123597196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123597195}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 272239817}
+  m_Father: {fileID: 1609965715}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2134054348 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 85804522997229448, guid: 97f832f837f26b44fb4249594535876e,
@@ -55686,6 +55956,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
         type: 3}
+      propertyPath: slideText
+      value: 
+      objectReference: {fileID: 1973585288}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
       propertyPath: backButton
       value: 
       objectReference: {fileID: 7215432531021623742}
@@ -55716,9 +55991,14 @@ PrefabInstance:
       objectReference: {fileID: 845308618240076019}
     - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
         type: 3}
+      propertyPath: objectToEnable1
+      value: 
+      objectReference: {fileID: 1466103941}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
       propertyPath: objectToActivate
       value: 
-      objectReference: {fileID: 2007199638}
+      objectReference: {fileID: 2123597195}
     - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
         type: 3}
       propertyPath: objectToDisable1
@@ -55726,9 +56006,96 @@ PrefabInstance:
       objectReference: {fileID: 14908166}
     - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
         type: 3}
+      propertyPath: pictures.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
       propertyPath: playerTransformation
       value: 
       objectReference: {fileID: 280196184}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
+      propertyPath: slideTexts.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
+      propertyPath: pictures.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: b04d0b7e4091a624385420d7efc9ae88,
+        type: 3}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
+      propertyPath: slideTexts.Array.data[0]
+      value: "Marcus: Hello and welcome to SKY office, it is so nice to finally see
+        you. \r\n\r\nPlayer: Hello Marcus, I read your letter and came right away.
+        So, what is going on here? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
+      propertyPath: slideTexts.Array.data[1]
+      value: "Marcus: This is where we try to make things happen for the community.
+        As you can see people around you are having meetings and working on different
+        projects in this office. And right now, we\u2019re facing one of our biggest
+        challenges yet. Follow me I will show you. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
+      propertyPath: slideTexts.Array.data[2]
+      value: "Marcus: This is our current venture. We want to turn it into a community
+        forest, a green space for people to enjoy. It could be a place the whole
+        town takes pride in. But\u2026 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
+      propertyPath: slideTexts.Array.data[3]
+      value: "Marcus: A development company has its eyes on this spot, too. They\u2019re
+        pushing to build a shopping mall right here. They\u2019ve already started
+        talks with the mayor, and now the town must decide between a forest or a
+        mall. The mayor agreed to let the people vote through a petition, and that\u2019s
+        where we come in. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
+      propertyPath: slideTexts.Array.data[4]
+      value: "Marcus: We need to convince as many people as possible to support the
+        forest. To do that, we have to spread the word, clear up doubts, and rally
+        support before the petition deadline. It\u2019s not just about asking people
+        to sign; it\u2019s about showing them why this matters. \n\nMarcus: These
+        pins mark the tasks we need to complete. You can check the details on the
+        task board.  You\u2019ll be working in a team of young people towards these
+        efforts. The tasks are varied, some need materials, and a few might need
+        some extra creativity to handle. \r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
+      propertyPath: slideTexts.Array.data[5]
+      value: "Marcus: This isn\u2019t going to be easy. Not everyone\u2019s on board,
+        and we\u2019ve already run into a few hiccups, flyers going missing, tools
+        mysteriously breaking. But we\u2019ll push through no worries. This isn\u2019t
+        just about the forest; it\u2019s about protecting the future of this town.
+        \r\nSo, what do you say? Are you in? \r\n \r\nPlayer: Absolutely! I\u2019m
+        in. \r\n \r\nMarcus: That\u2019s the spirit!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
+      propertyPath: slideTexts.Array.data[6]
+      value: "Marcus: You can see all the tasks here, you can start by delivering
+        the flyers. After that go in order. The sooner we get the word out, the better
+        chance we have to win this thing. And remember, time\u2019s ticking, so let\u2019s
+        make every moment count.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
+        type: 3}
+      propertyPath: slideTexts.Array.data[7]
+      value: " \rMarcus: Oh, and before I forget, see that room over there? That\u2019s
+        our supply room. It\u2019s stocked with most of the materials you\u2019ll
+        need to complete the tasks. Posters, leaflets, paint, you name it.Whenever
+        you activate a task from the board, the items you\u2019ll need for it will
+        show up in there. Just make sure to grab what you need before heading out.\n\nPlayer:
+        Got it. Thank you!"
+      objectReference: {fileID: 0}
     - target: {fileID: 6926559537471027529, guid: 13824c621f28cb147a8a508fc0aab5f8,
         type: 3}
       propertyPath: permanentlyDisabledObject1
@@ -61139,6 +61506,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2077930626470760209, guid: 68355d95ded0e4a42ae4b3ef615e6b99,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872989177776942312, guid: 68355d95ded0e4a42ae4b3ef615e6b99,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872989177776942312, guid: 68355d95ded0e4a42ae4b3ef615e6b99,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 4226677100354929422, guid: 68355d95ded0e4a42ae4b3ef615e6b99,
         type: 3}
       propertyPath: m_Name
@@ -61148,6 +61530,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523408235442228400, guid: 68355d95ded0e4a42ae4b3ef615e6b99,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523408235442228400, guid: 68355d95ded0e4a42ae4b3ef615e6b99,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7525589365649514557, guid: 68355d95ded0e4a42ae4b3ef615e6b99,
         type: 3}
@@ -61411,6 +61803,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 80691133462350864, guid: bd36b20666e548b4bb50e281e9aedc67,
         type: 3}
+      propertyPath: slideText
+      value: 
+      objectReference: {fileID: 1962692130}
+    - target: {fileID: 80691133462350864, guid: bd36b20666e548b4bb50e281e9aedc67,
+        type: 3}
       propertyPath: backButton
       value: 
       objectReference: {fileID: 8970893758188148624}
@@ -61464,6 +61861,57 @@ PrefabInstance:
       propertyPath: playerTransformation
       value: 
       objectReference: {fileID: 280196184}
+    - target: {fileID: 80691133462350864, guid: bd36b20666e548b4bb50e281e9aedc67,
+        type: 3}
+      propertyPath: slideTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 80691133462350864, guid: bd36b20666e548b4bb50e281e9aedc67,
+        type: 3}
+      propertyPath: slideTexts.Array.data[0]
+      value: "Layla: Oh my goodness, I can\u2019t believe this many people actually
+        showed up! I thought it was going to be just a few of us. \r\n \r\nPlayer:
+        I donno how! Looks like everyone\u2019s having a good time, even the grumpy
+        dog. \r\n \r\nLayla: And it\u2019s all thanks to you! I couldn\u2019t have
+        done this without your help. I was really starting to worry when no one had
+        responded, but you went above and beyond. You really brought the community
+        together."
+      objectReference: {fileID: 0}
+    - target: {fileID: 80691133462350864, guid: bd36b20666e548b4bb50e281e9aedc67,
+        type: 3}
+      propertyPath: slideTexts.Array.data[1]
+      value: "Player:I\u2019m glad I could help. Nice to see the neighborhood come
+        together.\n\nLayla: It really is. I\u2019ve been here a while, and it hasn\u2019t
+        felt this lively in ages. You\u2019ve got a real gift for connecting people,
+        you\u2019ve made a big difference already. \r\n \r\nPlayer: That\u2019s really
+        kind of you to say, thank you."
+      objectReference: {fileID: 0}
+    - target: {fileID: 80691133462350864, guid: bd36b20666e548b4bb50e281e9aedc67,
+        type: 3}
+      propertyPath: slideTexts.Array.data[2]
+      value: "Player: That\u2019s really kind of you to say, thank you. \r\n \r\nLayla:
+        You should be proud! It\u2019s people like you who bring out the best in
+        a place like this. Oh, before I forget, there\u2019s someone I want you to
+        meet. He\u2019s a close friend of mine\u2014Marcus. \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 80691133462350864, guid: bd36b20666e548b4bb50e281e9aedc67,
+        type: 3}
+      propertyPath: slideTexts.Array.data[3]
+      value: "Layla: Marcus works at SKY, an NGO that organizes community events
+        and activities. I thought you two would get along.\n\nMarcus: Hey there!
+        It\u2019s great to meet you. I\u2019m Marcus. \r\n\r\nPlayer: Nice to meet
+        you, Marcus! Layla mentioned you work with an NGO? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 80691133462350864, guid: bd36b20666e548b4bb50e281e9aedc67,
+        type: 3}
+      propertyPath: slideTexts.Array.data[4]
+      value: "Marcus: Yeah, that\u2019s right. I\u2019ve been with them for a few
+        years now. It\u2019s really rewarding, but it wouldn\u2019t be possible without
+        people like you stepping up. You know, I think you\u2019d be a great fit
+        for some of the projects we\u2019ve got coming up. If you\u2019re interested,
+        we can talk more sometime. \r\n\nPlayer:I\u2019d love to hear more about
+        it. Thanks, Marcus!"
+      objectReference: {fileID: 0}
     - target: {fileID: 80691133462350864, guid: bd36b20666e548b4bb50e281e9aedc67,
         type: 3}
       propertyPath: permanentlyDisabledObject1
@@ -62180,3 +62628,4 @@ SceneRoots:
   - {fileID: 1085052384}
   - {fileID: 945747934}
   - {fileID: 1515179835}
+  - {fileID: 1453679193}
