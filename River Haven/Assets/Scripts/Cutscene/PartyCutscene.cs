@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using PixelCrushers.DialogueSystem;
+using TMPro; // Required for TextMeshPro
 
 public class PartyCutscene : MonoBehaviour
 {
+    [Header("Player & Scene Objects")]
     [SerializeField] private Transform playerTransformation;
     [SerializeField] private Transform destination;
     [SerializeField] private GameObject playerObject;
@@ -18,16 +20,23 @@ public class PartyCutscene : MonoBehaviour
     [SerializeField] private GameObject objectToEnable1;
     [SerializeField] private GameObject objectToEnable2;
 
+    [Header("Cutscene Slides")]
     public Sprite[] pictures;
+    [TextArea(2, 5)]
+    public string[] slideTexts; // Custom text for each slide
     public Image pictureDisplay;
+    public TextMeshProUGUI slideText; // TextMeshPro text display
+
+    [Header("UI Buttons")]
     public UnityEngine.UI.Button nextButton;
     public UnityEngine.UI.Button backButton;
     public UnityEngine.UI.Button skipButton;
 
+    [Header("Dialogue System")]
+    public string variableName = "PartyFinished";
+
     private int currentIndex = 0;
     private bool isCutsceneActive = false;
-
-    public string variableName = "PartyFinished";
 
     private void Start()
     {
@@ -57,11 +66,13 @@ public class PartyCutscene : MonoBehaviour
         playerTransformation.position = destination.position;
         playerObject.SetActive(true);
         canvasObject.SetActive(true);
+
         objectToDisable1.SetActive(false);
         //objectToDisable2.SetActive(false);
         objectToActivate.SetActive(true);
         permanentlyDisabledObject1.SetActive(false);
         permanentlyDisabledObject2.SetActive(false);
+
         UpdatePicture();
         UpdateButtons();
         DisablePlayerControls();
@@ -69,8 +80,19 @@ public class PartyCutscene : MonoBehaviour
 
     private void UpdatePicture()
     {
+        // Update the image
         pictureDisplay.sprite = pictures[currentIndex];
         pictureDisplay.SetNativeSize();
+
+        // Update the text
+        if (currentIndex < slideTexts.Length)
+        {
+            slideText.text = slideTexts[currentIndex];
+        }
+        else
+        {
+            slideText.text = ""; // Fallback in case text array is shorter
+        }
     }
 
     private void UpdateButtons()
@@ -82,34 +104,39 @@ public class PartyCutscene : MonoBehaviour
     private void NextPicture()
     {
         currentIndex++;
-        UpdatePicture();
-        UpdateButtons();
-        // If we've reached the last picture, skip the cutscene
-        if (currentIndex == pictures.Length)
+        if (currentIndex >= pictures.Length)
         {
             SkipCutscene();
+            return;
         }
+        UpdatePicture();
+        UpdateButtons();
     }
 
     private void PreviousPicture()
     {
-        currentIndex--;
-        UpdatePicture();
-        UpdateButtons();
+        if (currentIndex > 0)
+        {
+            currentIndex--;
+            UpdatePicture();
+            UpdateButtons();
+        }
     }
 
     private void SkipCutscene()
     {
         isCutsceneActive = false;
         canvasObject.SetActive(false);
+
         objectToDisable1.SetActive(true);
         //objectToDisable2.SetActive(true);
         objectToActivate.SetActive(false);
-        //permanentlyDisabledObject1.SetActive(false);
-        //permanentlyDisabledObject2.SetActive(false);
+
         EnablePlayerControls();
+
         objectToEnable1.SetActive(true);
         objectToEnable2.SetActive(true);
+
         DialogueManager.ShowAlert("Go talk to Layla at the party scene");
         ChangeBoolean(variableName, true);
     }
@@ -126,8 +153,8 @@ public class PartyCutscene : MonoBehaviour
         // (You'll need to implement this based on your player controller setup)
     }
 
-    void ChangeBoolean(string varName, bool value)
+    private void ChangeBoolean(string varName, bool value)
     {
-        DialogueLua.SetVariable(varName, true);
+        DialogueLua.SetVariable(varName, value);
     }
 }
