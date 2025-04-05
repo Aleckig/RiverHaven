@@ -9,6 +9,7 @@ public class ArrowRotation : MonoBehaviour
     [SerializeField] private Transform newTarget2;
     [SerializeField] private Transform newTarget3;
     [SerializeField] private Transform newTarget4;
+    [SerializeField] private Transform newTarget5;
     private Vector3 targetRotation;
 
     void Start()
@@ -41,6 +42,12 @@ public class ArrowRotation : MonoBehaviour
     public void MakeNewTarget4()
     {
         target = newTarget4;
+        targetRotation = new Vector3(target.position.x, this.transform.position.y, target.position.z);
+    }
+
+    public void MakeNewTarget5()
+    {
+        target = newTarget5;
         targetRotation = new Vector3(target.position.x, this.transform.position.y, target.position.z);
     }
 }

@@ -16,6 +16,10 @@ public class MapZoom : MonoBehaviour
     private bool isZoomedOut = false;
     private float elapsedTime = 0f;
     [SerializeField] private Camera secondCamera;
+    [SerializeField] private GameObject player;
+    [SerializeField] private Animator animator;
+    private bool isZoomingOut = false;
+    public bool playerInConversation = false;
 
     void Start()
     {
@@ -26,17 +30,36 @@ public class MapZoom : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (player != null && player.GetComponent<IndoorTracker>().isIndoors == false)
         {
-            if (isZoomedOut)
+            if (Input.GetKeyDown(KeyCode.M) && playerInConversation == false)
             {
-                StartCoroutine(ZoomIn());
-                secondCamera.gameObject.SetActive(false);
-            }
-            else
-            {
-                StartCoroutine(ZoomOut());
-                secondCamera.gameObject.SetActive(true);
+                if (animator != null)
+                {
+                    animator.SetFloat("Speed", 0f);
+                }
+                if (isZoomedOut)
+                {
+                    StartCoroutine(ZoomIn());
+                    secondCamera.gameObject.SetActive(false);
+                }
+                else
+                {
+                    StartCoroutine(ZoomOut());
+                    secondCamera.gameObject.SetActive(true);
+                }
+                if (player != null && isZoomingOut == true)
+                {
+                    player.GetComponent<PlayerController>().enabled = false;
+                }
+                else if (player != null && isZoomingOut == false)
+                {
+                    player.GetComponent<PlayerController>().enabled = true;
+                }
+                else
+                {
+                    player.GetComponent<PlayerController>().enabled = true;
+                }
             }
         }
     }
@@ -47,6 +70,7 @@ public class MapZoom : MonoBehaviour
         float initialTime = Time.time;
         float initialZoomY = transposer.m_FollowOffset.y;
         float initialRotationX = virtualCamera.transform.eulerAngles.x;
+        isZoomingOut = true;
 
         while (transposer.m_FollowOffset.y < targetYPosition)
         {
@@ -71,6 +95,7 @@ public class MapZoom : MonoBehaviour
         float initialTime = Time.time;
         float targetZoomY = initialYPosition;
         float targetRotationX = initialXRotation;
+        isZoomingOut = false;
 
         while (transposer.m_FollowOffset.y > initialYPosition)
         {
@@ -88,5 +113,23 @@ public class MapZoom : MonoBehaviour
         virtualCamera.transform.eulerAngles = new Vector3(initialXRotation, virtualCamera.transform.eulerAngles.y, virtualCamera.transform.eulerAngles.z);
 
         isZoomedOut = false;
+    }
+
+    public void SetSpeedToZero()
+    {
+        if (animator != null)
+        {
+            animator.SetFloat("Speed", 0f);
+        }
+    }
+
+    public void SetPlayerConversationTrue()
+    {
+        playerInConversation = true;
+    }
+
+    public void SetPlayerConversationFalse()
+    {
+        playerInConversation = false;
     }
 }
