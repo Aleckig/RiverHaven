@@ -13,6 +13,7 @@ public class SimonTask : MonoBehaviour
     [SerializeField] private GameObject simonSaysGamePanel;
     [SerializeField] private GameObject closeTaskMarker; // Reference to the close task marker
     [SerializeField] int[] lightSequence;           // The sequence of lights that the player needs to follow
+    [SerializeField] private int maxLevel = 4; 
     int level = 0;
     int buttonsPressed = 0;
     bool passed = false;
@@ -66,7 +67,7 @@ public class SimonTask : MonoBehaviour
             {
                 Debug.Log($"Level {level + 1} complete!");
                 // After all buttons are pressed correctly, move to the next level
-                if (level == 4) // Assuming 5 is the max level
+                if (level == maxLevel) // Assuming 5 is the max level
                 {
                     // Set won to true after completing level 5
                     won = true;
