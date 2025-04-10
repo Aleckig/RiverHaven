@@ -23,8 +23,11 @@ public class ScreenFade : MonoBehaviour
     [SerializeField] private Transform RyanTransform;
     [SerializeField] private Transform speechTransform;
     [SerializeField] private GameObject truckPainting;
+    [SerializeField] private Transform EthanTransform;
     private bool isRyanQuest = false;
     [SerializeField] private GameObject player;
+    [SerializeField] private Transform[] characterPositions;
+    [SerializeField] private GameObject[] characters;
 
     // Call this function to trigger the fade effect, stay black, and fade back in
     public void TriggerFadeAndAlert()
@@ -117,7 +120,7 @@ public class ScreenFade : MonoBehaviour
         showTheAlert = true;
         teleportPlayer = true;
         destination = StoreTransform;
-        alertMessage = "Go to the store and find the ingredients";
+        alertMessage = "Go to the store and find the ingredients.";
         if (!isFading)
         {
             StartCoroutine(FadeSequence());
@@ -125,6 +128,23 @@ public class ScreenFade : MonoBehaviour
         if (player != null)
         {
             player.GetComponent<IndoorTracker>().isIndoors = true;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
+        }
+    }
+
+    public void TriggerFadeAndTeleportToEthan()
+    {
+        showTheAlert = true;
+        teleportPlayer = true;
+        destination = EthanTransform;
+        alertMessage = "Confront Ethan about sabotaging the event.";
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
             player.GetComponent<IndoorTracker>().isInNGO = false;
         }
     }
@@ -210,6 +230,65 @@ public class ScreenFade : MonoBehaviour
         if (teleportPlayer == true)
         {
             playerTransform.position = destination.position;
+        }
+    }
+
+    public void TriggerFadeAndTeleportToTruck()
+    {
+        showTheAlert = true;
+        alertMessage = "Talk to Marcus about preparation for the tree planting event.";
+        teleportPlayer = true;
+        destination = RyanTransform;
+        TeleportCharactersToTruck();
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
+        }
+    }
+
+    public void TeleportCharactersToTruck()
+    {
+        StartCoroutine(TeleportCharactersToTruckInvoke());
+    }
+
+    private IEnumerator TeleportCharactersToTruckInvoke()
+    {
+        yield return new WaitForSeconds(1f);
+        for (int i = 0; i < characters.Length; i++)
+        {
+            // Get the NPC GameObject
+            GameObject npc = characters[i];
+
+            // Get the target Transform position
+            Transform targetPosition = characterPositions[i];
+
+            // Teleport the NPC to the target position
+            if (npc != null && targetPosition != null)
+            {
+                UnityEngine.AI.NavMeshAgent agent = npc.GetComponent<UnityEngine.AI.NavMeshAgent>();
+                if (agent != null)
+                {
+                    // Disable the NavMeshAgent if it exists
+                    agent.enabled = false;
+                }
+                npc.gameObject.SetActive(false);
+                npc.transform.position = targetPosition.position;
+                npc.transform.rotation = targetPosition.rotation;
+                npc.gameObject.SetActive(true);
+                NPCAnimator npcAnimator = npc.GetComponent<NPCAnimator>();
+                if (npcAnimator != null)
+                {
+                    npcAnimator.StopWalking();
+                }
+                npc.GetComponentInChildren<Animator>().SetBool("isWalking", false);
+                npc.GetComponentInChildren<Animator>().SetBool("isSitting", false);
+                npc.GetComponentInChildren<Animator>().Play("Breathing", 0, Random.Range(0f, 1f));
+            }
         }
     }
 }
