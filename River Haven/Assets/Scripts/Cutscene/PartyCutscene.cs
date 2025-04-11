@@ -137,7 +137,7 @@ public class PartyCutscene : MonoBehaviour
         objectToEnable1.SetActive(true);
         objectToEnable2.SetActive(true);
 
-        DialogueManager.ShowAlert("Go talk to Layla at the party scene");
+        DialogueManager.ShowAlert("Go outside and check your mailbox.");
         ChangeBoolean(variableName, true);
     }
 

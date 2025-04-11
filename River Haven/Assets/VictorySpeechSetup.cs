@@ -6,9 +6,16 @@ public class VictorySpeechSetup : MonoBehaviour
 {
     [SerializeField] private Transform[] characterPositions;
     [SerializeField] private GameObject[] characters;
-    
+    [SerializeField] private Transform[] characterPositionsAtPlantingSite;
+
     public void TeleportCharacters()
     {
+        StartCoroutine(TeleportCharactersInvoke());
+    }
+
+    public void TeleportCharactersToPlantingSite()
+    {
+        characterPositions = characterPositionsAtPlantingSite;
         StartCoroutine(TeleportCharactersInvoke());
     }
 

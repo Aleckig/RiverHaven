@@ -45,7 +45,7 @@ public class ActivityTracker : MonoBehaviour
         activitiesCompleted = activitiesCompletedVar.asInt;
         if (activitiesCompleted >= 3 && hasTeleported == false && screenFade != null)
         {
-            DialogueManager.ShowAlert("Layla has urgent news. Go talk to her.");
+            AlertWithDelay();
             screenFade.TriggerFadeAndTeleportToNGO();
             UnityEngine.AI.NavMeshAgent agent = layla.GetComponent<UnityEngine.AI.NavMeshAgent>();
             if (agent != null)
@@ -79,5 +79,16 @@ public class ActivityTracker : MonoBehaviour
     {
         // Stop invoking when the object is disabled to free up resources
         CancelInvoke("TriggerAction");
+    }
+
+    public void AlertWithDelay()
+    {
+        StartCoroutine(DelayAlert());
+    }
+
+    private IEnumerator DelayAlert()
+    {
+        yield return new WaitForSeconds(2f);
+        DialogueManager.ShowAlert("Layla has urgent news. Go talk to her.");
     }
 }

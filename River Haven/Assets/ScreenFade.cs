@@ -26,8 +26,20 @@ public class ScreenFade : MonoBehaviour
     [SerializeField] private Transform EthanTransform;
     private bool isRyanQuest = false;
     [SerializeField] private GameObject player;
+    [SerializeField] private Animator animator;
     [SerializeField] private Transform[] characterPositions;
     [SerializeField] private GameObject[] characters;
+    private bool startFade = true;
+
+    void Start()
+    {
+        if (!isFading)
+        {
+            fadeImage.gameObject.SetActive(true);
+            fadeImage.color = new Color(0f, 0f, 0f, 1f);
+            StartCoroutine(FadeToColor(new Color(0, 0, 0, 0)));
+        }
+    }
 
     // Call this function to trigger the fade effect, stay black, and fade back in
     public void TriggerFadeAndAlert()
@@ -82,6 +94,23 @@ public class ScreenFade : MonoBehaviour
         }
     }
 
+    public void TriggerFadeAndTeleportToNGOWithAlert()
+    {
+        showTheAlert = true;
+        alertMessage = "There are new tasks on the activity board. Go check the board.";
+        teleportPlayer = true;
+        destination = NGOTransform;
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = true;
+            player.GetComponent<IndoorTracker>().isInNGO = true;
+        }
+    }
+
     public void TriggerFadeAndTeleportToRyan()
     {
         showTheAlert = false;
@@ -104,6 +133,39 @@ public class ScreenFade : MonoBehaviour
         teleportPlayer = true;
         destination = CommunityBoardTransform;
         alertMessage = "Put the last poster on the community board.";
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
+        }
+    }
+
+    public void TriggerFadeAndTeleportToCommunityBoard2()
+    {
+        showTheAlert = true;
+        teleportPlayer = true;
+        destination = CommunityBoardTransform;
+        alertMessage = "Build the last booth next to the community board.";
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
+        }
+    }
+
+    public void TriggerFadeAndTeleportToCity()
+    {
+        showTheAlert = false;
+        teleportPlayer = true;
+        destination = StoreTransform;
         if (!isFading)
         {
             StartCoroutine(FadeSequence());
@@ -171,6 +233,14 @@ public class ScreenFade : MonoBehaviour
         isFading = true;
 
         // Fade to black
+        if (player != null)
+        {
+            player.GetComponent<PlayerController>().enabled = false;
+        }
+        if (animator != null)
+        {
+            animator.SetFloat("Speed", 0f);
+        }
         yield return StartCoroutine(FadeToColor(new Color(0, 0, 0, 1))); // Fade to black (alpha = 1)
 
         // Wait for the specified time while the screen stays black
@@ -185,9 +255,16 @@ public class ScreenFade : MonoBehaviour
             isRyanQuest = false;
         }
 
+        if (player != null)
+        {
+            player.GetComponent<PlayerController>().enabled = true;
+        }
+        if (animator != null)
+        {
+            animator.SetFloat("Speed", 0f);
+        }
         // Fade back to transparent (normal)
         yield return StartCoroutine(FadeToColor(new Color(0, 0, 0, 0))); // Fade back to transparent (alpha = 0)
-
         fadeImage.gameObject.SetActive(false);
         isFading = false;
     }
@@ -211,6 +288,11 @@ public class ScreenFade : MonoBehaviour
         }
 
         // Ensure the color is exactly as intended
+        if (startFade == true)
+        {
+            fadeImage.gameObject.SetActive(false);
+            startFade = false;
+        }
         fadeImage.color = targetColor;
     }
 
