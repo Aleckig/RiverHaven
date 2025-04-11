@@ -3342,6 +3342,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 107
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: false
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -37971,7 +37985,8 @@ MonoBehaviour:
         destinationDialogueID: 34
         isConnector: 0
         priority: 2
-      conditionsString: Variable["ActivitiesCompleted"] >= 6
+      conditionsString: Variable["ActivitiesCompleted"] >= 6 and (Variable["EthanRedemption"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -38436,8 +38451,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hello, you're just in time! We started loading the truck while the
-          bus is on it's way to pick us up to the tree site.
+        value: Hey, so the preparations are happening, and people are getting ready
+          to go plant some trees. Are you ready to make this town greener?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -38508,7 +38523,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Great! I can help you carry all the items.
+        value: I cannot wait Marcus, are we going there with this truck?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -38538,7 +38553,7 @@ MonoBehaviour:
       - originConversationID: 30
         originDialogueID: 42
         destinationConversationID: 30
-        destinationDialogueID: 43
+        destinationDialogueID: 48
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -38567,11 +38582,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 32
+        value: 7
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 32
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -38579,7 +38594,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Thanks!
+        value: Great! Let's get going.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -38620,8 +38635,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32.135513
-        y: 697.3852
+        x: 29.595161
+        y: 773.59576
         width: 160
         height: 30
     - id: 44
@@ -38911,8 +38926,80 @@ MonoBehaviour:
         y: 570.2035
         width: 160
         height: 30
+    - id: 48
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 32
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Yes, we will load the saplings and move with this truck, but the town
+          residents will come by bus.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 30
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 30
+        originDialogueID: 48
+        destinationConversationID: 30
+        destinationDialogueID: 43
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 32.135506
+        y: 711.78046
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 465.7316, y: 302.30197}
+    canvasScrollPosition: {x: 2.5404053, y: 405.60965}
     canvasZoom: 0.94475055
   - id: 31
     fields:
