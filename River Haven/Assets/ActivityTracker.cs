@@ -9,6 +9,10 @@ public class ActivityTracker : MonoBehaviour
     [SerializeField] private GameObject playerObject;
     private bool messageShown = false;
     private int activitiesCompleted = 0;
+    [SerializeField] private ScreenFade screenFade;
+    private bool hasTeleported = false;
+    [SerializeField] private GameObject layla;
+    [SerializeField] private GameObject laylaPosition;
 
     //void Update()
     //{
@@ -39,6 +43,21 @@ public class ActivityTracker : MonoBehaviour
     {
         var activitiesCompletedVar = DialogueLua.GetVariable("ActivitiesCompleted");
         activitiesCompleted = activitiesCompletedVar.asInt;
+        if (activitiesCompleted >= 3 && hasTeleported == false && screenFade != null)
+        {
+            AlertWithDelay();
+            screenFade.TriggerFadeAndTeleportToNGO();
+            UnityEngine.AI.NavMeshAgent agent = layla.GetComponent<UnityEngine.AI.NavMeshAgent>();
+            if (agent != null)
+            {
+                // Disable the NavMeshAgent if it exists
+                agent.enabled = false;
+            }
+            layla.gameObject.SetActive(false);
+            layla.gameObject.transform.position = laylaPosition.gameObject.transform.position;
+            layla.gameObject.SetActive(true);
+            hasTeleported = true;
+        }
         if (activitiesCompleted >= 6 && messageShown == false)
         {
             DialogueManager.ShowAlert("Congratulations! You have completed all the activity board tasks. Go talk to Marcus at the NGO building.");
@@ -60,5 +79,16 @@ public class ActivityTracker : MonoBehaviour
     {
         // Stop invoking when the object is disabled to free up resources
         CancelInvoke("TriggerAction");
+    }
+
+    public void AlertWithDelay()
+    {
+        StartCoroutine(DelayAlert());
+    }
+
+    private IEnumerator DelayAlert()
+    {
+        yield return new WaitForSeconds(2f);
+        DialogueManager.ShowAlert("Layla has urgent news. Go talk to her.");
     }
 }

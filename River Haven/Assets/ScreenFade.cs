@@ -23,8 +23,23 @@ public class ScreenFade : MonoBehaviour
     [SerializeField] private Transform RyanTransform;
     [SerializeField] private Transform speechTransform;
     [SerializeField] private GameObject truckPainting;
+    [SerializeField] private Transform EthanTransform;
     private bool isRyanQuest = false;
     [SerializeField] private GameObject player;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Transform[] characterPositions;
+    [SerializeField] private GameObject[] characters;
+    private bool startFade = true;
+
+    void Start()
+    {
+        if (!isFading)
+        {
+            fadeImage.gameObject.SetActive(true);
+            fadeImage.color = new Color(0f, 0f, 0f, 1f);
+            StartCoroutine(FadeToColor(new Color(0, 0, 0, 0)));
+        }
+    }
 
     // Call this function to trigger the fade effect, stay black, and fade back in
     public void TriggerFadeAndAlert()
@@ -79,6 +94,23 @@ public class ScreenFade : MonoBehaviour
         }
     }
 
+    public void TriggerFadeAndTeleportToNGOWithAlert()
+    {
+        showTheAlert = true;
+        alertMessage = "There are new tasks on the activity board. Go check the board.";
+        teleportPlayer = true;
+        destination = NGOTransform;
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = true;
+            player.GetComponent<IndoorTracker>().isInNGO = true;
+        }
+    }
+
     public void TriggerFadeAndTeleportToRyan()
     {
         showTheAlert = false;
@@ -112,12 +144,45 @@ public class ScreenFade : MonoBehaviour
         }
     }
 
+    public void TriggerFadeAndTeleportToCommunityBoard2()
+    {
+        showTheAlert = true;
+        teleportPlayer = true;
+        destination = CommunityBoardTransform;
+        alertMessage = "Build the last booth next to the community board.";
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
+        }
+    }
+
+    public void TriggerFadeAndTeleportToCity()
+    {
+        showTheAlert = false;
+        teleportPlayer = true;
+        destination = StoreTransform;
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
+        }
+    }
+
     public void TriggerFadeAndTeleportToStore()
     {
         showTheAlert = true;
         teleportPlayer = true;
         destination = StoreTransform;
-        alertMessage = "Go to the store and find the ingredients";
+        alertMessage = "Go to the store and find the ingredients.";
         if (!isFading)
         {
             StartCoroutine(FadeSequence());
@@ -125,6 +190,23 @@ public class ScreenFade : MonoBehaviour
         if (player != null)
         {
             player.GetComponent<IndoorTracker>().isIndoors = true;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
+        }
+    }
+
+    public void TriggerFadeAndTeleportToEthan()
+    {
+        showTheAlert = true;
+        teleportPlayer = true;
+        destination = EthanTransform;
+        alertMessage = "Confront Ethan about sabotaging the event.";
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
             player.GetComponent<IndoorTracker>().isInNGO = false;
         }
     }
@@ -151,6 +233,14 @@ public class ScreenFade : MonoBehaviour
         isFading = true;
 
         // Fade to black
+        if (player != null)
+        {
+            player.GetComponent<PlayerController>().enabled = false;
+        }
+        if (animator != null)
+        {
+            animator.SetFloat("Speed", 0f);
+        }
         yield return StartCoroutine(FadeToColor(new Color(0, 0, 0, 1))); // Fade to black (alpha = 1)
 
         // Wait for the specified time while the screen stays black
@@ -165,9 +255,16 @@ public class ScreenFade : MonoBehaviour
             isRyanQuest = false;
         }
 
+        if (player != null)
+        {
+            player.GetComponent<PlayerController>().enabled = true;
+        }
+        if (animator != null)
+        {
+            animator.SetFloat("Speed", 0f);
+        }
         // Fade back to transparent (normal)
         yield return StartCoroutine(FadeToColor(new Color(0, 0, 0, 0))); // Fade back to transparent (alpha = 0)
-
         fadeImage.gameObject.SetActive(false);
         isFading = false;
     }
@@ -191,6 +288,11 @@ public class ScreenFade : MonoBehaviour
         }
 
         // Ensure the color is exactly as intended
+        if (startFade == true)
+        {
+            fadeImage.gameObject.SetActive(false);
+            startFade = false;
+        }
         fadeImage.color = targetColor;
     }
 
@@ -210,6 +312,65 @@ public class ScreenFade : MonoBehaviour
         if (teleportPlayer == true)
         {
             playerTransform.position = destination.position;
+        }
+    }
+
+    public void TriggerFadeAndTeleportToTruck()
+    {
+        showTheAlert = true;
+        alertMessage = "Talk to Marcus about preparation for the tree planting event.";
+        teleportPlayer = true;
+        destination = RyanTransform;
+        TeleportCharactersToTruck();
+        if (!isFading)
+        {
+            StartCoroutine(FadeSequence());
+        }
+        if (player != null)
+        {
+            player.GetComponent<IndoorTracker>().isIndoors = false;
+            player.GetComponent<IndoorTracker>().isInNGO = false;
+        }
+    }
+
+    public void TeleportCharactersToTruck()
+    {
+        StartCoroutine(TeleportCharactersToTruckInvoke());
+    }
+
+    private IEnumerator TeleportCharactersToTruckInvoke()
+    {
+        yield return new WaitForSeconds(1f);
+        for (int i = 0; i < characters.Length; i++)
+        {
+            // Get the NPC GameObject
+            GameObject npc = characters[i];
+
+            // Get the target Transform position
+            Transform targetPosition = characterPositions[i];
+
+            // Teleport the NPC to the target position
+            if (npc != null && targetPosition != null)
+            {
+                UnityEngine.AI.NavMeshAgent agent = npc.GetComponent<UnityEngine.AI.NavMeshAgent>();
+                if (agent != null)
+                {
+                    // Disable the NavMeshAgent if it exists
+                    agent.enabled = false;
+                }
+                npc.gameObject.SetActive(false);
+                npc.transform.position = targetPosition.position;
+                npc.transform.rotation = targetPosition.rotation;
+                npc.gameObject.SetActive(true);
+                NPCAnimator npcAnimator = npc.GetComponent<NPCAnimator>();
+                if (npcAnimator != null)
+                {
+                    npcAnimator.StopWalking();
+                }
+                npc.GetComponentInChildren<Animator>().SetBool("isWalking", false);
+                npc.GetComponentInChildren<Animator>().SetBool("isSitting", false);
+                npc.GetComponentInChildren<Animator>().Play("Breathing", 0, Random.Range(0f, 1f));
+            }
         }
     }
 }
