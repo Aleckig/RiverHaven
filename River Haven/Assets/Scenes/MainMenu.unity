@@ -626,6 +626,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8037504263231631262, guid: 9be1749b59727b347870f561999613df,
         type: 3}
       insertIndex: 3
+      addedObject: {fileID: 1334720310}
+    - targetCorrespondingSourceObject: {fileID: 8037504263231631262, guid: 9be1749b59727b347870f561999613df,
+        type: 3}
+      insertIndex: 4
       addedObject: {fileID: 366362056}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be1749b59727b347870f561999613df, type: 3}
@@ -6773,7 +6777,7 @@ Transform:
   m_GameObject: {fileID: 735278105}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8343,7 +8347,7 @@ Transform:
   m_GameObject: {fileID: 837500334}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.72, y: 0, z: 0}
+  m_LocalPosition: {x: -4.72, y: 0, z: -0.53}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14855,6 +14859,37 @@ Transform:
   m_Children:
   - {fileID: 537852726}
   m_Father: {fileID: 817885914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1334720309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334720310}
+  m_Layer: 0
+  m_Name: Checkpoint (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1334720310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334720309}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -40.36, y: 0, z: -3.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1806594346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1334854091
 GameObject:
@@ -22764,6 +22799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpoints:
   - {fileID: 1558847074}
+  - {fileID: 1334720310}
   - {fileID: 67511949}
   - {fileID: 1568135252}
   - {fileID: 1591718125}
