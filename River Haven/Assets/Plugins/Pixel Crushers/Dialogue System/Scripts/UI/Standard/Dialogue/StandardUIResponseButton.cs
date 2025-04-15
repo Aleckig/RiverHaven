@@ -25,6 +25,9 @@ namespace PixelCrushers.DialogueSystem
 
         [Tooltip("Set button's text to this color by default.")]
         public Color defaultColor = Color.white;
+        
+        [Tooltip("Set button's text to this color when selected.")]
+        public Color selectedColor = Color.green;
 
         /// <summary>
         /// Gets or sets the response text element.
@@ -119,6 +122,16 @@ namespace PixelCrushers.DialogueSystem
         protected virtual void SetColor(Color currentColor)
         {
             if (setLabelColor) label.color = currentColor;
+        }
+        
+        public void SetSelectedColor()
+        {
+            if (setLabelColor) label.color = selectedColor;
+        }
+        
+        public void SetUnselectedColor()
+        {
+            if (setLabelColor) label.color = defaultColor;
         }
 
         /// <summary>
