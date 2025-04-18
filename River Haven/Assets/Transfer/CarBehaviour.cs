@@ -12,18 +12,35 @@ public class CarBehaviour : MonoBehaviour
     [SerializeField] private List<GameObject> npcList = new List<GameObject>();
     [SerializeField] private List<GameObject> carVariants = new List<GameObject>();
     [SerializeField] private List<Transform> followPoints = new List<Transform>();
+    [SerializeField] private Transform npcSpawnPoint;
     //
     private NavMeshAgent navMeshAgent;
     //
-    private int stopPointID = 1;
-    public int SetStopPointID { set => stopPointID = ((value > 1) && (value <= 5)) ? value : 1; }
+    private int stopPointID = 0;
+    public int SetStopPointID { set => stopPointID = ((value >= 1) && (value <= 5)) ? value : 0; }
     //
     private bool pauseMovement = false; // For general purpose of stop, ak player or other object
     private bool npcOut = false;  // For checking where is npc went to the shop or not
 
-    private void Start()
+    private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+    }
+    private void OnEnable()
+    {
+        // Set the car to a random variant
+        int randomIndex = Random.Range(0, carVariants.Count);
+        for (int i = 0; i < carVariants.Count; i++)
+        {
+            if (i == randomIndex)
+            {
+                carVariants[i].SetActive(true);
+            }
+            else
+            {
+                carVariants[i].SetActive(false);
+            }
+        }
         FollowPathWithTp();
     }
     public void PauseMovement()
@@ -33,6 +50,20 @@ public class CarBehaviour : MonoBehaviour
         navMeshAgent.velocity /= 2;
     }
     public void ContinueMovement() => pauseMovement = npcOut; // Continue movement only if the NPC isn't out of the car
+    public void NPCGetInCar()
+    {
+        stopPointID = 0;
+        npcOut = false;
+        ContinueMovement();
+    }
+
+    public void PlayHonkSound()
+    {
+        if (audioSource != null && honkingSound != null)
+        {
+            audioSource.PlayOneShot(honkingSound, honkVolume);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -42,9 +73,13 @@ public class CarBehaviour : MonoBehaviour
             if (parsedStopPointID == stopPointID)
             {
                 PauseMovement();
+                if (!npcOut)  // If the NPC is already out, do not spawn another one
+                {
+                    GameObject npc = npcList[Random.Range(0, npcList.Count)];
+                    npc.GetComponent<NPCFromCar>().StartMovement(parsedStopPointID, npcSpawnPoint, this.gameObject);
+                }
                 npcOut = true;
             }
-            Debug.Log($"StopPointID: {parsedStopPointID}; PausedMovement: {pauseMovement}");
         }
 
         // Check if the waypoint is a stop point and if the ID matches
@@ -100,6 +135,7 @@ public class CarBehaviour : MonoBehaviour
         }
 
         navMeshAgent.ResetPath();
+        gameObject.SetActive(false);
         yield break;
     }
 }

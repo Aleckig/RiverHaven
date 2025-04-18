@@ -8,7 +8,10 @@ public class CarObstacle : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
+        {
             carBehaviour.PauseMovement();
+            carBehaviour.PlayHonkSound();
+        }
         if (other.gameObject.CompareTag("Car"))
             carBehaviour.PauseMovement();
     }
