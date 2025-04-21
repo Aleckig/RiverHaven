@@ -23,7 +23,7 @@ public class RouteManager : MonoBehaviour
   {
     // For correct displayment of values for dropdown option
     if (Application.isPlaying) return;
-    Debug.Log("Updated list");
+    // Debug.Log("Updated list");
     UpdateStaticList();
     //
   }
