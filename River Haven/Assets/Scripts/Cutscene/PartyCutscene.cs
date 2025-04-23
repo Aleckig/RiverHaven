@@ -46,6 +46,25 @@ public class PartyCutscene : MonoBehaviour
         skipButton.onClick.AddListener(SkipCutscene);
         canvasObject.SetActive(false); // Ensure the canvas is initially disabled
     }
+    private void Update()
+    {
+        if (!isCutsceneActive) return;
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            PreviousPicture();
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            NextPicture();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SkipCutscene();
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
