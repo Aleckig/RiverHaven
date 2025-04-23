@@ -702,6 +702,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Jupiter
       objectReference: {fileID: 0}
+    - target: {fileID: 2298875988378446700, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+        type: 3}
+      propertyPath: m_Name
+      value: NamePrefab - Calvin
+      objectReference: {fileID: 0}
     - target: {fileID: 2331347713183872421, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1016,6 +1021,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400722852036489496, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+        type: 3}
+      propertyPath: m_text
+      value: Calvin
       objectReference: {fileID: 0}
     - target: {fileID: 7915144668542770343, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
@@ -6316,6 +6326,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 905267246}
+  isNPC: 1
+  npc: {fileID: 248177700}
 --- !u!114 &248177711 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 777479032273393065, guid: b3c44dedddc466241a37344c179e256e,
@@ -8693,6 +8705,8 @@ Transform:
   - {fileID: 1005966215}
   - {fileID: 2102480563}
   - {fileID: 1173116675}
+  - {fileID: 1717991829}
+  - {fileID: 746469192}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &275194048 stripped
@@ -9858,7 +9872,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659547339}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
@@ -10074,7 +10088,7 @@ MonoBehaviour:
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
   waitOneFrameOnStartOrEnable: 1
-  alertMessage: You're getting tired, return to your home to rest.
+  alertMessage: Go talk to Ethan, the town's rich man with a bad reputation.
   textTable: {fileID: 0}
   alertDuration: 5
   sendMessages: []
@@ -10137,6 +10151,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4978896793147469938}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 335133217}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
@@ -10357,9 +10395,14 @@ MonoBehaviour:
   trigger: 2
   condition:
     luaConditions:
-    - Variable["BirthdayQuest.Invitees"] >= 4
+    - Variable["BirthdayQuest.Invitees"] >= 5
     - Variable["PartyFinished"] == false
-    questConditions: []
+    questConditions:
+    - questName: Party Invitations
+      questState: 2
+      checkQuestEntry: 0
+      entryNumber: 0
+      questEntryState: 0
     acceptedTags: []
     acceptedGameObjects: []
     luaWizardIndex: -1
@@ -10373,7 +10416,26 @@ MonoBehaviour:
   setAnotherQuestEntryState: 0
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
-  luaCode: 
+  luaCode: 'SetQuestEntryState("Party Invitations", 9, "active")
+
+    SetQuestEntryState("Party
+    Invitations", 2, "unassigned")
+
+    SetQuestEntryState("Party Invitations", 3,
+    "unassigned")
+
+    SetQuestEntryState("Party Invitations", 4, "unassigned")
+
+    SetQuestEntryState("Party
+    Invitations", 5, "unassigned")
+
+    SetQuestEntryState("Party Invitations", 6,
+    "unassigned")
+
+    SetQuestEntryState("Party Invitations", 7, "unassigned")
+
+    SetQuestEntryState("Party
+    Invitations", 8, "unassigned")'
   sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
@@ -10422,6 +10484,100 @@ MonoBehaviour:
       luaWizardIndex: 0
       lastEvaluationValue: 0
     target: {fileID: 335133251}
+    state: 1
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: c1cc03cd82f6cdb40afbc0575be25564, type: 2}
+--- !u!114 &335133260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335133207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 2
+  condition:
+    luaConditions:
+    - Variable["BirthdayQuest.Invitees"] >= 1
+    - Variable["PartyFinished"] == false
+    questConditions:
+    - questName: Party Invitations
+      questState: 2
+      checkQuestEntry: 0
+      entryNumber: 0
+      questEntryState: 0
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: SetQuestEntryState("Party Invitations", 8, "active")
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkEntryID: -1
+  barkEntryTitle: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: 
+  conversationConversant: {fileID: 0}
+  conversationActor: {fileID: 0}
+  startConversationEntryID: -1
+  startConversationEntryTitle: 
+  overrideDialogueUI: {fileID: 0}
+  exclusive: 0
+  replace: 0
+  queue: 0
+  skipIfNoValidEntries: 0
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  marginToAllowTriggerExit: 0.2
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions:
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 335133260}
     state: 1
   setAnimatorStateActions: []
   onExecute:
@@ -10581,6 +10737,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11424616, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: alwaysAutoFocus
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11426068, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_BlockingMask.m_Bits
       value: 255
@@ -10617,6 +10777,10 @@ PrefabInstance:
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.alertSettings.alertCheckFrequency
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.inputSettings.cancelConversation.key
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20862,7 +21026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387200542bfd2df4eb86ef709a1a26c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 612980908}
+  target: {fileID: 4978896793147469927}
+  homeTarget: {fileID: 708810305}
   newTarget: {fileID: 1108766215}
   newTarget2: {fileID: 1037599801}
   newTarget3: {fileID: 1123985423}
@@ -21279,12 +21444,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612770858}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &612980908 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6183266634596881331, guid: 532849e866af2984daafd8b71ecc195c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1175390710}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &613933869
 GameObject:
   m_ObjectHideFlags: 0
@@ -21756,6 +21915,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 418185476}
+          m_TargetAssemblyTypeName: ScreenFade, Assembly-CSharp
+          m_MethodName: ResetActiveQuests
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - guid: 73194507-6fc7-4919-b118-1a9ffdf9539c
     onExecute:
       m_PersistentCalls:
@@ -21891,6 +22062,42 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1042517643}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 589991496}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 589991500}
+          m_TargetAssemblyTypeName: ArrowRotation, Assembly-CSharp
+          m_MethodName: MakeHomeTarget
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
   - guid: 44b4da94-520e-4366-a2da-84b03d5f27b1
     onExecute:
@@ -22464,7 +22671,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 1175390715}
+        - m_Target: {fileID: 319885947}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -22560,6 +22767,38 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: ScreenFade, Assembly-CSharp
           m_MethodName: TriggerFadeAndTeleportToNGO
           m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 0fb8be8b-db9c-4392-b9a0-1e4894be5ee0
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1747519210}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - guid: bd1b1972-4878-48a5-a4c5-32f45a09e99e
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 589991496}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -25217,6 +25456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 628887884}
+  isNPC: 1
+  npc: {fileID: 495205405}
 --- !u!54 &698087572
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25445,12 +25686,12 @@ MonoBehaviour:
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
+  setQuestState: 0
+  questName: Gather Fishing Bait
   questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
+  setQuestEntryState: 1
+  questEntryNumber: 2
+  questEntryState: 2
   setAnotherQuestEntryState: 0
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
@@ -25544,12 +25785,12 @@ MonoBehaviour:
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
+  setQuestState: 0
+  questName: Gather Fishing Bait
   questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
+  setQuestEntryState: 1
+  questEntryNumber: 3
+  questEntryState: 4
   setAnotherQuestEntryState: 0
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
@@ -25677,6 +25918,12 @@ Transform:
   - {fileID: 753778899}
   m_Father: {fileID: 2021252784}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &708810305 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6183266634596881331, guid: 532849e866af2984daafd8b71ecc195c,
+    type: 3}
+  m_PrefabInstance: {fileID: 659547330}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &708889017
 GameObject:
   m_ObjectHideFlags: 0
@@ -29652,7 +29899,7 @@ PrefabInstance:
         catch. A big corporation is pushing to develop the same land into yet another
         mall. The final decision is in the hands of the people, and a petition will
         determine which vision wins. \r\n \r\nWe need all the support we can get
-        to make this happen. After seeing your enthusiasm and hare work for the birthday
+        to make this happen. After seeing your enthusiasm and hard work for the birthday
         party I believe you\u2019d be a perfect fit to help us spread the word with
         the same passion for community work and solidarity. If you\u2019re interested,
         come by the SKY office today. I\u2019ll give you a quick tour and explain
@@ -37699,6 +37946,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 319885947}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
@@ -38049,12 +38308,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2035312048}
   m_SourcePrefab: {fileID: 100100000, guid: 13824c621f28cb147a8a508fc0aab5f8, type: 3}
---- !u!4 &1050457546 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3024496776232789621, guid: 532849e866af2984daafd8b71ecc195c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1175390710}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1059810728
 GameObject:
   m_ObjectHideFlags: 0
@@ -40471,6 +40724,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 335133251}
+    - targetCorrespondingSourceObject: {fileID: 6600957522050911493, guid: 920f742f8b138de43b8370666210cbb9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 335133260}
   m_SourcePrefab: {fileID: 100100000, guid: 920f742f8b138de43b8370666210cbb9, type: 3}
 --- !u!1001 &1119555316
 PrefabInstance:
@@ -40738,7 +40995,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1050457546}
+    m_TransformParent: {fileID: 274444686}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f32e5938036064e478648bf275c6338d,
         type: 3}
@@ -40748,37 +41005,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f32e5938036064e478648bf275c6338d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: -307.46808
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f32e5938036064e478648bf275c6338d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -10.627
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f32e5938036064e478648bf275c6338d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.65
+      value: 251.51341
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f32e5938036064e478648bf275c6338d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f32e5938036064e478648bf275c6338d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f32e5938036064e478648bf275c6338d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f32e5938036064e478648bf275c6338d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f32e5938036064e478648bf275c6338d,
         type: 3}
@@ -41936,10 +42193,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 11299543}
-    - targetCorrespondingSourceObject: {fileID: 3024496776232789621, guid: 532849e866af2984daafd8b71ecc195c,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1717991829}
     - targetCorrespondingSourceObject: {fileID: 3872067002954024717, guid: 532849e866af2984daafd8b71ecc195c,
         type: 3}
       insertIndex: -1
@@ -41960,10 +42213,6 @@ PrefabInstance:
         type: 3}
       insertIndex: 17
       addedObject: {fileID: 289441574}
-    - targetCorrespondingSourceObject: {fileID: 2387035111287465578, guid: 532849e866af2984daafd8b71ecc195c,
-        type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 746469192}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3292262124271836346, guid: 532849e866af2984daafd8b71ecc195c,
         type: 3}
@@ -42482,7 +42731,7 @@ Transform:
   m_GameObject: {fileID: 1188819053}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 93.1, y: 0, z: 108.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44950,6 +45199,7 @@ MonoBehaviour:
   readyToThrow: 0
   itemPickedUp: 0
   animator: {fileID: 176293629}
+  usableComponent: {fileID: 1289786273}
 --- !u!1 &1291057970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5687739881634546648, guid: a5eda3c5c0e19de4f99aedb4cd00c791,
@@ -46017,12 +46267,6 @@ Transform:
   - {fileID: 399055058}
   m_Father: {fileID: 797251756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1338469452 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2387035111287465578, guid: 532849e866af2984daafd8b71ecc195c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1175390710}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1345867932
 GameObject:
   m_ObjectHideFlags: 0
@@ -46502,15 +46746,15 @@ MonoBehaviour:
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
+  setQuestState: 0
+  questName: Finding The Artist's Paint
   questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  setAnotherQuestEntryState: 0
+  setQuestEntryState: 1
+  questEntryNumber: 2
+  questEntryState: 2
+  setAnotherQuestEntryState: 1
   anotherQuestEntryNumber: 1
-  anotherQuestEntryState: 0
+  anotherQuestEntryState: 4
   luaCode: Variable["JupitersPaintFound"] = true
   sequence: 
   sequenceSpeaker: {fileID: 0}
@@ -50529,6 +50773,7 @@ MonoBehaviour:
   readyToThrow: 0
   itemPickedUp: 0
   animator: {fileID: 176293629}
+  usableComponent: {fileID: 1498354364}
 --- !u!1 &1499140736
 GameObject:
   m_ObjectHideFlags: 0
@@ -50707,15 +50952,15 @@ MonoBehaviour:
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
+  setQuestState: 0
+  questName: Lost Piano Sheet
   questState: 0
-  setQuestEntryState: 0
+  setQuestEntryState: 1
   questEntryNumber: 1
-  questEntryState: 0
-  setAnotherQuestEntryState: 0
-  anotherQuestEntryNumber: 1
-  anotherQuestEntryState: 0
+  questEntryState: 4
+  setAnotherQuestEntryState: 1
+  anotherQuestEntryNumber: 2
+  anotherQuestEntryState: 2
   luaCode: Variable["PianoSheetFound"] = true
   sequence: 
   sequenceSpeaker: {fileID: 0}
@@ -51492,7 +51737,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1338469452}
+    m_TransformParent: {fileID: 274444686}
     m_Modifications:
     - target: {fileID: 1392318924767750626, guid: d6d151fc0a9bb5d43b7ee6163f9d1dcb,
         type: 3}
@@ -51502,22 +51747,22 @@ PrefabInstance:
     - target: {fileID: 3117262429863738743, guid: d6d151fc0a9bb5d43b7ee6163f9d1dcb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.09401135
+      value: 881.855
       objectReference: {fileID: 0}
     - target: {fileID: 3117262429863738743, guid: d6d151fc0a9bb5d43b7ee6163f9d1dcb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -10.627
       objectReference: {fileID: 0}
     - target: {fileID: 3117262429863738743, guid: d6d151fc0a9bb5d43b7ee6163f9d1dcb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.24377443
+      value: -55.93165
       objectReference: {fileID: 0}
     - target: {fileID: 3117262429863738743, guid: d6d151fc0a9bb5d43b7ee6163f9d1dcb,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3117262429863738743, guid: d6d151fc0a9bb5d43b7ee6163f9d1dcb,
         type: 3}
@@ -51527,7 +51772,7 @@ PrefabInstance:
     - target: {fileID: 3117262429863738743, guid: d6d151fc0a9bb5d43b7ee6163f9d1dcb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3117262429863738743, guid: d6d151fc0a9bb5d43b7ee6163f9d1dcb,
         type: 3}
@@ -52450,6 +52695,7 @@ MonoBehaviour:
   readyToThrow: 0
   itemPickedUp: 0
   animator: {fileID: 176293629}
+  usableComponent: {fileID: 1573487368}
 --- !u!1 &1573549795
 GameObject:
   m_ObjectHideFlags: 0
@@ -52749,12 +52995,12 @@ MonoBehaviour:
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
+  setQuestState: 0
+  questName: Gather Fishing Bait
   questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
+  setQuestEntryState: 1
+  questEntryNumber: 2
+  questEntryState: 2
   setAnotherQuestEntryState: 0
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
@@ -52848,12 +53094,12 @@ MonoBehaviour:
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
+  setQuestState: 0
+  questName: Gather Fishing Bait
   questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
+  setQuestEntryState: 1
+  questEntryNumber: 3
+  questEntryState: 4
   setAnotherQuestEntryState: 0
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
@@ -55425,6 +55671,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 364437677}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1747519210 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4627590786171468868, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
+    type: 3}
+  m_PrefabInstance: {fileID: 46015825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1747898061
 GameObject:
   m_ObjectHideFlags: 0
@@ -56204,6 +56462,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 680368691844165372, guid: 29ce87b07fb970e4284e18feb0e23f89,
+        type: 3}
+      propertyPath: isTowerTask
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3251251249714805712, guid: 29ce87b07fb970e4284e18feb0e23f89,
         type: 3}
@@ -57063,12 +57326,12 @@ MonoBehaviour:
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
+  setQuestState: 0
+  questName: Gather Fishing Bait
   questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
+  setQuestEntryState: 1
+  questEntryNumber: 3
+  questEntryState: 4
   setAnotherQuestEntryState: 0
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
@@ -57221,12 +57484,12 @@ MonoBehaviour:
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
+  setQuestState: 0
+  questName: Gather Fishing Bait
   questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
+  setQuestEntryState: 1
+  questEntryNumber: 2
+  questEntryState: 2
   setAnotherQuestEntryState: 0
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
@@ -58634,7 +58897,7 @@ MonoBehaviour:
   condition:
     luaConditions: []
     questConditions:
-    - questName: Find Dog's Toy
+    - questName: The Angry Loud Dog
       questState: 2
       checkQuestEntry: 0
       entryNumber: 0
@@ -58652,7 +58915,12 @@ MonoBehaviour:
   setAnotherQuestEntryState: 0
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
-  luaCode: Variable["DogToyFound"] = true
+  luaCode: 'Variable["DogToyFound"] = true
+
+    SetQuestEntryState("The Angry Loud
+    Dog", 2, "success")
+
+    SetQuestEntryState("The Angry Loud Dog", 3, "active")'
   sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
@@ -61055,15 +61323,15 @@ MonoBehaviour:
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
+  setQuestState: 0
+  questName: Mystery Mail
   questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  setAnotherQuestEntryState: 0
-  anotherQuestEntryNumber: 1
-  anotherQuestEntryState: 0
+  setQuestEntryState: 1
+  questEntryNumber: 2
+  questEntryState: 4
+  setAnotherQuestEntryState: 1
+  anotherQuestEntryNumber: 3
+  anotherQuestEntryState: 2
   luaCode: 
   sequence: 
   sequenceSpeaker: {fileID: 0}
@@ -62409,7 +62677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 4
   Actions:
-  - time: 6:00
+  - time: 14:00
     events:
       m_PersistentCalls:
         m_Calls:
@@ -73725,6 +73993,18 @@ MonoBehaviour:
   moveSpeed: 2
   stoppingDistance: 1
   animator: {fileID: 1333161972}
+--- !u!114 &4978896793147469938 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 835535523228819506, guid: d5ea912148adce64db3e46692989d0de,
+    type: 3}
+  m_PrefabInstance: {fileID: 8742365168922906273}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106516869}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4998637190878011903
 GameObject:
   m_ObjectHideFlags: 0
@@ -82057,6 +82337,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 80691133462350864, guid: bd36b20666e548b4bb50e281e9aedc67,
         type: 3}
+      propertyPath: isParty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 80691133462350864, guid: bd36b20666e548b4bb50e281e9aedc67,
+        type: 3}
       propertyPath: slideText
       value: 
       objectReference: {fileID: 1962692130}
@@ -83015,6 +83300,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 835535523228819506, guid: d5ea912148adce64db3e46692989d0de,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 835535523228819506, guid: d5ea912148adce64db3e46692989d0de,
+        type: 3}
       propertyPath: conversation
       value: EthanConversation
       objectReference: {fileID: 0}
@@ -83041,12 +83331,12 @@ PrefabInstance:
     - target: {fileID: 1801739828130862484, guid: d5ea912148adce64db3e46692989d0de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7880564
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 1801739828130862484, guid: d5ea912148adce64db3e46692989d0de,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 70.37633
+      value: 67.75
       objectReference: {fileID: 0}
     - target: {fileID: 1801739828130862484, guid: d5ea912148adce64db3e46692989d0de,
         type: 3}

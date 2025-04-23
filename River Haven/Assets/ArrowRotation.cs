@@ -5,6 +5,7 @@ using UnityEngine;
 public class ArrowRotation : MonoBehaviour
 {
     [SerializeField] private Transform target;
+    [SerializeField] private Transform homeTarget;
     [SerializeField] private Transform newTarget;
     [SerializeField] private Transform newTarget2;
     [SerializeField] private Transform newTarget3;
@@ -19,6 +20,12 @@ public class ArrowRotation : MonoBehaviour
     void Update()
     {
         transform.LookAt(targetRotation);
+    }
+
+    public void MakeHomeTarget()
+    {
+        target = homeTarget;
+        targetRotation = new Vector3(target.position.x, this.transform.position.y, target.position.z);
     }
 
     public void MakeNewTarget()

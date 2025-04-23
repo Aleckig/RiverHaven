@@ -19,6 +19,7 @@ public class PartyCutscene : MonoBehaviour
     [SerializeField] private GameObject permanentlyDisabledObject2;
     [SerializeField] private GameObject objectToEnable1;
     [SerializeField] private GameObject objectToEnable2;
+    [SerializeField] private bool isParty;
 
     [Header("Cutscene Slides")]
     public Sprite[] pictures;
@@ -65,6 +66,12 @@ public class PartyCutscene : MonoBehaviour
         playerObject.SetActive(false);
         playerTransformation.position = destination.position;
         playerObject.SetActive(true);
+        if (isParty == true)
+        {
+            playerObject.GetComponent<IndoorTracker>().isIndoors = true;
+            playerObject.GetComponent<IndoorTracker>().isInNGO = false;
+            QuestLog.SetQuestState("Mystery Mail", QuestState.Active);
+        }
         canvasObject.SetActive(true);
 
         objectToDisable1.SetActive(false);

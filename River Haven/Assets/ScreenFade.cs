@@ -30,6 +30,8 @@ public class ScreenFade : MonoBehaviour
     [SerializeField] private Transform[] characterPositions;
     [SerializeField] private GameObject[] characters;
     private bool startFade = true;
+    private bool tipShown = false;
+    private bool showTip = false;
 
     void Start()
     {
@@ -38,6 +40,37 @@ public class ScreenFade : MonoBehaviour
             fadeImage.gameObject.SetActive(true);
             fadeImage.color = new Color(0f, 0f, 0f, 1f);
             StartCoroutine(FadeToColor(new Color(0, 0, 0, 0)));
+        }
+    }
+
+    void Update()
+    {
+        if (tipShown == false && Input.GetKeyDown(KeyCode.J))
+        {
+            //bool myBool = DialogueLua.GetVariable("TalkedToMai").AsBool;
+            var quests = QuestLog.GetAllQuests();
+
+            int activeCount = 0;
+
+            // Count active quests
+            foreach (var quest in quests)
+            {
+                if (QuestLog.IsQuestActive(quest))
+                {
+                    activeCount++;
+
+                    // Early exit if we already found 2
+                    if (activeCount >= 2)
+                    {
+                        showTip = true;
+                    }
+                }
+            }
+            if (showTip == true)
+            {
+                DialogueManager.ShowAlert("Click on the quest titles to see more information about each quest.");
+                tipShown = true;
+            }
         }
     }
 
@@ -336,6 +369,18 @@ public class ScreenFade : MonoBehaviour
     public void TeleportCharactersToTruck()
     {
         StartCoroutine(TeleportCharactersToTruckInvoke());
+    }
+
+    public void ResetActiveQuests()
+    {
+        var allQuests = QuestLog.GetAllQuests();
+        foreach (string quest in allQuests)
+        {
+            if (QuestLog.IsQuestActive(quest))
+            {
+                QuestLog.SetQuestState(quest, QuestState.Unassigned);
+            }
+        }
     }
 
     private IEnumerator TeleportCharactersToTruckInvoke()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class PickUpItem : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PickUpItem : MonoBehaviour
     public bool itemPickedUp;
     private Rigidbody rb;
     [SerializeField] private Animator animator; // Ensure Animator is assigned either in the Inspector or through code
+    [SerializeField] private Usable usableComponent;
 
     void Start()
     {
@@ -51,10 +53,14 @@ public class PickUpItem : MonoBehaviour
 
         pickUpDistance = Vector3.Distance(player.position, transform.position);
 
-        if (pickUpDistance <= 2f)
+        if (pickUpDistance <= 1.5f)
         {
             if (Input.GetKeyDown(KeyCode.Space) && !itemPickedUp && pickUpPoint.childCount < 1)
             {
+                if (usableComponent != null)
+                {
+                    usableComponent.enabled = false;
+                }
                 playerController.holdingObject = true;
                 rb.useGravity = false;
                 rb.constraints = RigidbodyConstraints.FreezeAll;

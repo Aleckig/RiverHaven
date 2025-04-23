@@ -32,6 +32,8 @@ public class SimonTask : MonoBehaviour
     [SerializeField] private AudioClip buttonSound;
     [SerializeField] private AudioClip orderSound;
 
+    [SerializeField] private bool isTowerTask;
+
     private void OnEnable()
     {
         ResetGame();
@@ -66,8 +68,15 @@ public class SimonTask : MonoBehaviour
                 if (level == maxLevel)
                 {
                     won = true;
-                    QuestLog.SetQuestState("Fix The Radio Tower", QuestState.Success);
-                    DialogueLua.SetVariable("ActivitiesCompleted", DialogueLua.GetVariable("ActivitiesCompleted").AsInt + 1);
+                    if (isTowerTask == true)
+                    {
+                        QuestLog.SetQuestState("Fix The Radio Tower", QuestState.Success);
+                        DialogueLua.SetVariable("ActivitiesCompleted", DialogueLua.GetVariable("ActivitiesCompleted").AsInt + 1);
+                    }
+                    if (isTowerTask == false)
+                    {
+                        DialogueLua.SetVariable("PianoTaskCompleted", true);
+                    }
                     closeTaskMarker.SetActive(false);
                     audioSource.PlayOneShot(correctSound);
                     StartCoroutine(ColorBlink(correctColor));
@@ -132,7 +141,14 @@ public class SimonTask : MonoBehaviour
         if (won)
         {
             ClosePanel();
-            DialogueManager.ShowAlert("You fixed the radio tower!");
+            if (isTowerTask == true)
+            {
+                DialogueManager.ShowAlert("You fixed the radio tower!");
+            }
+            if (isTowerTask == false)
+            {
+                DialogueManager.ShowAlert("You played the right notes! Talk to Calvin.");
+            }
         }
 
         EnableInteractableButtons();

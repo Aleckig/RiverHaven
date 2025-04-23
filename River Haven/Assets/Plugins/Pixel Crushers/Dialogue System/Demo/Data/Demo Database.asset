@@ -1180,7 +1180,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Entry Count
-      value: 1
+      value: 2
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
@@ -1188,13 +1188,21 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_QuestState
     - title: Entry 1
-      value: 
+      value: Search near the river for the paint bucket
       type: 0
       typeString: CustomFieldType_Text
+    - title: Entry 2 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: Bring the paint back to Jupiter
+      type: 0
+      typeString: 
   - id: 7
     fields:
     - title: Name
-      value: Find Dog's Toy
+      value: The Angry Loud Dog
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -1203,8 +1211,8 @@ MonoBehaviour:
       typeString: CustomFieldType_Files
     - title: Description
       value: Mr Grumpy's dog is angry and barking, and Steve's kids aren't able to
-        play outside. Find the toy and bring it back. Mr Grumpy says that the dog
-        usually likes to play near the pool at the large houses.
+        play outside. Find the missing toy and bring it back to Mr Grumpy. Mr Grumpy
+        says that the dog usually likes to play near the pool at the large houses.
       type: 0
       typeString: CustomFieldType_Text
     - title: Success Description
@@ -1231,6 +1239,42 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 4
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Ask Mr Grumpy about his dog
+      type: 0
+      typeString: 
+    - title: Entry 2 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: Find the missing dog toy near the pool at the large houses
+      type: 0
+      typeString: 
+    - title: Entry 3 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 3
+      value: Bring the toy back to Mr Grumpy
+      type: 0
+      typeString: 
+    - title: Entry 4 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 4
+      value: Inform Steve that the dog toy was found
+      type: 0
+      typeString: 
   - id: 8
     fields:
     - title: Name
@@ -1281,8 +1325,8 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: Baraka needs bait for fishing. There are worms near the moderate houses
-        in the west side of the town, I should go search there.
+      value: Baraka needs bait for fishing. There are worms right south of the moderate
+        houses in the west side of the town.
       type: 0
       typeString: CustomFieldType_Text
     - title: Success Description
@@ -1310,7 +1354,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Entry Count
-      value: 1
+      value: 3
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
@@ -1321,10 +1365,26 @@ MonoBehaviour:
       value: '[var=WormsGathered]/3 worms gathered.'
       type: 0
       typeString: 
+    - title: Entry 2 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: Return to Baraka with the bait
+      type: 0
+      typeString: 
+    - title: Entry 3 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 3
+      value: Search near the moderate houses.
+      type: 0
+      typeString: 
   - id: 10
     fields:
     - title: Name
-      value: Bring Scarf To Agatha
+      value: The Handmade Scarf
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -1359,6 +1419,26 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 2
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Bring the scarf to Agatha
+      type: 0
+      typeString: 
+    - title: Entry 2 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: Return to Violet to thank her for Agatha
+      type: 0
+      typeString: 
   - id: 11
     fields:
     - title: Name
@@ -1398,6 +1478,26 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 2
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Find the sheet near the park or ask Calvin for help
+      type: 0
+      typeString: 
+    - title: Entry 2 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: Bring the sheet to Ethan
+      type: 0
+      typeString: 
   - id: 12
     fields:
     - title: Name
@@ -1870,6 +1970,238 @@ MonoBehaviour:
       value: 'Brush Found: [var=BrushFound]/1'
       type: 0
       typeString: 
+  - id: 21
+    fields:
+    - title: Name
+      value: Party Invitations
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: Invite as many people from the neighborhood to the Landlord's party
+        as possible. Helping them around may persuade them to join the party.
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: CustomFieldType_QuestState
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Trackable
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Track
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 9
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: 'People coming to the party: [var=BirthdayQuest.Invitees]'
+      type: 0
+      typeString: 
+    - title: Entry 2 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: Invite Steve
+      type: 0
+      typeString: 
+    - title: Entry 3 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 3
+      value: Invite Baraka
+      type: 0
+      typeString: 
+    - title: Entry 4 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 4
+      value: Invite Jupiter
+      type: 0
+      typeString: 
+    - title: Entry 5 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 5
+      value: Invite Violet
+      type: 0
+      typeString: 
+    - title: Entry 6 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 6
+      value: Invite Ethan
+      type: 0
+      typeString: 
+    - title: Entry 7 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 7
+      value: Invite Calvin
+      type: 0
+      typeString: 
+    - title: Entry 8 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 8
+      value: Give Mai feedback on her cookies
+      type: 0
+      typeString: 
+    - title: Entry 9 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 9
+      value: Go check the community board
+      type: 0
+      typeString: 
+  - id: 22
+    fields:
+    - title: Name
+      value: The Spare Football
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: CustomFieldType_QuestState
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Trackable
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Track
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Return to Steve to give him the new football
+      type: 0
+      typeString: 
+  - id: 23
+    fields:
+    - title: Name
+      value: Mystery Mail
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: You have received mail in your mailbox outside your house. Go check
+        what it is.
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: CustomFieldType_QuestState
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Trackable
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Track
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 3
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Check your mailbox outside for new mail
+      type: 0
+      typeString: 
+    - title: Entry 2 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: Follow the quest arrow to the NGO building
+      type: 0
+      typeString: 
+    - title: Entry 3 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 3
+      value: Talk to Marcus
+      type: 0
+      typeString: 
   locations: []
   variables:
   - id: 0
@@ -2295,7 +2627,7 @@ MonoBehaviour:
   - id: 31
     fields:
     - title: Name
-      value: 
+      value: PianoTaskCompleted
       type: 0
       typeString: 
     - title: Initial Value
@@ -3121,7 +3453,7 @@ MonoBehaviour:
   - id: 90
     fields:
     - title: Name
-      value: 
+      value: GrumpyMet
       type: 0
       typeString: 
     - title: Initial Value
@@ -3321,7 +3653,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -3335,7 +3667,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -3349,7 +3681,119 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 108
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 109
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 110
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 111
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 112
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 113
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 114
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 115
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -11495,7 +11939,9 @@ MonoBehaviour:
       userScript: 'SetQuestState("Meeting The Neighbors", "active");
 
         ShowAlert("New
-        Quest: Meeting The Neighbors")'
+        Quest: Meeting The Neighbors");
+
+        ShowAlert("Hold Shift to sprint.");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11998,7 +12444,9 @@ MonoBehaviour:
       userScript: 'ShowAlert("Go around the town to ask people if they need any help.");
 
         Variable["TalkedToMai"]
-        = true'
+        = true;
+
+        SetQuestState("Party Invitations", "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13654,8 +14102,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["BirthdayQuest.Invitees"] = Variable["BirthdayQuest.Invitees"]
+      userScript: 'Variable["BirthdayQuest.Invitees"] = Variable["BirthdayQuest.Invitees"]
         + 1
+
+        SetQuestEntryState("Party Invitations", 8, "unassigned")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14078,7 +14528,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: SetQuestEntryState("Party Invitations", 8, "unassigned")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14089,7 +14539,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 37.860718, y: 50.73346}
+    canvasScrollPosition: {x: 4.543274, y: 437.67056}
     canvasZoom: 1.056503
   - id: 16
     fields:
@@ -14290,7 +14740,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active"
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active" and
+        (Variable["GrumpyMet"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -15356,8 +15807,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
-        + 1
+      userScript: 'Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1;
+
+        Variable["GrumpyMet"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15427,8 +15880,8 @@ MonoBehaviour:
         destinationDialogueID: 18
         isConnector: 0
         priority: 2
-      conditionsString: Variable["DogQuestAvailable"] == true and (CurrentQuestState("Meeting
-        The Neighbors") == "success")
+      conditionsString: (CurrentQuestState("Meeting The Neighbors") == "success")
+        and (CurrentQuestState("The Angry Loud Dog") == "active")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -15714,7 +16167,12 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("Find Dog's Toy", "active")
+      userScript: 'SetQuestEntryState("The Angry Loud Dog", 1, "success")
+
+        SetQuestEntryState("The
+        Angry Loud Dog", 2, "active");
+
+        Variable["DogQuestAvailable"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15790,7 +16248,8 @@ MonoBehaviour:
         destinationDialogueID: 24
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Find Dog's Toy") == "active"
+      conditionsString: CurrentQuestState("The Angry Loud Dog") == "active" and (Variable["DogQuestAvailable"]
+        == true)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -16135,10 +16594,13 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SetQuestState("Find Dog''s Toy", "success");
+      userScript: 'ShowAlert("Go inform Steve that the dog has its toy and the kids
+        can play outside now.")
 
-        ShowAlert("Go
-        inform Steve that the dog has its toy and the kids can play outside now.")'
+        SetQuestEntryState("The Angry Loud Dog",
+        3, "success")
+
+        SetQuestEntryState("The Angry Loud Dog", 4, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16427,8 +16889,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 198.40002, y: 7.200012}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 53.681274, y: 64.69656}
+    canvasZoom: 0.8047495
   - id: 17
     fields:
     - title: Title
@@ -17418,8 +17880,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("Meeting The Neighbors") == "success" and
-        (CurrentQuestState("Find Dog's Toy") ~= "active") and (CurrentQuestState("Find
-        Dog's Toy") ~= "success")
+        (CurrentQuestState("The Angry Loud Dog") ~= "active") and (CurrentQuestState("The
+        Angry Loud Dog") ~= "success")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -17776,7 +18238,7 @@ MonoBehaviour:
       userScript: 'ShowAlert("Go talk to Mr Grumpy and ask if you can help with the
         dog.");
 
-        Variable["DogQuestAvailable"] = true'
+        SetQuestState("The Angry Loud Dog", "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17848,8 +18310,9 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Find Dog's Toy") == "success" and (CurrentQuestState("Go
-        Talk To Baraka") == "unassigned")
+      conditionsString: CurrentQuestState("The Angry Loud Dog") == "active" and (CurrentQuestState("Go
+        Talk To Baraka") == "unassigned") and (Variable["DogToyFound"] == true) and
+        (CurrentQuestEntryState("The Angry Loud Dog", 4) == "active")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -18109,8 +18572,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'I wanted to know if you were coming or not, I only saw two names
-          on the pin board.  '
+        value: I wanted to know if you were coming or not, I didn't see too many
+          invitations taken on the community board.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -18355,8 +18818,10 @@ MonoBehaviour:
       userScript: 'ShowAlert("I should go talk to Baraka to ask about the football.
         Maybe he can give it to Steve''s kids.");
 
-        SetQuestState("Go Talk
-        To Baraka", "active")'
+        SetQuestState("The Angry
+        Loud Dog", "success");
+
+        SetQuestState("Go Talk To Baraka", "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18709,8 +19174,13 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["BirthdayQuest.Invitees"] = Variable["BirthdayQuest.Invitees"]
+      userScript: 'Variable["BirthdayQuest.Invitees"] = Variable["BirthdayQuest.Invitees"]
         + 1
+
+        SetQuestEntryState("Party Invitations", 2, "unassigned");
+
+        SetQuestState("The
+        Spare Football", "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18780,8 +19250,8 @@ MonoBehaviour:
         destinationDialogueID: 32
         isConnector: 0
         priority: 2
-      conditionsString: Variable["FootBallReceived"] == true and (CurrentQuestState("Find
-        Dog's Toy") == "success") and (Variable["PartyFinished"] == false)
+      conditionsString: Variable["FootBallReceived"] == true and (CurrentQuestState("The
+        Angry Loud Dog") == "success") and (Variable["PartyFinished"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -18993,8 +19463,13 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["BirthdayQuest.Invitees"] = Variable["BirthdayQuest.Invitees"]
+      userScript: 'Variable["BirthdayQuest.Invitees"] = Variable["BirthdayQuest.Invitees"]
         + 1
+
+        SetQuestEntryState("Party Invitations", 2, "success");
+
+        SetQuestState("The
+        Spare Football", "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19005,7 +19480,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 77.6611, y: 52.06833}
+    canvasScrollPosition: {x: 238.27866, y: 16.767792}
     canvasZoom: 0.9065014
   - id: 18
     fields:
@@ -21755,7 +22230,10 @@ MonoBehaviour:
       userScript: 'SetQuestState("Finding The Artist''s Paint", "success");
 
         Variable["BirthdayQuest.Invitees"]
-        = Variable["BirthdayQuest.Invitees"] + 1'
+        = Variable["BirthdayQuest.Invitees"] + 1;
+
+        SetQuestEntryState("Party
+        Invitations", 4, "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21766,7 +22244,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 211.19998, y: 0}
+    canvasScrollPosition: {x: 423.19998, y: 3.2000122}
     canvasZoom: 1
   - id: 20
     fields:
@@ -23592,7 +24070,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("Meeting The Neighbors") == "success" and
-        (CurrentQuestState("Bring Scarf To Agatha") == "unassigned") and (Variable["PartyFinished"]
+        (CurrentQuestState("The Handmade Scarf") == "unassigned") and (Variable["PartyFinished"]
         == false)
       userScript: 
       onExecute:
@@ -23731,7 +24209,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("Bring Scarf To Agatha", "active")
+      userScript: SetQuestState("The Handmade Scarf", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -23802,8 +24280,8 @@ MonoBehaviour:
         destinationDialogueID: 17
         isConnector: 0
         priority: 2
-      conditionsString: Variable["ScarfGiven"] == true and (CurrentQuestState("Bring
-        Scarf To Agatha") == "active")
+      conditionsString: Variable["ScarfGiven"] == true and (CurrentQuestState("The
+        Handmade Scarf") == "active")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -24301,10 +24779,13 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SetQuestState("Bring Scarf To Agatha", "success");
+      userScript: 'SetQuestState("The Handmade Scarf", "success");
 
         Variable["BirthdayQuest.Invitees"]
-        = Variable["BirthdayQuest.Invitees"] + 1'
+        = Variable["BirthdayQuest.Invitees"] + 1;
+
+        SetQuestEntryState("Party
+        Invitations", 5, "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25881,7 +26362,12 @@ MonoBehaviour:
         = Variable["BirthdayQuest.Invitees"] + 1;
 
         ShowAlert("Go and give
-        the football to Steve.")'
+        the football to Steve.");
+
+        SetQuestState("The Spare Football", "active");
+
+        SetQuestEntryState("Party
+        Invitations", 3, "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -26462,7 +26948,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 428.00006, y: 0.80000305}
+    canvasScrollPosition: {x: 287.2001, y: 4}
     canvasZoom: 1
   - id: 23
     fields:
@@ -27224,8 +27710,8 @@ MonoBehaviour:
         destinationDialogueID: 10
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Bring Scarf To Agatha") == "active" and
-        (Variable["ScarfGiven"] == false)
+      conditionsString: CurrentQuestState("The Handmade Scarf") == "active" and (Variable["ScarfGiven"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -27365,7 +27851,13 @@ MonoBehaviour:
       userScript: 'Variable["ScarfGiven"] = true;
 
         ShowAlert("Go back to
-        Violet to thank for the scarf.")'
+        Violet to thank for the scarf.");
+
+        SetQuestEntryState("The Handmade
+        Scarf", 2, "active");
+
+        SetQuestEntryState("The Handmade Scarf", 1,
+        "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27376,7 +27868,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 7.189148, y: 92.66107}
+    canvasScrollPosition: {x: 27.159271, y: 16.774841}
     canvasZoom: 1.0014997
   - id: 24
     fields:
@@ -28264,6 +28756,12 @@ MonoBehaviour:
         destinationDialogueID: 26
         isConnector: 0
         priority: 2
+      - originConversationID: 25
+        originDialogueID: 0
+        destinationConversationID: 25
+        destinationDialogueID: 31
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -29053,7 +29551,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("Meeting The Neighbors") == "success" and
-        (Variable["PartyFinished"] == false)
+        (Variable["PartyFinished"] == false) and (Variable["PianoTaskCompleted"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -29908,7 +30407,12 @@ MonoBehaviour:
       userScript: 'Variable["PianoSheetCopied"] = true
 
         ShowAlert("Bring
-        the copy back to Ethan.");'
+        the copy back to Ethan.");
+
+        SetQuestEntryState("Lost Piano Sheet",
+        1, "success");
+
+        SetQuestEntryState("Lost Piano Sheet", 2, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -30416,8 +30920,225 @@ MonoBehaviour:
         y: 233.6
         width: 160
         height: 30
+    - id: 31
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 25
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I did it!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Camera(CameraPoint,listener,1)
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 25
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 25
+        originDialogueID: 31
+        destinationConversationID: 25
+        destinationDialogueID: 32
+        isConnector: 0
+        priority: 2
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "success" and
+        (Variable["PartyFinished"] == false) and (Variable["PianoTaskCompleted"]
+        == true) and (CurrentQuestEntryState("Party Invitations", 7) ~= "success")
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 417.6
+        y: 492.8
+        width: 160
+        height: 30
+    - id: 32
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 25
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: That was pretty good, I have to admit. I guess I can lend the speaker
+          system. I'll come by to make sure it is used properly.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 25
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 25
+        originDialogueID: 32
+        destinationConversationID: 25
+        destinationDialogueID: 33
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 417.6
+        y: 542.8
+        width: 160
+        height: 30
+    - id: 33
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 25
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Great to have you on board. See you at the party!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 0fb8be8b-db9c-4392-b9a0-1e4894be5ee0
+        type: 0
+        typeString: 
+      conversationID: 25
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 'Variable["BirthdayQuest.Invitees"] = Variable["BirthdayQuest.Invitees"]
+        + 1;
+
+        SetQuestEntryState("Party Invitations", 7, "success")'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 417.6
+        y: 592.8
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 365.6, y: 0.7999878}
+    canvasScrollPosition: {x: 183.19995, y: 292.8}
     canvasZoom: 1
   - id: 26
     fields:
@@ -31241,6 +31962,10 @@ MonoBehaviour:
         value: Camera(CameraPoint,listener,1)
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: bd1b1972-4878-48a5-a4c5-32f45a09e99e
+        type: 0
+        typeString: 
       conversationID: 27
       isRoot: 0
       isGroup: 0
@@ -31615,8 +32340,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
-        + 1
+      userScript: 'Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1;
+
+        ShowAlert("You''re getting tired, return to your home to rest.")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -31688,7 +32415,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("Meeting The Neighbors") == "success" and
-        CurrentQuestState("Lost Piano Sheet") ~= "success" and (Variable["PartyFinished"]
+        CurrentQuestState("Lost Piano Sheet") == "unassigned" and (Variable["PartyFinished"]
         == false)
       userScript: 
       onExecute:
@@ -32473,7 +33200,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("Lost Piano Sheet", "success")
+      userScript: 'SetQuestState("Lost Piano Sheet", "success");
+
+        SetQuestEntryState("Party
+        Invitations", 6, "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -32612,7 +33342,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("Lost Piano Sheet", "success")
+      userScript: 'SetQuestState("Lost Piano Sheet", "success");
+
+        SetQuestEntryState("Party
+        Invitations", 6, "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -33415,7 +34148,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 118.400085, y: 327.2}
+    canvasScrollPosition: {x: 313.60013, y: 0.8000183}
     canvasZoom: 1
   - id: 28
     fields:
@@ -33743,7 +34476,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["BirthdayQuest.Invitees"] >= 4
-      userScript: ShowAlert("The party is starting soon! Follow the arrow.")
+      userScript: 'ShowAlert("The party is starting soon! Follow the arrow.");
+
+        SetQuestState("Party
+        Invitations", "success");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -36473,7 +37209,7 @@ MonoBehaviour:
         priority: 2
       conditionsString: Variable["Act1Finished"] == true and (Variable["QuestsSkipped"]
         == false) and (CurrentQuestState("Give Out Promotional Leaflets") == "unassigned")
-      userScript: 
+      userScript: SetQuestState("Mystery Mail", "success")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -38999,7 +39735,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2.5404053, y: 405.60965}
+    canvasScrollPosition: {x: 254.88205, y: 350.5688}
     canvasZoom: 0.94475055
   - id: 31
     fields:
@@ -42764,7 +43500,12 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: ShowAlert("Follow the quest arrow to the NGO building.")
+      userScript: 'ShowAlert("Follow the quest arrow to the NGO building.");
+
+        SetQuestEntryState("Mystery
+        Mail", 2, "active");
+
+        SetQuestEntryState("Mystery Mail", 1, "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
