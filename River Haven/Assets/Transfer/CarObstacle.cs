@@ -15,6 +15,13 @@ public class CarObstacle : MonoBehaviour
         if (other.gameObject.CompareTag("Car"))
             carBehaviour.PauseMovement();
     }
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            carBehaviour.PauseMovement();
+        }
+    }
     void OnTriggerExit(Collider other)
     {
         carBehaviour.ContinueMovement();

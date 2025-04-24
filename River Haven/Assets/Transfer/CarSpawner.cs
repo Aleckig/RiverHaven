@@ -25,7 +25,7 @@ public class CarSpawner : MonoBehaviour
     private void SpawnCar()
     {
         int randomIndex = Random.Range(1, 6);
-        if (randomIndex > closestSpotID) return;
+        if (randomIndex >= closestSpotID) return;
 
         closestSpotID = randomIndex;
         GameObject car = carList[Random.Range(0, carList.Count)];

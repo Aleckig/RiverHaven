@@ -59,7 +59,7 @@ public class CarBehaviour : MonoBehaviour
 
     public void PlayHonkSound()
     {
-        if (audioSource != null && honkingSound != null)
+        if (audioSource != null && honkingSound != null && !npcOut)
         {
             audioSource.PlayOneShot(honkingSound, honkVolume);
         }

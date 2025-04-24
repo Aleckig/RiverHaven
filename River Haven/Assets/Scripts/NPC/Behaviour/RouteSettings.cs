@@ -191,6 +191,14 @@ public class RouteSettings : MonoBehaviour
         pauseMovement = false;
         pauseOnTrigger = false;
     }
+    public void StopMovement()
+    {
+        finishMovement = true;
+        pauseMovement = true;
+        animator.StopWalking();
+        navMeshAgent.ResetPath();
+    }
+
     public void ContinueMovement()
     {
         ResetState();
