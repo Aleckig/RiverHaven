@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using PixelCrushers.DialogueSystem;
 
 public class RouteSettings : MonoBehaviour
 {
@@ -21,11 +22,13 @@ public class RouteSettings : MonoBehaviour
     // Conditions for pausing of the
     private bool pauseOnTrigger = false;
     private GameObject pauseOnTriggerObject;
+    [SerializeField] private Usable usable;
 
     private void Awake()
     {
         animator = GetComponent<NPCAnimator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        usable = GetComponent<Usable>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -66,7 +69,10 @@ public class RouteSettings : MonoBehaviour
 
     private IEnumerator MoveTo(List<string> waypoints, bool tpStatus = true)
     {
-
+        if (usable != null)
+        {
+            usable.enabled = false;
+        }
         int actionId = SaveActionStatus(cMinutes);
 
         Transform objectToMove = this.gameObject.transform;
@@ -139,6 +145,10 @@ public class RouteSettings : MonoBehaviour
         navMeshAgent.ResetPath();
         animator.StopWalking();
         ClearActionStatus(actionId, cMinutes);
+        if (usable != null)
+        {
+            usable.enabled = true;
+        }
         yield break;
     }
 
@@ -193,7 +203,6 @@ public class RouteSettings : MonoBehaviour
     }
     public void StopMovement()
     {
-        finishMovement = true;
         pauseMovement = true;
         animator.StopWalking();
         navMeshAgent.ResetPath();

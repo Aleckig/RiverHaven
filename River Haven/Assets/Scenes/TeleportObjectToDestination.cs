@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class TeleportObjectToDestination : MonoBehaviour
 {
     [SerializeField] private Transform destination;
     [SerializeField] private bool isNPC;
     [SerializeField] private GameObject npc;
+    [SerializeField] private Usable usable;
+
+    private void Awake()
+    {
+        usable = GetComponent<Usable>();
+    }
 
     public void TeleportToTarget()
     {
@@ -30,6 +37,10 @@ public class TeleportObjectToDestination : MonoBehaviour
             npc.GetComponentInChildren<Animator>().SetBool("isWalking", false);
             npc.GetComponentInChildren<Animator>().SetBool("isSitting", false);
             npc.GetComponentInChildren<Animator>().Play("Breathing", 0, Random.Range(0f, 1f));
+            if (usable != null)
+            {
+                usable.enabled = true;
+            }
         }
 
         //this.transform.position = destination.position;
