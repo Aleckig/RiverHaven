@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class VictorySpeechSetup : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class VictorySpeechSetup : MonoBehaviour
         {
             // Get the NPC GameObject
             GameObject npc = characters[i];
-
+            Usable usable = npc.GetComponent<Usable>();
             // Get the target Transform position
             Transform targetPosition = characterPositions[i];
 
@@ -51,6 +52,13 @@ public class VictorySpeechSetup : MonoBehaviour
                 npc.GetComponentInChildren<Animator>().SetBool("isWalking", false);
                 npc.GetComponentInChildren<Animator>().SetBool("isSitting", false);
                 npc.GetComponentInChildren<Animator>().Play("Breathing", 0, Random.Range(0f,1f));
+                if (usable != null)
+                {
+                    if (!(npc.name == "Marcus" || npc.name == "Ethan"))
+                    {
+                        npc.GetComponent<Usable>().enabled = false;
+                    }
+                }
             }
         }
     }

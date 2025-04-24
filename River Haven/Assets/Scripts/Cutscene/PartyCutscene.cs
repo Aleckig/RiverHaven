@@ -102,6 +102,7 @@ public class PartyCutscene : MonoBehaviour
         UpdatePicture();
         UpdateButtons();
         DisablePlayerControls();
+        Cursor.visible = true;
     }
 
     private void UpdatePicture()

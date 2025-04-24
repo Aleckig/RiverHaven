@@ -31895,13 +31895,13 @@ MonoBehaviour:
       - originConversationID: 27
         originDialogueID: 0
         destinationConversationID: 27
-        destinationDialogueID: 21
+        destinationDialogueID: 27
         isConnector: 0
         priority: 2
       - originConversationID: 27
         originDialogueID: 0
         destinationConversationID: 27
-        destinationDialogueID: 27
+        destinationDialogueID: 34
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -33385,7 +33385,7 @@ MonoBehaviour:
         value: "Hey... I owe you an apology. \rI was the one who took the flyers.
           Hid the sign-up sheet. Tried to mess up the whole campaign. \rAt first,
           I didn\u2019t believe any of this would work. I thought people were too
-          selfish, too busy to care. "
+          selfish, too busy to care."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -33401,9 +33401,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'Camera(CameraPoint,listener,1);
-
-          Delay({{end}})'
+        value: Camera(CameraPoint,listener,1);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 27
@@ -33427,8 +33425,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 959.2001
-        y: 22.399994
+        x: 953.6001
+        y: 1
         width: 160
         height: 30
     - id: 22
@@ -33461,7 +33459,7 @@ MonoBehaviour:
         value: "But I was wrong. You all proved me wrong. \rYou rallied this town.
           You made people care. And even with me trying to tear it down\u2026 you
           still succeeded. \rSo from now on\u2026 I want to help. No more sabotage.
-          No more doubt. "
+          No more doubt."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -33477,7 +33475,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Delay({{end}})
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 27
@@ -33501,8 +33499,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 953.6
-        y: 71.59999
+        x: 955.9999
+        y: 94.79999
         width: 160
         height: 30
     - id: 23
@@ -33549,7 +33547,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Delay({{end}})
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 27
@@ -33573,8 +33571,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 959.2001
-        y: 122.399994
+        x: 956.0001
+        y: 204.8
         width: 160
         height: 30
     - id: 24
@@ -33645,8 +33643,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 959.2001
-        y: 172.4
+        x: 956.8002
+        y: 257.19998
         width: 160
         height: 30
     - id: 25
@@ -33717,7 +33715,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 959.2001
-        y: 222.4
+        y: 312.8
         width: 160
         height: 30
     - id: 26
@@ -33786,8 +33784,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 959.2001
-        y: 272.4
+        x: 957.6
+        y: 368.4
         width: 160
         height: 30
     - id: 27
@@ -34214,8 +34212,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1145.6002
-        y: 47.59999
+        x: 960.0001
+        y: 48.399994
         width: 160
         height: 30
     - id: 33
@@ -34286,12 +34284,303 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1148.8
-        y: 96.8
+        x: 960
+        y: 148
+        width: 160
+        height: 30
+    - id: 34
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Hey... I owe you an apology. I was the one who took the flyers. Hid
+          the sign-up sheet. Tried to mess up the whole campaign. At first, I didn't
+          believe any of this would work. I thought people were too selfish, too
+          busy to care.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Camera(CameraPoint,listener,1)
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 27
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 27
+        originDialogueID: 34
+        destinationConversationID: 27
+        destinationDialogueID: 35
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["EthanRedemption"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1402.4003
+        y: 133.6
+        width: 160
+        height: 30
+    - id: 35
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I had a suspicion you were behind it all.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 27
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 27
+        originDialogueID: 35
+        destinationConversationID: 27
+        destinationDialogueID: 36
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1402.4003
+        y: 183.6
+        width: 160
+        height: 30
+    - id: 36
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: But I was wrong. You all proved me wrong. You rallied this town. You
+          made people care. And even with me trying to tear it down... you still
+          succeeded. So from now on... I want to help. No more sabotage. No more
+          doubt.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 27
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 27
+        originDialogueID: 36
+        destinationConversationID: 27
+        destinationDialogueID: 37
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1402.4003
+        y: 233.6
+        width: 160
+        height: 30
+    - id: 37
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: We are proud of what we have achieved. But there is still work to
+          do.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 27
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 27
+        originDialogueID: 37
+        destinationConversationID: 27
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1402.4003
+        y: 283.6
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 660.8001, y: 0.7999878}
+    canvasScrollPosition: {x: 771.20056, y: 0}
     canvasZoom: 1
   - id: 28
     fields:
@@ -38005,6 +38294,12 @@ MonoBehaviour:
         destinationDialogueID: 22
         isConnector: 0
         priority: 2
+      - originConversationID: 30
+        originDialogueID: 21
+        destinationConversationID: 30
+        destinationDialogueID: 39
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -39878,7 +40173,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 254.88205, y: 350.5688}
+    canvasScrollPosition: {x: 653.7174, y: 0}
     canvasZoom: 0.94475055
   - id: 31
     fields:

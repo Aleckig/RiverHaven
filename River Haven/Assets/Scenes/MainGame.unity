@@ -1095,7 +1095,7 @@ PrefabInstance:
     - target: {fileID: 7010292195638415545, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 240
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 7010292195638415545, guid: 9d205b5a7fdc9491c8d13f3b32b64535,
         type: 3}
@@ -7374,7 +7374,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1921732730}
     m_Modifications:
     - target: {fileID: 173728899196085368, guid: 96d6d6b92da0a844793dce5ee76a2a03,
         type: 3}
@@ -7395,6 +7395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 651984265153625934, guid: 96d6d6b92da0a844793dce5ee76a2a03,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 738656181837075821, guid: 96d6d6b92da0a844793dce5ee76a2a03,
         type: 3}
@@ -7696,6 +7701,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 3364826809708371074, guid: 96d6d6b92da0a844793dce5ee76a2a03,
+        type: 3}
+      propertyPath: closeTaskMarker
+      value: 
+      objectReference: {fileID: 552948952}
     - target: {fileID: 3483015720807649902, guid: 96d6d6b92da0a844793dce5ee76a2a03,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -7936,6 +7946,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -87.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5227023664220774122, guid: 96d6d6b92da0a844793dce5ee76a2a03,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227023664220774122, guid: 96d6d6b92da0a844793dce5ee76a2a03,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227023664220774122, guid: 96d6d6b92da0a844793dce5ee76a2a03,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227023664220774122, guid: 96d6d6b92da0a844793dce5ee76a2a03,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5240178917131289465, guid: 96d6d6b92da0a844793dce5ee76a2a03,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -8125,6 +8155,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 310
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689778994437167713, guid: 96d6d6b92da0a844793dce5ee76a2a03,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7103846678194549318, guid: 96d6d6b92da0a844793dce5ee76a2a03,
         type: 3}
@@ -15972,6 +16007,12 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 3286881216786256290, guid: 97f832f837f26b44fb4249594535876e,
     type: 3}
   m_PrefabInstance: {fileID: 2365613454959097530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &552948952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5065865483721619443, guid: 29ce87b07fb970e4284e18feb0e23f89,
+    type: 3}
+  m_PrefabInstance: {fileID: 1787345889}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &554847835
 PrefabInstance:
@@ -30069,17 +30110,17 @@ PrefabInstance:
     - target: {fileID: 3908423284551718227, guid: 1a0e5e51bf7774343a95886bd0381dbe,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3908423284551718227, guid: 1a0e5e51bf7774343a95886bd0381dbe,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3908423284551718227, guid: 1a0e5e51bf7774343a95886bd0381dbe,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3908423284551718227, guid: 1a0e5e51bf7774343a95886bd0381dbe,
         type: 3}
@@ -30124,7 +30165,7 @@ PrefabInstance:
     - target: {fileID: 3908423284551718227, guid: 1a0e5e51bf7774343a95886bd0381dbe,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 8.5218
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 3908423284551718227, guid: 1a0e5e51bf7774343a95886bd0381dbe,
         type: 3}
@@ -30149,22 +30190,21 @@ PrefabInstance:
     - target: {fileID: 5465895152699412473, guid: 1a0e5e51bf7774343a95886bd0381dbe,
         type: 3}
       propertyPath: m_text
-      value: "Dear [Player's Name], \r\n \r\nI hope this letter finds you well and
-        settling comfortably into the neighborhood. It\u2019s been wonderful seeing
-        the community come together lately, and I wanted to personally reach out
-        to you about something important. \r\n \r\nAt SKY, the NGO I work with, we\u2019re
-        launching a campaign to protect a large plot of land right here in town.
-        We\u2019re proposing to turn it into a beautiful community forest, a space
-        for nature, families, and future generations to enjoy. But there\u2019s a
-        catch. A big corporation is pushing to develop the same land into yet another
-        mall. The final decision is in the hands of the people, and a petition will
-        determine which vision wins. \r\n \r\nWe need all the support we can get
-        to make this happen. After seeing your enthusiasm and hard work for the birthday
-        party I believe you\u2019d be a perfect fit to help us spread the word with
-        the same passion for community work and solidarity. If you\u2019re interested,
-        come by the SKY office today. I\u2019ll give you a quick tour and explain
-        everything in detail. \r\n \r\nLooking forward to seeing you there! \r\nBest
-        regards, \r\nMarcus"
+      value: "Dear Alex, \r\n \r\nI hope this letter finds you well and settling
+        comfortably into the neighborhood. It\u2019s been wonderful seeing the community
+        come together lately, and I wanted to personally reach out to you about something
+        important. \r\n \r\nAt SKY, the NGO I work with, we\u2019re launching a campaign
+        to protect a large plot of land right here in town. We\u2019re proposing
+        to turn it into a beautiful community forest, a space for nature, families,
+        and future generations to enjoy. But there\u2019s a catch. A big corporation
+        is pushing to develop the same land into yet another mall. The final decision
+        is in the hands of the people, and a petition will determine which vision
+        wins. \r\n \r\nWe need all the support we can get to make this happen. After
+        seeing your enthusiasm and hard work for the birthday party I believe you\u2019d
+        be a perfect fit to help us spread the word with the same passion for community
+        work and solidarity. If you\u2019re interested, come by the SKY office today.
+        I\u2019ll give you a quick tour and explain everything in detail. \r\n \r\nLooking
+        forward to seeing you there! \r\nBest regards, \r\nMarcus"
       objectReference: {fileID: 0}
     - target: {fileID: 5465895152699412473, guid: 1a0e5e51bf7774343a95886bd0381dbe,
         type: 3}
@@ -48573,6 +48613,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7382549092122234815, guid: 6a6ccc2850adff34baf655a06cd26c52,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8020215612331158331, guid: 6a6ccc2850adff34baf655a06cd26c52,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -57092,10 +57137,20 @@ PrefabInstance:
       propertyPath: isTowerTask
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1418247720769731253, guid: 29ce87b07fb970e4284e18feb0e23f89,
+        type: 3}
+      propertyPath: objectToActivate
+      value: 
+      objectReference: {fileID: 1795107538}
     - target: {fileID: 3251251249714805712, guid: 29ce87b07fb970e4284e18feb0e23f89,
         type: 3}
       propertyPath: m_Name
       value: SimonTaskManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251251249714805712, guid: 29ce87b07fb970e4284e18feb0e23f89,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4913607059813371040, guid: 29ce87b07fb970e4284e18feb0e23f89,
         type: 3}
@@ -57104,9 +57159,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 310390260403411249, guid: 29ce87b07fb970e4284e18feb0e23f89,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1795107543}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29ce87b07fb970e4284e18feb0e23f89, type: 3}
+--- !u!1 &1795107538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7103846678194549318, guid: 96d6d6b92da0a844793dce5ee76a2a03,
+    type: 3}
+  m_PrefabInstance: {fileID: 261797482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1795107543 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1908691960115078338, guid: 96d6d6b92da0a844793dce5ee76a2a03,
+    type: 3}
+  m_PrefabInstance: {fileID: 261797482}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1802584762
 GameObject:
   m_ObjectHideFlags: 0
@@ -60729,6 +60800,12 @@ MonoBehaviour:
 --- !u!1 &1921732729 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3251251249714805712, guid: 29ce87b07fb970e4284e18feb0e23f89,
+    type: 3}
+  m_PrefabInstance: {fileID: 1787345889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1921732730 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 310390260403411249, guid: 29ce87b07fb970e4284e18feb0e23f89,
     type: 3}
   m_PrefabInstance: {fileID: 1787345889}
   m_PrefabAsset: {fileID: 0}
@@ -84550,7 +84627,6 @@ SceneRoots:
   - {fileID: 1515179835}
   - {fileID: 1453679193}
   - {fileID: 1416452322}
-  - {fileID: 261797482}
   - {fileID: 2086962303}
   - {fileID: 1958982134}
   - {fileID: 1205769034}
