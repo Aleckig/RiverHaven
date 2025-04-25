@@ -25,10 +25,11 @@ public class CarSpawner : MonoBehaviour
     private void SpawnCar()
     {
         int randomIndex = Random.Range(1, 6);
+        Debug.Log($"SpawnCar() called closetestSpotID:{closestSpotID} and randomindex:{randomIndex} ");
         if (randomIndex >= closestSpotID) return;
-
         closestSpotID = randomIndex;
-        GameObject car = carList[Random.Range(0, carList.Count)];
+        //Select random car from the list
+        GameObject car = GetRandomCar();
         car.SetActive(true);
         CarBehaviour carBehaviour = car.GetComponent<CarBehaviour>();
         carBehaviour.SetStopPointID = closestSpotID;
@@ -38,5 +39,15 @@ public class CarSpawner : MonoBehaviour
     {
         if (id == closestSpotID)
             closestSpotID = 6;
+    }
+
+    private GameObject GetRandomCar()
+    {
+        int randomIndex = Random.Range(0, carList.Count);
+        if (carList[randomIndex].activeSelf)
+        {
+            return GetRandomCar();
+        }
+        return carList[randomIndex];
     }
 }
