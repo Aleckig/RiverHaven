@@ -37,6 +37,7 @@ public class SimonTask : MonoBehaviour
     private void OnEnable()
     {
         ResetGame();
+        Cursor.visible = true;
     }
 
     public void ButtonClickOrder(int button)

@@ -1538,7 +1538,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Entry Count
-      value: 1
+      value: 2
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
@@ -1547,6 +1547,14 @@ MonoBehaviour:
       typeString: 
     - title: Entry 1
       value: '[var=Leaflets.GivenOut]/5 leaflets given out'
+      type: 0
+      typeString: 
+    - title: Entry 2 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: Drop the leaflets in the mailboxes and give them out to people
       type: 0
       typeString: 
   - id: 13
@@ -1639,6 +1647,18 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Go outside and head to the cafe
+      type: 0
+      typeString: 
   - id: 15
     fields:
     - title: Name
@@ -1728,6 +1748,18 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Head to the radio tower near the bridge
+      type: 0
+      typeString: 
   - id: 17
     fields:
     - title: Name
@@ -1895,6 +1927,18 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Open the safe and upload the material on the NGO computer
+      type: 0
+      typeString: 
   - id: 20
     fields:
     - title: Name
@@ -1935,7 +1979,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Entry Count
-      value: 4
+      value: 5
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
@@ -1943,7 +1987,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Entry 1
-      value: 'Paint Found: [var=PaintFound]/1'
+      value: Enter the hardware shop to buy the needed items
       type: 0
       typeString: 
     - title: Entry 2 State
@@ -1968,6 +2012,14 @@ MonoBehaviour:
       typeString: 
     - title: Entry 4
       value: 'Brush Found: [var=BrushFound]/1'
+      type: 0
+      typeString: 
+    - title: Entry 5 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 5
+      value: 'Paint Found: [var=PaintFound]/1'
       type: 0
       typeString: 
   - id: 21
@@ -2200,6 +2252,66 @@ MonoBehaviour:
       typeString: 
     - title: Entry 3
       value: Talk to Marcus
+      type: 0
+      typeString: 
+  - id: 24
+    fields:
+    - title: Name
+      value: Tree Planting Event
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: It is time for the final tree planting event. Plant the first tree to
+        inspire the rest of the people at the site.
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Success Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Failure Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: State
+      value: unassigned
+      type: 0
+      typeString: CustomFieldType_QuestState
+    - title: Is Item
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Trackable
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Track
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 2
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Talk to Marcus about planting the first tree
+      type: 0
+      typeString: 
+    - title: Entry 2 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: Grab and drop the shovel near the blue marker and dig a whole by pressing
+        "E" repeatedly
       type: 0
       typeString: 
   locations: []
@@ -3467,7 +3579,7 @@ MonoBehaviour:
   - id: 92
     fields:
     - title: Name
-      value: 
+      value: SteveMet
       type: 0
       typeString: 
     - title: Initial Value
@@ -3481,7 +3593,7 @@ MonoBehaviour:
   - id: 93
     fields:
     - title: Name
-      value: 
+      value: EthanMet
       type: 0
       typeString: 
     - title: Initial Value
@@ -3495,7 +3607,7 @@ MonoBehaviour:
   - id: 94
     fields:
     - title: Name
-      value: 
+      value: BarakaMet
       type: 0
       typeString: 
     - title: Initial Value
@@ -3509,7 +3621,7 @@ MonoBehaviour:
   - id: 95
     fields:
     - title: Name
-      value: 
+      value: JupiterMet
       type: 0
       typeString: 
     - title: Initial Value
@@ -3523,7 +3635,7 @@ MonoBehaviour:
   - id: 96
     fields:
     - title: Name
-      value: 
+      value: VioletMet
       type: 0
       typeString: 
     - title: Initial Value
@@ -3537,7 +3649,7 @@ MonoBehaviour:
   - id: 97
     fields:
     - title: Name
-      value: 
+      value: AgathaMet
       type: 0
       typeString: 
     - title: Initial Value
@@ -3551,7 +3663,7 @@ MonoBehaviour:
   - id: 98
     fields:
     - title: Name
-      value: 
+      value: CalvinMet
       type: 0
       typeString: 
     - title: Initial Value
@@ -3565,7 +3677,7 @@ MonoBehaviour:
   - id: 99
     fields:
     - title: Name
-      value: 
+      value: VuMet
       type: 0
       typeString: 
     - title: Initial Value
@@ -3593,7 +3705,7 @@ MonoBehaviour:
   - id: 101
     fields:
     - title: Name
-      value: 
+      value: TreePlantingStarted
       type: 0
       typeString: 
     - title: Initial Value
@@ -3787,6 +3899,118 @@ MonoBehaviour:
       type: 0
       typeString: 
   - id: 115
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 116
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 117
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 118
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 119
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 120
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 121
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 122
+    fields:
+    - title: Name
+      value: 
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 123
     fields:
     - title: Name
       value: 
@@ -11048,7 +11272,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "I\u2019m [Player's Name], it\u2019s great to meet you."
+        value: "I\u2019m Alex, it\u2019s great to meet you."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -11833,7 +12057,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "You\u2019re very welcome, [Player's Name]. See you around!"
+        value: "You\u2019re very welcome, Alex. See you around!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -14539,7 +14763,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 4.543274, y: 437.67056}
+    canvasScrollPosition: {x: 0.75720215, y: 479.31744}
     canvasZoom: 1.056503
   - id: 16
     fields:
@@ -14993,8 +15217,8 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "Oh, I\u2019m not selling anything, sir. I just wanted to introduce
-          myself. I\u2019m [Player's Name]. I moved into the house next to the one
-          with the annoyingly loud dog. "
+          myself. I\u2019m Alex. I moved into the house next to the one with the
+          annoyingly loud dog. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -16062,8 +16286,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "His favorite toy was lost somewhere in town, probably near the pool
-          at the large houses. He's always playing there. It\u2019s a squeaky bone\u2014find
+        value: "Her favorite toy was lost somewhere in town, probably near the pool
+          at the large houses. She's always playing there. It\u2019s a squeaky bone\u2014find
           it, and maybe the dog\u2019ll stop driving me mad."
         type: 0
         typeString: CustomFieldType_Text
@@ -16889,7 +17113,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 53.681274, y: 64.69656}
+    canvasScrollPosition: {x: 0, y: 462.25577}
     canvasZoom: 0.8047495
   - id: 17
     fields:
@@ -17091,7 +17315,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active"
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active" and
+        (Variable["SteveMet"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -17129,7 +17354,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Hi, I\u2019m [Player's Name]. I just moved in down the street. "
+        value: "Hi, I\u2019m Alex. I just moved in down the street. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -17776,7 +18001,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'Take care, [Player''s Name]! Catch you later. '
+        value: 'Take care, Alex! Catch you later. '
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -17808,8 +18033,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
-        + 1
+      userScript: 'Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1;
+
+        Variable["SteveMet"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17919,9 +18146,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'Oh, hey [Player''s Name]. All is good; however, the kids are a bit
-          nervous about playing outside. The dog keeps barking at them recently,
-          and it even tore up their football. '
+        value: 'Oh, hey Alex. All is good; however, the kids are a bit nervous about
+          playing outside. The dog keeps barking at them recently, and it even tore
+          up their football. '
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -18429,7 +18656,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Absolutely I will but besides that have you heard about the birthday
+        value: Absolutely I will but besides that, have you heard about the birthday
           party in the evening?
         type: 0
         typeString: CustomFieldType_Text
@@ -18787,7 +19014,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: See you [Player's Name]!
+        value: See you Alex!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -19480,7 +19707,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 238.27866, y: 16.767792}
+    canvasScrollPosition: {x: 122.669464, y: 37.065674}
     canvasZoom: 0.9065014
   - id: 18
     fields:
@@ -19663,7 +19890,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active"
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active" and
+        (Variable["VuMet"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -19701,8 +19929,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hi, I'm [Player's Name]. I just moved across the street and wanted
-          to introduce myself.
+        value: Hi, I'm Alex. I just moved across the street and wanted to introduce
+          myself.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20343,7 +20571,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Nice to meet you too, [Player's Name]. Bye!
+        value: Nice to meet you too, Alex. Bye!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20446,8 +20674,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
-        + 1
+      userScript: 'Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1;
+
+        Variable["VuMet"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20458,7 +20688,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 71.19998, y: 202.39996}
+    canvasScrollPosition: {x: 0, y: 312.8}
     canvasZoom: 1
   - id: 19
     fields:
@@ -20626,7 +20856,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hello! I'm [Player's Name], I just moved in across the street.
+        value: Hello! I'm Alex, I just moved in across the street.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20659,7 +20889,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active"
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active" and
+        (Variable["JupiterMet"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -21125,7 +21356,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: It is. But listen, I've got to go back to work. It was really nice
-          meeting you, [Player's Name]. Enjoy the neighborhood!
+          meeting you, Alex. Enjoy the neighborhood!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -21299,8 +21530,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
-        + 1
+      userScript: 'Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1;
+
+        Variable["JupiterMet"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22244,7 +22477,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 423.19998, y: 3.2000122}
+    canvasScrollPosition: {x: 1.5999756, y: 301.60004}
     canvasZoom: 1
   - id: 20
     fields:
@@ -22394,8 +22627,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Hi! I\u2019m [Player's Name]. I just moved into the town and wanted
-          to say hello."
+        value: "Hi! I\u2019m Alex. I just moved into the town and wanted to say hello."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -22893,8 +23125,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "You\u2019re very welcome, [Player's Name]. It was nice meeting you.
-          See you around!"
+        value: "You\u2019re very welcome, Alex. It was nice meeting you. See you
+          around!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23009,7 +23241,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 23.199997, y: 146.4}
+    canvasScrollPosition: {x: 0, y: 67.2}
     canvasZoom: 1
   - id: 21
     fields:
@@ -23177,8 +23409,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Hello! I\u2019m [Player's Name]. I just moved into the neighborhood
-          and wanted to say hi. "
+        value: "Hello! I\u2019m Alex. I just moved into the neighborhood and wanted
+          to say hi. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23211,7 +23443,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active"
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active" and
+        (Variable["VioletMet"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -23997,8 +24230,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
-        + 1
+      userScript: 'Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1;
+
+        Variable["VioletMet"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -24796,7 +25031,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 170.4, y: 1.6000061}
+    canvasScrollPosition: {x: 0, y: 0.7999878}
     canvasZoom: 1
   - id: 22
     fields:
@@ -25003,7 +25238,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active"
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active" and
+        (Variable["BarakaMet"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -25112,7 +25348,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I am [Player's Name], moved across the street and came to say Hi!
+        value: I am Alex, I moved across the street and came to say hi!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25610,7 +25846,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Alright, see you [Player's Name]. Take care.
+        value: Alright, see you Alex. Take care.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25713,8 +25949,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
-        + 1
+      userScript: 'Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1;
+
+        Variable["BarakaMet"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -26948,7 +27186,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 287.2001, y: 4}
+    canvasScrollPosition: {x: 4.799988, y: 299.20013}
     canvasZoom: 1
   - id: 23
     fields:
@@ -27104,7 +27342,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'Hey ma''am, I''m [Player''s Name], I just moved into the area.  '
+        value: 'Hey ma''am, I''m Alex, I just moved into the area.  '
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -27137,7 +27375,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active"
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active" and
+        (Variable["AgathaMet"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -27606,7 +27845,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You too, [Player's Name]. Take care.
+        value: You too, Alex. Take care.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -27638,8 +27877,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
-        + 1
+      userScript: 'Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1;
+
+        Variable["AgathaMet"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27868,7 +28109,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 27.159271, y: 16.774841}
+    canvasScrollPosition: {x: 0.7987976, y: 45.531677}
     canvasZoom: 1.0014997
   - id: 24
     fields:
@@ -28018,8 +28259,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Hello, sir. I\u2019m [Player\u2019s Name]. I saw you here and wanted
-          to introduce myself. "
+        value: "Hello, sir. I\u2019m Alex. I saw you here and wanted to introduce
+          myself. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -28626,7 +28867,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0.7999878, y: 0}
+    canvasScrollPosition: {x: 3.2000122, y: 159.2}
     canvasZoom: 1
   - id: 25
     fields:
@@ -28800,8 +29041,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Hello, I\u2019m [Player\u2019s Name]. I just moved into the neighborhood
-          and wanted to introduce myself."
+        value: "Hello, I\u2019m Alex. I just moved into the neighborhood and wanted
+          to introduce myself."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -28834,7 +29075,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active"
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active" and
+        (Variable["CalvinMet"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -29478,8 +29720,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
-        + 1
+      userScript: 'Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
+        + 1;
+
+        Variable["CalvinMet"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -30947,7 +31191,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I did it!
+        value: I did it! I played the correct notes!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -31138,7 +31382,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 183.19995, y: 292.8}
+    canvasScrollPosition: {x: 31.20002, y: 291.2}
     canvasZoom: 1
   - id: 26
     fields:
@@ -31895,13 +32139,13 @@ MonoBehaviour:
       - originConversationID: 27
         originDialogueID: 0
         destinationConversationID: 27
-        destinationDialogueID: 21
+        destinationDialogueID: 27
         isConnector: 0
         priority: 2
       - originConversationID: 27
         originDialogueID: 0
         destinationConversationID: 27
-        destinationDialogueID: 27
+        destinationDialogueID: 34
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -31942,8 +32186,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Hello, I\u2019m [Player\u2019s Name]. I just moved in and wanted
-          to introduce myself."
+        value: "Hello, I\u2019m Alex. I just moved in and wanted to introduce myself."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -31980,7 +32223,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active"
+      conditionsString: CurrentQuestState("Meeting The Neighbors") == "active" and
+        (Variable["EthanMet"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -32343,7 +32587,10 @@ MonoBehaviour:
       userScript: 'Variable["neighborsMetAmount"] = Variable["neighborsMetAmount"]
         + 1;
 
-        ShowAlert("You''re getting tired, return to your home to rest.")'
+        ShowAlert("You''re getting tired, return to your home to rest.");
+
+        Variable["EthanMet"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -33385,7 +33632,7 @@ MonoBehaviour:
         value: "Hey... I owe you an apology. \rI was the one who took the flyers.
           Hid the sign-up sheet. Tried to mess up the whole campaign. \rAt first,
           I didn\u2019t believe any of this would work. I thought people were too
-          selfish, too busy to care. "
+          selfish, too busy to care."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -33401,9 +33648,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'Camera(CameraPoint,listener,1);
-
-          Delay({{end}})'
+        value: Camera(CameraPoint,listener,1);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 27
@@ -33417,7 +33662,7 @@ MonoBehaviour:
       - originConversationID: 27
         originDialogueID: 21
         destinationConversationID: 27
-        destinationDialogueID: 22
+        destinationDialogueID: 32
         isConnector: 0
         priority: 2
       conditionsString: Variable["EthanRedemption"] == true
@@ -33427,8 +33672,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 959.2001
-        y: 22.399994
+        x: 953.6001
+        y: 1
         width: 160
         height: 30
     - id: 22
@@ -33461,7 +33706,7 @@ MonoBehaviour:
         value: "But I was wrong. You all proved me wrong. \rYou rallied this town.
           You made people care. And even with me trying to tear it down\u2026 you
           still succeeded. \rSo from now on\u2026 I want to help. No more sabotage.
-          No more doubt. "
+          No more doubt."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -33477,7 +33722,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Delay({{end}})
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 27
@@ -33491,7 +33736,7 @@ MonoBehaviour:
       - originConversationID: 27
         originDialogueID: 22
         destinationConversationID: 27
-        destinationDialogueID: 23
+        destinationDialogueID: 33
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -33501,8 +33746,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 959.2001
-        y: 72.399994
+        x: 955.9999
+        y: 94.79999
         width: 160
         height: 30
     - id: 23
@@ -33549,7 +33794,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Delay({{end}})
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 27
@@ -33573,8 +33818,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 959.2001
-        y: 122.399994
+        x: 956.0001
+        y: 204.8
         width: 160
         height: 30
     - id: 24
@@ -33604,8 +33849,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: What you have done was upsetting but I always believed we could do
-          this. I am happy to see proving it to you as well.
+        value: What you did was upsetting but I always believed we could do this.
+          I am happy to see that we proved it to you as well.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -33645,8 +33890,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 959.2001
-        y: 172.4
+        x: 956.8002
+        y: 257.19998
         width: 160
         height: 30
     - id: 25
@@ -33717,7 +33962,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 959.2001
-        y: 222.4
+        y: 312.8
         width: 160
         height: 30
     - id: 26
@@ -33786,8 +34031,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 959.2001
-        y: 272.4
+        x: 957.6
+        y: 368.4
         width: 160
         height: 30
     - id: 27
@@ -34147,8 +34392,442 @@ MonoBehaviour:
         y: 635.2
         width: 160
         height: 30
+    - id: 32
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I had a suspicion you were behind it all.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 27
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 27
+        originDialogueID: 32
+        destinationConversationID: 27
+        destinationDialogueID: 22
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 960.0001
+        y: 48.399994
+        width: 160
+        height: 30
+    - id: 33
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: We are proud of what we have achieved, but there is still work to
+          do.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 27
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 27
+        originDialogueID: 33
+        destinationConversationID: 27
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 960
+        y: 148
+        width: 160
+        height: 30
+    - id: 34
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Hey... I owe you an apology. I was the one who took the flyers. Hid
+          the sign-up sheet. Tried to mess up the whole campaign. At first, I didn't
+          believe any of this would work. I thought people were too selfish, too
+          busy to care.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Camera(CameraPoint,listener,1)
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 27
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 27
+        originDialogueID: 34
+        destinationConversationID: 27
+        destinationDialogueID: 35
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["EthanRedemption"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1402.4003
+        y: 133.6
+        width: 160
+        height: 30
+    - id: 35
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I had a suspicion you were behind it all.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 27
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 27
+        originDialogueID: 35
+        destinationConversationID: 27
+        destinationDialogueID: 36
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1402.4003
+        y: 183.6
+        width: 160
+        height: 30
+    - id: 36
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: But I was wrong. You all proved me wrong. You rallied this town. You
+          made people care. And even with me trying to tear it down... you still
+          succeeded. So from now on... I want to help. No more sabotage. No more
+          doubt.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 27
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 27
+        originDialogueID: 36
+        destinationConversationID: 27
+        destinationDialogueID: 37
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1402.4003
+        y: 233.6
+        width: 160
+        height: 30
+    - id: 37
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 15
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: We are proud of what we have achieved. But there is still work to
+          do.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 27
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 27
+        originDialogueID: 37
+        destinationConversationID: 27
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1402.4003
+        y: 283.6
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 313.60013, y: 0.8000183}
+    canvasScrollPosition: {x: 112, y: 9.600006}
     canvasZoom: 1
   - id: 28
     fields:
@@ -36193,7 +36872,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 271.19998, y: 0}
+    canvasScrollPosition: {x: 11.199982, y: 0}
     canvasZoom: 1
   - id: 30
     fields:
@@ -36335,6 +37014,12 @@ MonoBehaviour:
         destinationDialogueID: 41
         isConnector: 0
         priority: 2
+      - originConversationID: 30
+        originDialogueID: 0
+        destinationConversationID: 30
+        destinationDialogueID: 49
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -36444,8 +37129,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Nice to meet you, Marcus! I am [Player's Name]. Layla mentioned you
-          work with an NGO?
+        value: Nice to meet you, Marcus! I am Alex. Layla mentioned you work with
+          an NGO?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -37103,8 +37788,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Anytime! It was great meeting you, [Player's Name]. Let\u2019s keep
-          in touch."
+        value: "Anytime! It was great meeting you, Alex. Let\u2019s keep in touch."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -37173,8 +37857,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hello again, [Player's Name]. Feel free to look around and enjoy your
-          time here at the NGO building!
+        value: Hello again, Alex. Feel free to look around and enjoy your time here
+          at the NGO building!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -39734,8 +40418,435 @@ MonoBehaviour:
         y: 711.78046
         width: 160
         height: 30
+    - id: 49
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 32
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Alright, this is it. The start of something real.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Camera(CameraPoint,listener,1)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 30
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 30
+        originDialogueID: 49
+        destinationConversationID: 30
+        destinationDialogueID: 50
+        isConnector: 0
+        priority: 2
+      conditionsString: CurrentQuestState("Tree Planting Event") == "active"
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 873.83905
+        y: 360.28568
+        width: 160
+        height: 30
+    - id: 50
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 32
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Hard to believe we've come this far.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 30
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 30
+        originDialogueID: 50
+        destinationConversationID: 30
+        destinationDialogueID: 51
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 873.83923
+        y: 415.36636
+        width: 160
+        height: 30
+    - id: 51
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 32
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: And now this is going to be our own forest. One tree at a time. But
+          we've got to do it right.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 30
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 30
+        originDialogueID: 51
+        destinationConversationID: 30
+        destinationDialogueID: 52
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 873.83923
+        y: 465.36636
+        width: 160
+        height: 30
+    - id: 52
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 32
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: How should we do this?
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 30
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 30
+        originDialogueID: 52
+        destinationConversationID: 30
+        destinationDialogueID: 53
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 873.83923
+        y: 515.36633
+        width: 160
+        height: 30
+    - id: 53
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 32
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 'Here''s how it goes: first, dig a hole deep enough for the roots.
+          Then, place the sapling gently and upright. Finally, water it well, and
+          that''s it. Why don''t you go ahead and show the others how it''s done.'
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 30
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 30
+        originDialogueID: 53
+        destinationConversationID: 30
+        destinationDialogueID: 54
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 873.83923
+        y: 565.36633
+        width: 160
+        height: 30
+    - id: 54
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 32
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I would love to!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 30
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: SetQuestEntryState("Tree Planting Event", 2, "active")
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 873.83923
+        y: 615.36633
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 254.88205, y: 350.5688}
+    canvasScrollPosition: {x: 764.6466, y: 3.3871155}
     canvasZoom: 0.94475055
   - id: 31
     fields:
@@ -42691,7 +43802,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "To all our volunteers you showed what\u2019s possible when we come
+        value: "To all our volunteers, you showed what\u2019s possible when we come
           together!"
         type: 0
         typeString: CustomFieldType_Text
@@ -43232,7 +44343,9 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Variable["EthanRedemption"] = true;
 
-'
+
+        ShowAlert("Ethan
+        emerges from the crowd and looks like he has something to say.")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -43243,7 +44356,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 157.10379}
+    canvasScrollPosition: {x: 78.11313, y: 7.0214233}
     canvasZoom: 0.911499
   - id: 37
     fields:

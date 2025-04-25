@@ -74,7 +74,7 @@ public class CoffeeTask : MonoBehaviour
                 PlayButtonClickSound();
                 StartCoroutine(ChangeSliderValueWithDelay(currentSliderControl, -1));
             });
-
+            Cursor.visible = true;
             sliderControl.completionImage.color = Color.white;
         }
 
