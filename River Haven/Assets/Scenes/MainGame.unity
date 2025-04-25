@@ -7724,6 +7724,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3364826809708371074, guid: 96d6d6b92da0a844793dce5ee76a2a03,
         type: 3}
+      propertyPath: isTowerTask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3364826809708371074, guid: 96d6d6b92da0a844793dce5ee76a2a03,
+        type: 3}
       propertyPath: closeTaskMarker
       value: 
       objectReference: {fileID: 552948952}
@@ -10994,7 +10999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.inputSettings.cancelConversation.key
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24059,6 +24064,11 @@ PrefabInstance:
       propertyPath: playerTransformation
       value: 
       objectReference: {fileID: 280196184}
+    - target: {fileID: 3871664130003708990, guid: 532849e866af2984daafd8b71ecc195c,
+        type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 335133207}
     - target: {fileID: 3871664130003708990, guid: 532849e866af2984daafd8b71ecc195c,
         type: 3}
       propertyPath: playerTransformation
@@ -55483,7 +55493,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.1, z: 0.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -1.3}
 --- !u!114 &1717991832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72295,7 +72305,7 @@ PrefabInstance:
     - target: {fileID: 8962135532986578364, guid: 417252d7c8a2da3498adadb347bd03b3,
         type: 3}
       propertyPath: barkText
-      value: Where did I put my glasses...
+      value: Where did I put my phone...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

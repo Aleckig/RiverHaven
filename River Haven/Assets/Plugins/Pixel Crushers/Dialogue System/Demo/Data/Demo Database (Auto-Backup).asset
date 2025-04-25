@@ -1639,6 +1639,18 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Go outside and head to the cafe
+      type: 0
+      typeString: 
   - id: 15
     fields:
     - title: Name
@@ -1728,6 +1740,18 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Head to the radio tower near the bridge
+      type: 0
+      typeString: 
   - id: 17
     fields:
     - title: Name
@@ -1895,6 +1919,18 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: Open the safe and upload the material on the NGO computer
+      type: 0
+      typeString: 
   - id: 20
     fields:
     - title: Name
@@ -1935,7 +1971,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Entry Count
-      value: 4
+      value: 5
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
@@ -1943,7 +1979,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Entry 1
-      value: 'Paint Found: [var=PaintFound]/1'
+      value: Enter the hardware shop to buy the needed items
       type: 0
       typeString: 
     - title: Entry 2 State
@@ -1968,6 +2004,14 @@ MonoBehaviour:
       typeString: 
     - title: Entry 4
       value: 'Brush Found: [var=BrushFound]/1'
+      type: 0
+      typeString: 
+    - title: Entry 5 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 5
+      value: 'Paint Found: [var=PaintFound]/1'
       type: 0
       typeString: 
   - id: 21
@@ -18603,7 +18647,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Absolutely I will but besides that have you heard about the birthday
+        value: Absolutely I will but besides that, have you heard about the birthday
           party in the evening?
         type: 0
         typeString: CustomFieldType_Text
@@ -18961,7 +19005,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: See you [Player's Name]!
+        value: See you Alex!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -19654,7 +19698,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 39.713165, y: 260.3417}
+    canvasScrollPosition: {x: 122.669464, y: 37.065674}
     canvasZoom: 0.9065014
   - id: 18
     fields:
@@ -31138,7 +31182,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I did it!
+        value: I did it! I played the correct notes!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -40435,7 +40479,7 @@ MonoBehaviour:
         destinationDialogueID: 50
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("Tree Planting Event") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -43468,7 +43512,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "To all our volunteers you showed what\u2019s possible when we come
+        value: "To all our volunteers, you showed what\u2019s possible when we come
           together!"
         type: 0
         typeString: CustomFieldType_Text
@@ -44009,7 +44053,9 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Variable["EthanRedemption"] = true;
 
-'
+
+        ShowAlert("Ethan
+        emerges from the crowd and looks like he has something to say.")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -44020,7 +44066,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 70.21405, y: 107.076355}
+    canvasScrollPosition: {x: 78.11313, y: 7.0214233}
     canvasZoom: 0.911499
   - id: 37
     fields:
