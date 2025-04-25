@@ -8,6 +8,7 @@ public class VictorySpeechSetup : MonoBehaviour
     [SerializeField] private Transform[] characterPositions;
     [SerializeField] private GameObject[] characters;
     [SerializeField] private Transform[] characterPositionsAtPlantingSite;
+    public List<string> barkStrings;
 
     public void TeleportCharacters()
     {
@@ -59,7 +60,35 @@ public class VictorySpeechSetup : MonoBehaviour
                         npc.GetComponent<Usable>().enabled = false;
                     }
                 }
+                if (i < barkStrings.Count)
+                {
+                    string barkText = barkStrings[i];
+                    // Find the OnTriggerEnter bark trigger
+                    DialogueSystemTrigger barkTrigger = FindBarkTrigger(npc);
+
+                    if (barkTrigger != null)
+                    {
+                        // Set the bark text
+                        barkTrigger.barkText = barkText;
+                    }
+                }
             }
         }
+    }
+    private DialogueSystemTrigger FindBarkTrigger(GameObject npc)
+    {
+        DialogueSystemTrigger[] triggers = npc.GetComponents<DialogueSystemTrigger>();
+
+        foreach (DialogueSystemTrigger trigger in triggers)
+        {
+            // Check if this is an OnTriggerEnter bark trigger
+            if (trigger.trigger.ToString() == "OnTriggerEnter" &&
+                !string.IsNullOrEmpty(trigger.barkText))
+            {
+                return trigger;
+            }
+        }
+
+        return null; // No matching trigger found
     }
 }

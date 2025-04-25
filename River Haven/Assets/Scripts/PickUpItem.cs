@@ -15,6 +15,7 @@ public class PickUpItem : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] private Animator animator; // Ensure Animator is assigned either in the Inspector or through code
     [SerializeField] private Usable usableComponent;
+    [SerializeField] private bool isShovel;
 
     void Start()
     {
@@ -72,7 +73,17 @@ public class PickUpItem : MonoBehaviour
 
         if (itemPickedUp)
         {
-            this.transform.position = pickUpPoint.position; // Move item to pickUpPoint position
+            if (!isShovel)
+            {
+                this.transform.position = pickUpPoint.position; // Move item to pickUpPoint position
+                this.transform.rotation = pickUpPoint.rotation;
+            }
+            else
+            {
+                Quaternion offsetRotation = Quaternion.Euler(120f, 80f, 0);
+                this.transform.position = pickUpPoint.position; // Move item to pickUpPoint position
+                this.transform.rotation = pickUpPoint.rotation * offsetRotation;
+            }
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && itemPickedUp)
