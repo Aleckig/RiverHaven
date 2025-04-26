@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Settings (Riverhaven)
   m_EditorClassIdentifier: 
   _bools:
-  - _isActive: 1
+  - _isActive: 0
     ID: fullscreen
     ApplyImmediately: 0
     _groups: []
     _defaultValue: 1
     IgnoreConnectionDefaults: 0
     ConnectionObject: {fileID: 11400000, guid: 57cfa21e332facf40a95e6c6d47dca57, type: 2}
-  - _isActive: 0
+  - _isActive: 1
     ID: vSync
     ApplyImmediately: 1
     _groups: []
@@ -118,7 +118,7 @@ MonoBehaviour:
     _optionLabels: []
     _overrideConnectionLabels: 0
     ConnectionObject: {fileID: 11400000, guid: 12aae2cfe94bba543975059d47f4e6d8, type: 2}
-  - _isActive: 0
+  - _isActive: 1
     ID: frameRate
     ApplyImmediately: 1
     _groups: []
@@ -127,7 +127,7 @@ MonoBehaviour:
     _optionLabels: []
     _overrideConnectionLabels: 0
     ConnectionObject: {fileID: 11400000, guid: 6dbbb4ed4f7a2ea49976dfcfd50bc691, type: 2}
-  - _isActive: 0
+  - _isActive: 1
     ID: antiAliasing
     ApplyImmediately: 1
     _groups: []
